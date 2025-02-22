@@ -11,7 +11,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-P93ZDBJ3E4');
     </script>
     <title>Beacon Digital Solutions - About</title>
@@ -26,8 +25,18 @@
         }
         header {
             background-color: #003366;
-            padding: 15px 0;
+            padding: 15px 20px;
             border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .menu-toggle {
             display: none;
@@ -36,18 +45,11 @@
             color: white;
             font-size: 1.5em;
             cursor: pointer;
-            margin-right: 20px;
         }
         nav {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
             justify-content: center;
             gap: 30px;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
         nav a {
             color: white;
@@ -59,25 +61,14 @@
         nav a:hover {
             color: #00A8E8;
         }
-        nav.active {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            background-color: #003366;
-            padding: 20px;
-            gap: 15px;
-        }
         .hero {
             background-color: #003366;
             color: white;
             text-align: center;
-            padding: 20px 20px; /* Reduced to maximize real estate */
+            padding: 20px 20px;
         }
         .hero .logo {
-            max-width: 150px; /* Consistent with your request */
+            max-width: 150px;
             height: auto;
             margin-bottom: 10px;
         }
@@ -140,9 +131,26 @@
             vertical-align: middle;
         }
         @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            nav { display: none; }
-            nav.active { display: flex; }
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #003366;
+                padding: 20px;
+                gap: 15px;
+            }
+            nav.active {
+                display: flex;
+            }
+            .nav-container {
+                justify-content: flex-end;
+            }
             .hero .logo { max-width: 120px; }
             .hero h1 { font-size: 1.5em; }
             .about-section h2 { font-size: 1.5em; }
@@ -151,39 +159,41 @@
             footer img { width: 18px; }
         }
     </style>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-    </script>
 </head>
 <body>
     <header>
-        <button class="menu-toggle" aria-label="Menu">☰</button>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="nav-container">
+            <button class="menu-toggle" aria-label="Menu">☰</button>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
     <div class="hero">
         <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions logo for project management and digital transformation" class="logo">
         <h1>About Beacon Digital Solutions</h1>
     </div>
     <main>
-       <section class="about-section">
-    <h2>Taylor Miller, PMP, CSPO</h2>
-    <img src="Taylor_photo.jpg" alt="Taylor Miller, PMP and CSPO, founder of Beacon Digital Solutions">
-    <p>Taylor Miller, PMP, CSPO, is the visionary founder of Beacon Digital Solutions, bringing over a decade of distinguished experience in project management, digital transformation, and agile coaching. Renowned for delivering measurable outcomes, Taylor has empowered organizations across diverse sectors to achieve operational excellence and adapt to a digital-first landscape.</p>
-    <p>With an impressive tenure at Booz Allen Hamilton, Taylor honed his consulting expertise, driving high-stakes projects with precision and foresight. His leadership in scaling his family’s refrigeration business showcased his knack for operational strategy, while his pivotal role at Pratt & Whitney spearheading digital transformation initiatives solidified his reputation as a forward-thinking innovator. These accomplishments underscore his unique ability to blend strategic vision with hands-on execution.</p>
-    <p>A certified Project Management Professional (PMP) and Certified Scrum Product Owner (CSPO), Taylor’s credentials are complemented by a relentless passion for innovation and client success. Based in Palm Beach, FL, he founded Beacon Digital Solutions to transform businesses through tailored, results-driven solutions. <a href="contact.html" style="color: #003366; text-decoration: none; font-weight: bold;">Contact Taylor today</a> to elevate your organization’s potential.</p>
-</section>
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+        <section class="about-section">
+            <h2>Taylor Miller, PMP, CSPO</h2>
+            <img src="Taylor_photo.jpg" alt="Taylor Miller, PMP and CSPO, founder of Beacon Digital Solutions">
+            <p>Taylor Miller, PMP, CSPO, is the visionary founder of Beacon Digital Solutions, bringing over a decade of distinguished experience in project management, digital transformation, and agile coaching. Renowned for delivering measurable outcomes, Taylor has empowered organizations across diverse sectors to achieve operational excellence and adapt to a digital-first landscape.</p>
+            <p>With an impressive tenure at Booz Allen Hamilton, Taylor honed his consulting expertise, driving high-stakes projects with precision and foresight. His leadership in scaling his family’s refrigeration business showcased his knack for operational strategy, while his pivotal role at Pratt & Whitney spearheading digital transformation initiatives solidified his reputation as a forward-thinking innovator. These accomplishments underscore his unique ability to blend strategic vision with hands-on execution.</p>
+            <p>A certified Project Management Professional (PMP) and Certified Scrum Product Owner (CSPO), Taylor’s credentials are complemented by a relentless passion for innovation and client success. Based in Palm Beach, FL, he founded Beacon Digital Solutions to transform businesses through tailored, results-driven solutions. <a href="contact.html" style="color: #003366; text-decoration: none; font-weight: bold;">Contact Taylor today</a> to elevate your organization’s potential.</p>
+        </section>
     </main>
     <footer>
         <p>© 2025 Beacon Digital Solutions | Palm Beach, FL</p>
         <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
     </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
+​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
