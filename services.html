@@ -2,33 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPM Consulting - Services</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        nav { background-color: #1a3c5e; padding: 10px; text-align: center; position: sticky; top: 0; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .services { padding: 40px 20px; text-align: center; background-color: #ecf0f1; }
-        .services ul { list-style-type: none; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #1a3c5e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #a8c7e6;
+            text-decoration: underline;
+        }
+        .header img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services-section {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .service {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .service h3 {
+            color: #1a3c5e;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .service p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        @media (max-width: 600px) {
+            nav { flex-direction: column; gap: 10px; }
+            nav a { margin: 5px 0; }
+            .service { margin-bottom: 20px; }
+            .service h3 { font-size: 1.3em; }
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <div class="services">
-        <h1>Services</h1>
-        <ul>
-            <li>Project Management Support</li>
-            <li>Digital Transformation</li>
-            <li>Agile Coaching</li>
-            <li>Agile Team Augmentation</li>
-        </ul>
-        <p>Contact us to tailor these services to your needs.</p>
-    </div>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div>
+            <img src="TPM_consulting.jpg" alt="TPM Consulting Logo">
+            <h1>TPM Consulting</h1>
+            <p>Transforming Your Business for a Digital Future</p>
+        </div>
+    </header>
+    <main>
+        <section class="services-section">
+            <h2 style="font-size: 2em; color: #1a3c5e; margin-bottom: 30px;">Our Services</h2>
+            <div class="service">
+                <h3>Project Management Support</h3>
+                <p>TPM Consulting delivers expert project management to keep your initiatives on track. We streamline planning, execution, and delivery, ensuring your projects meet deadlines, stay within budget, and achieve strategic goals with precision and clarity.</p>
+            </div>
+            <div class="service">
+                <h3>Process Optimization</h3>
+                <p>Maximize your efficiency with our process optimization services. We analyze and refine your operational models, incentive structures, and workflows, driving productivity and reducing waste to help your business perform at its peak.</p>
+            </div>
+            <div class="service">
+                <h3>Digital Transformation</h3>
+                <p>Embrace the future with TPM Consulting’s digital transformation strategies. We leverage cutting-edge technology and data analytics to modernize your operations, enhance competitiveness, and position your business for long-term success in a digital world.</p>
+            </div>
+            <div class="service">
+                <h3>Agile Support</h3>
+                <p>Stay agile and innovative with our comprehensive agile support. From coaching your teams to implementing flexible methodologies, we empower your organization to adapt quickly, foster innovation, and respond effectively to market demands.</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
 ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
