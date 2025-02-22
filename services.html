@@ -20,12 +20,25 @@
             padding: 15px 0;
             border-bottom: 1px solid #ccc;
         }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            margin-right: 20px;
+        }
         nav {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
             gap: 30px;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
@@ -36,6 +49,17 @@
         }
         nav a:hover {
             color: #00A8E8;
+        }
+        nav.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #003366;
+            padding: 20px;
+            gap: 15px;
         }
         .hero {
             background-color: #003366;
@@ -102,7 +126,9 @@
             vertical-align: middle;
         }
         @media (max-width: 768px) {
-            nav { gap: 15px; }
+            .menu-toggle { display: block; }
+            nav { display: none; }
+            nav.active { display: flex; }
             .hero .logo { max-width: 120px; }
             .hero h1 { font-size: 1.5em; }
             .service h3 { font-size: 1.3em; }
@@ -110,9 +136,15 @@
             footer img { width: 18px; }
         }
     </style>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 </head>
 <body>
     <header>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>

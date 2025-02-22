@@ -20,12 +20,25 @@
             padding: 15px 0;
             border-bottom: 1px solid #ccc;
         }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            margin-right: 20px;
+        }
         nav {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
             gap: 30px;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
@@ -36,6 +49,17 @@
         }
         nav a:hover {
             color: #00A8E8;
+        }
+        nav.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #003366;
+            padding: 20px;
+            gap: 15px;
         }
         .hero {
             background-color: #003366;
@@ -64,20 +88,20 @@
             padding: 40px 20px;
             text-align: center;
         }
-        .intro-section, .why-choose-section {
+        .intro-section, .why-choose-section, .cta-section {
             background-color: white;
             padding: 30px;
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
-        .intro-section h2, .why-choose-section h2 {
+        .intro-section h2, .why-choose-section h2, .cta-section h2 {
             color: #003366;
             font-size: 2em;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        .intro-section p, .why-choose-section p {
+        .intro-section p, .why-choose-section p, .cta-section p {
             font-size: 1.1em;
             max-width: 800px;
             margin: 0 auto;
@@ -105,18 +129,26 @@
             vertical-align: middle;
         }
         @media (max-width: 768px) {
-            nav { gap: 15px; }
+            .menu-toggle { display: block; }
+            nav { display: none; }
+            nav.active { display: flex; }
             .hero .logo { max-width: 120px; }
             .hero h1 { font-size: 1.5em; }
             .hero p { font-size: 0.9em; }
-            .intro-section h2, .why-choose-section h2 { font-size: 1.5em; }
+            .intro-section h2, .why-choose-section h2, .cta-section h2 { font-size: 1.5em; }
             footer { padding: 15px 0; font-size: 0.8em; }
             footer img { width: 18px; }
         }
     </style>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 </head>
 <body>
     <header>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -137,6 +169,10 @@
         <section class="why-choose-section">
             <h2>Why Choose TPM Consulting?</h2>
             <p>TPM Consulting stands out with our proven expertise in digital transformation, agile methodologies, and project management. We deliver tailored solutions that drive efficiency, innovation, and measurable results for your business—partner with us to transform your operational model and succeed in a digital-first world.</p>
+        </section>
+        <section class="cta-section">
+            <h2>Ready to Transform Your Business?</h2>
+            <a href="contact.html" style="display: inline-block; background-color: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px;">Get a Free Consultation</a>
         </section>
     </main>
     <footer>
