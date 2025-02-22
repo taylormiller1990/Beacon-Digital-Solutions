@@ -11,7 +11,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-P93ZDBJ3E4');
     </script>
     <title>Beacon Digital Solutions - Home</title>
@@ -26,8 +25,18 @@
         }
         header {
             background-color: #003366;
-            padding: 15px 0;
+            padding: 15px 20px;
             border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .menu-toggle {
             display: none;
@@ -36,18 +45,11 @@
             color: white;
             font-size: 1.5em;
             cursor: pointer;
-            margin-right: 20px;
         }
         nav {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
             justify-content: center;
             gap: 30px;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
         nav a {
             color: white;
@@ -59,25 +61,14 @@
         nav a:hover {
             color: #00A8E8;
         }
-        nav.active {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            background-color: #003366;
-            padding: 20px;
-            gap: 15px;
-        }
         .hero {
             background-color: #003366;
             color: white;
             text-align: center;
-            padding: 20px 20px; /* Reduced to maximize real estate */
+            padding: 20px 20px;
         }
         .hero .logo {
-            max-width: 150px; /* Consistent with your request */
+            max-width: 150px;
             height: auto;
             margin-bottom: 10px;
         }
@@ -138,9 +129,26 @@
             vertical-align: middle;
         }
         @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            nav { display: none; }
-            nav.active { display: flex; }
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #003366;
+                padding: 20px;
+                gap: 15px;
+            }
+            nav.active {
+                display: flex;
+            }
+            .nav-container {
+                justify-content: flex-end;
+            }
             .hero .logo { max-width: 120px; }
             .hero h1 { font-size: 1.5em; }
             .hero p { font-size: 0.9em; }
@@ -149,21 +157,18 @@
             footer img { width: 18px; }
         }
     </style>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-    </script>
 </head>
 <body>
     <header>
-        <button class="menu-toggle" aria-label="Menu">☰</button>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="nav-container">
+            <button class="menu-toggle" aria-label="Menu">☰</button>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
     <div class="hero">
         <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions logo for digital transformation and project management" class="logo">
@@ -184,5 +189,11 @@
         <p>© 2025 Beacon Digital Solutions | Palm Beach, FL</p>
         <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
     </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
+​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
