@@ -1,4 +1,4 @@
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,28 +41,27 @@
             background-color: #003366;
             color: white;
             text-align: center;
-            padding:5px 20px;
+            padding: 20px 20px; /* Reduced to maximize real estate */
         }
         .hero .logo {
-            display: inline-block;
-            max-width: 200px;
+            max-width: 150px; /* Consistent with your request */
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .hero h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
+            font-size: 2em;
+            margin: 5px 0;
             font-weight: bold;
         }
         .hero p {
-            font-size: 1.2em;
+            font-size: 1em;
             margin: 0;
             font-style: italic;
         }
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 5px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
         .intro-section, .why-choose-section {
@@ -84,12 +83,35 @@
             margin: 0 auto;
             color: #333;
         }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #00A8E8;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer img {
+            width: 20px;
+            height: auto;
+            vertical-align: middle;
+        }
         @media (max-width: 768px) {
             nav { gap: 15px; }
-            .hero .logo { font-size: 1.5em; }
-            .hero h1 { font-size: 2em; }
-            .hero p { font-size: 1em; }
+            .hero .logo { max-width: 120px; }
+            .hero h1 { font-size: 1.5em; }
+            .hero p { font-size: 0.9em; }
             .intro-section h2, .why-choose-section h2 { font-size: 1.5em; }
+            footer { padding: 15px 0; font-size: 0.8em; }
+            footer img { width: 18px; }
         }
     </style>
 </head>
@@ -103,7 +125,7 @@
         </nav>
     </header>
     <div class="hero">
-        <img src="TPM_Consulting.jpg" alt="TPM Consulting logo for digital transformation and project management" class="logo" style="max-width: 200px; height: auto;">
+        <img src="TPM_Consulting.jpg" alt="TPM Consulting logo for digital transformation and project management" class="logo">
         <h1>TPM Consulting</h1>
         <p>Transforming Your Business for a Digital Future</p>
     </div>
@@ -117,6 +139,9 @@
             <p>TPM Consulting stands out with our proven expertise in digital transformation, agile methodologies, and project management. We deliver tailored solutions that drive efficiency, innovation, and measurable results for your business—partner with us to transform your operational model and succeed in a digital-first world.</p>
         </section>
     </main>
+    <footer>
+        <p>© 2025 TPM Consulting | Palm Beach, FL</p>
+        <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="x-logo.png" alt="Twitter X Logo"></a></p>
+    </footer>
 </body>
 </html>
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
