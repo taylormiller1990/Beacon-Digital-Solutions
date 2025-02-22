@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Taylor Miller, PMP and CSPO, founder of TPM Consulting, offering project management, digital transformation, and agile coaching services in Palm Beach, FL.">
+    <meta name="keywords" content="Taylor Miller, TPM Consulting, project management professional, certified scrum product owner, digital transformation, agile coaching, Palm Beach FL">
     <title>TPM Consulting - About</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -14,40 +16,48 @@
             color: #333;
         }
         header {
-            background-color: #1a3c5e;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #003366;
+            padding: 15px 0;
+            border-bottom: 1px solid #ccc;
         }
         nav {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            gap: 30px;
         }
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1em;
             transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #a8c7e6;
-            text-decoration: underline;
+            color: #00A8E8;
         }
-        .header img {
+        .hero {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero .logo {
+            display: inline-block;
             max-width: 200px;
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+            font-weight: bold;
         }
         main {
-            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 40px 20px;
             text-align: center;
         }
         .about-section {
@@ -64,18 +74,23 @@
             margin: 20px auto;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .about-section h2 {
+            color: #003366;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
         .about-section p {
             font-size: 1.1em;
             max-width: 800px;
             margin: 0 auto;
+            color: #333;
         }
-        .about-section h2 {
-            color: #1a3c5e;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        @media (max-width: 600px) {
-            nav { gap: 10px; } /* Keep horizontal, reduce gap on smaller screens */
+        @media (max-width: 768px) {
+            nav { gap: 15px; }
+            .hero .logo { max-width: 150px; }
+            .hero h1 { font-size: 2em; }
+            .about-section h2 { font-size: 1.5em; }
             .about-section img { max-width: 150px; }
         }
     </style>
@@ -88,19 +103,18 @@
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <div>
-            <img src="TPM_Consulting.jpg" alt="TPM Consulting Logo">
-            <h1>TPM Consulting</h1>
-            <p>Transforming Your Business for a Digital Future</p>
-        </div>
     </header>
+    <div class="hero">
+        <img src="TPM_Consulting.jpg" alt="TPM Consulting logo for project management and digital transformation" class="logo">
+        <h1>About TPM Consulting</h1>
+    </div>
     <main>
         <section class="about-section">
             <h2>Taylor Miller</h2>
-            <img src="Taylor_photo.jpg" alt="Taylor Miller">
-            <p>Taylor Miller, PMP and CSPO, is a visionary leader with over 10 years of experience transforming businesses through project management, digital innovation, and agile practices. His expertise spans lean program management, product development, and process optimization, delivering measurable results for clients across industries.</p>
-            <p>With a consulting background at Booz Allen Hamilton, hands-on leadership from his family’s refrigeration service business, and strategic digital transformation work with Pratt & Whitney, Taylor brings a unique blend of strategic insight and practical know-how. His ability to navigate complex challenges ensures your organization thrives in a digital-first world.</p>
-            <p>Passionate about driving efficiency and innovation, Taylor is committed to partnering with you to achieve your goals. <a href="contact.html" style="color: #1a3c5e; text-decoration: none; font-weight: bold;">Contact TPM Consulting today</a> to discover how his comprehensive skill set can transform your business.</p>
+            <img src="Taylor_photo.jpg" alt="Taylor Miller, PMP and CSPO, founder of TPM Consulting">
+            <p>Taylor Miller, a certified Project Management Professional (PMP) and Certified Scrum Product Owner (CSPO), brings over 10 years of expertise in project management, digital transformation, and agile coaching. His deep knowledge drives measurable results for clients across industries.</p>
+            <p>With a consulting background at Booz Allen Hamilton, hands-on leadership from his family’s refrigeration business, and strategic digital transformation work with Pratt & Whitney, Taylor offers a unique blend of strategic insight and practical expertise. His ability to navigate complex challenges ensures your business thrives in a digital-first world.</p>
+            <p>Passionate about innovation, Taylor is dedicated to transforming your operations. <a href="contact.html" style="color: #003366; text-decoration: none; font-weight: bold;">Contact TPM Consulting today</a> to see how his skills can elevate your organization.</p>
         </section>
     </main>
 </body>
