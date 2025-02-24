@@ -30,6 +30,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
         .nav-container {
             max-width: 1200px;
@@ -61,34 +62,55 @@
         nav a:hover {
             color: #00A8E8;
         }
+        /* Hero Section */
         .hero {
-            background-color: #003366;
-            color: white;
+            position: relative;
+            height: 60vh;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('digital_transformation.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.7);
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
-            padding: 20px 20px;
+            padding: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
         }
         .hero .logo {
             max-width: 150px;
-            height: auto;
             margin-bottom: 10px;
+            filter: none !important;
         }
         .hero h1 {
-            font-size: 2em;
-            margin: 5px 0;
+            font-size: 2.5em;
+            margin: 0;
             font-weight: bold;
         }
         main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 0;
             text-align: center;
         }
         .about-section {
-            background-color: white;
+            background-color: #fff;
             padding: 30px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin: 0;
+            width: 100%;
         }
         .about-section img {
             max-width: 200px;
@@ -99,22 +121,31 @@
         }
         .about-section h2 {
             color: #003366;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin: 30px 0 15px 0;
         }
         .about-section p {
             font-size: 1.1em;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             color: #333;
+        }
+        .about-section a {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .about-section a:hover {
+            text-decoration: underline;
         }
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: 20px;
+            width: 100%;
+            margin: 0;
             font-size: 0.9em;
         }
         footer a {
@@ -151,12 +182,28 @@
             .nav-container {
                 justify-content: flex-end;
             }
-            .hero .logo { max-width: 120px; }
-            .hero h1 { font-size: 1.5em; }
-            .about-section h2 { font-size: 1.5em; }
-            .about-section img { max-width: 150px; }
-            footer { padding: 15px 0; font-size: 0.8em; }
-            footer img { width: 18px; }
+            .hero {
+                height: 40vh;
+            }
+            .hero .logo {
+                max-width: 120px;
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .about-section h2 {
+                font-size: 1.5em;
+            }
+            .about-section img {
+                max-width: 150px;
+            }
+            footer {
+                padding: 15px 0;
+                font-size: 0.8em;
+            }
+            footer img {
+                width: 18px;
+            }
         }
     </style>
 </head>
@@ -172,22 +219,33 @@
             </nav>
         </div>
     </header>
+    <!-- Hero Section -->
     <div class="hero">
-        <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions logo for project management and digital transformation" class="logo">
-        <h1>About Beacon Digital Solutions</h1>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions logo for project management and digital transformation" class="logo">
+            <h1>About Beacon Digital Solutions</h1>
+        </div>
     </div>
     <main>
+        <!-- About Section -->
         <section class="about-section">
-            <h2>Taylor Miller, PMP, CSPO</h2>
-            <img src="Taylor_photo.jpg" alt="Taylor Miller, PMP and CSPO, founder of Beacon Digital Solutions">
-            <p>Taylor Miller, PMP, CSPO, is the visionary founder of Beacon Digital Solutions, bringing over a decade of distinguished experience in project management, digital transformation, and agile coaching. Renowned for delivering measurable outcomes, Taylor has empowered organizations across diverse sectors to achieve operational excellence and adapt to a digital-first landscape.</p>
-            <p>With an impressive tenure at Booz Allen Hamilton, Taylor honed his consulting expertise, driving high-stakes projects with precision and foresight. His leadership in scaling his family’s refrigeration business showcased his knack for operational strategy, while his pivotal role at Pratt & Whitney spearheading digital transformation initiatives solidified his reputation as a forward-thinking innovator. These accomplishments underscore his unique ability to blend strategic vision with hands-on execution.</p>
-            <p>A certified Project Management Professional (PMP) and Certified Scrum Product Owner (CSPO), Taylor’s credentials are complemented by a relentless passion for innovation and client success. Based in Palm Beach, FL, he founded Beacon Digital Solutions to transform businesses through tailored, results-driven solutions. <a href="contact.html" style="color: #003366; text-decoration: none; font-weight: bold;">Contact Taylor today</a> to elevate your organization’s potential.</p>
+            <img src="Taylor_photo.jpg" alt="Taylor Miller, founder of Beacon Digital Solutions">
+            <p>Taylor Miller founded Beacon Digital Solutions in Palm Beach, FL, leveraging over a decade of expertise in project management, digital transformation, and agile methodologies.</p>
+            
+            <h2>Proven Expertise</h2>
+            <p>Taylor Miller has delivered transformative results across diverse sectors. As a consultant with Booz Allen Hamilton, Taylor established an Agile Engineering and Test Automation Services Center of Excellence for the USCIS Office of Information Technology as well as launching the agency’s first annual Product Owner Summit in Crystal City, Arlington, VA. At Pratt & Whitney’s Military Engines division under RTX, Taylor crafted a digital transformation strategy and, as Product Owner, led the digitization of critical business processes, earning numerous awards for innovation and collaboration. Enhancing a family-owned commercial refrigeration business with growth strategies further refined Taylor’s operational skills. Certified as a Project Management Professional (PMP) and Certified Scrum Product Owner (CSPO), Taylor blends strategic insight with actionable outcomes.</p>
+            
+            <h2>Driving Transformation</h2>
+            <p>Beacon Digital Solutions embodies Taylor Miller’s vision of transforming challenges into opportunities through tailored, results-oriented strategies that foster innovation and operational excellence.</p>
+            
+            <h2>Ready to Collaborate?</h2>
+            <p>Contact Taylor Miller at Beacon Digital Solutions to explore how this expertise can elevate your organization. <a href="contact.html">Reach out today</a>.</p>
         </section>
     </main>
     <footer>
         <p>© 2025 Beacon Digital Solutions | Palm Beach, FL</p>
-        <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
+        <p>Follow Taylor Miller on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
     </footer>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -196,4 +254,3 @@
     </script>
 </body>
 </html>
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
