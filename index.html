@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beacon Digital Solutions transforms businesses with expert project management, digital transformation, and agile coaching. Based in Palm Beach, FL, we drive innovation and efficiency for your organization.">
-    <meta name="keywords" content="Beacon Digital Solutions, project management, digital transformation, agile coaching, consulting services, Palm Beach FL">
+    <meta name="description" content="Beacon Digital Solutions offers expert digital transformation services, including agile project management, solutions architecture, and more. With a dedicated team and proven experience, we help businesses innovate and succeed.">
+    <meta name="keywords" content="Beacon Digital Solutions, digital transformation, agile coaching, project management, solutions architecture, data engineering, API development, UI/UX design, business intelligence, Palm Beach FL">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P93ZDBJ3E4"></script>
     <script>
@@ -13,6 +13,8 @@
         gtag('js', new Date());
         gtag('config', 'G-P93ZDBJ3E4');
     </script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Beacon Digital Solutions - Home</title>
     <style>
         body {
@@ -30,6 +32,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
         .nav-container {
             max-width: 1200px;
@@ -61,39 +64,104 @@
         nav a:hover {
             color: #00A8E8;
         }
-        .hero {
-            background-color: #003366;
-            color: white;
+        /* Hero Section Styles (for Sections 1, 3, 5) */
+        .hero, .services, .cta-section {
+            position: relative;
+            height: 60vh;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('digital_transformation.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.7);
+            z-index: 0;
+        }
+        .services-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('services-hero.jpg');
+            background-size: cover;
+            background-position: center 40%; /* Set to your perfected value */
+            background-repeat: no-repeat;
+            filter: brightness(1);
+            z-index: 0;
+        }
+        .cta-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('cta-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.8); /* Slightly darkened for text contrast */
+            z-index: 0;
+        }
+        .hero-content, .services-hero-content, .cta-hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
-            padding: 20px 20px;
+            padding: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .hero-content h1, .hero-content p, .hero-content .cta-button {
+            color: #fff !important;
+        }
+        .hero-content img {
+            filter: none !important;
         }
         .hero .logo {
-            max-width: 150px;
-            height: auto;
+            max-width: 100px;
             margin-bottom: 10px;
         }
         .hero h1 {
-            font-size: 2em;
-            margin: 5px 0;
-            font-weight: bold;
+            font-size: 2.5em;
+            margin: 0;
         }
         .hero p {
-            font-size: 1em;
-            margin: 0;
-            font-style: italic;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .cta-button {
+            background-color: #1A2A44;
+            color: #fff !important;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #0F1A2F;
         }
         main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 0;
             text-align: center;
         }
+        /* Non-Hero Sections (Welcome and Why Choose) */
         .intro-section, .why-choose-section {
-            background-color: white;
+            background-color: #fff;
             padding: 30px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin: 0; /* Removed margins to eliminate gaps */
+            color: #333;
+            width: 100%;
         }
         .intro-section h2, .why-choose-section h2 {
             color: #003366;
@@ -107,13 +175,67 @@
             margin: 0 auto;
             color: #333;
         }
+        .intro-section ul, .why-choose-section ul {
+            color: #333;
+            list-style: none;
+            padding: 0;
+        }
+        .intro-section li, .why-choose-section li {
+            margin-bottom: 10px;
+        }
+        /* Services Section (Hero) */
+        .services h2 {
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            color: #333;
+        }
+        .service i {
+            font-size: 80px;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+        .service h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+        .service p {
+            color: #333;
+        }
+        /* CTA Section (Hero) */
+        .cta-section p {
+            font-size: 1.4em; /* Increased for better visibility */
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .cta-section .cta-button {
+            margin: 0 auto;
+        }
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: 20px;
-            font-size: 0.9em;
+            width: 100%;
+            margin: 0; /* Ensure no gap above footer */
         }
         footer a {
             color: #00A8E8;
@@ -149,12 +271,34 @@
             .nav-container {
                 justify-content: flex-end;
             }
-            .hero .logo { max-width: 120px; }
-            .hero h1 { font-size: 1.5em; }
-            .hero p { font-size: 0.9em; }
-            .intro-section h2, .why-choose-section h2 { font-size: 1.5em; }
-            footer { padding: 15px 0; font-size: 0.8em; }
-            footer img { width: 18px; }
+            .hero, .services, .cta-section {
+                height: 40vh;
+            }
+            .hero .logo {
+                max-width: 80px;
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .intro-section h2, .services h2, .why-choose-section h2 {
+                font-size: 1.5em;
+            }
+            .service i {
+                font-size: 60px;
+            }
+            .cta-section p {
+                font-size: 1.2em; /* Slightly smaller on mobile */
+            }
+            footer {
+                padding: 15px 0;
+                font-size: 0.8em;
+            }
+            footer img {
+                width: 18px;
+            }
         }
     </style>
 </head>
@@ -170,19 +314,74 @@
             </nav>
         </div>
     </header>
+    <!-- Section 1: Beacon Digital Solutions (Hero) -->
     <div class="hero">
-        <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions logo for digital transformation and project management" class="logo">
-        <h1>Beacon Digital Solutions</h1>
-        <p>Transforming Your Business for a Digital Future</p>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions logo for digital transformation and project management" class="logo">
+            <h1>Beacon Digital Solutions</h1>
+            <p>Your Partner in Digital Transformation: Expert Strategy, Agile Execution</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </div>
     </div>
     <main>
+        <!-- Section 2: Welcome to Beacon Digital Solutions (No Hero) -->
         <section class="intro-section">
             <h2>Welcome to Beacon Digital Solutions</h2>
-            <p>We specialize in unlocking your business’s potential through innovative digital transformation, project management, and agile coaching. Based in Palm Beach, FL, our expert strategies help you thrive in today’s competitive market. <a href="services.html" style="color: #003366; text-decoration: none; font-weight: bold;">Explore our services</a> to get started.</p>
+            <p>At Beacon Digital Solutions, we specialize in guiding businesses through their digital transformation journey. Our comprehensive services include:</p>
+            <ul>
+                <li>Digital Transformation Strategy</li>
+                <li>Agile Project Management</li>
+                <li>Scrum and Agile Coaching</li>
+                <li>Solutions Architecture</li>
+                <li>Data Engineering</li>
+                <li>API Development</li>
+                <li>UI/UX Design</li>
+                <li>Business Intelligence and Analytics</li>
+            </ul>
+            <p>Our team of certified professionals, including a Certified Scrum Product Owner, Project Management Professional, Scrum Master, Solutions Architect, Data Engineer, API Developer, UI Developer, and Business Intelligence Engineer, is dedicated to delivering tailored solutions that meet your unique needs.</p>
         </section>
+        <!-- Section 3: Our Services (Hero) -->
+        <section class="services" id="services">
+            <div class="services-background"></div>
+            <div class="services-hero-content">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Digital Transformation Strategy</h3>
+                        <p>Expert guidance to navigate your digital journey.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Agile Project Management</h3>
+                        <p>Streamline your projects with agile methodologies.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Solutions Architecture</h3>
+                        <p>Design robust systems tailored to your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: Why Choose Beacon Digital Solutions (No Hero) -->
         <section class="why-choose-section">
             <h2>Why Choose Beacon Digital Solutions?</h2>
-            <p>Beacon Digital Solutions stands out with our proven expertise in digital transformation, agile methodologies, and project management. We deliver tailored solutions that drive efficiency, innovation, and measurable results for your business—partner with us to transform your operational model and succeed in a digital-first world.</p>
+            <ul>
+                <li><strong>Extensive Experience:</strong> Our team brings insights from leading digital transformation projects in both large enterprises and small businesses.</li>
+                <li><strong>Dedicated Agile Team:</strong> Our fully staffed team ensures every aspect of your project is handled by experts, from strategy to execution.</li>
+                <li><strong>Tailored Solutions:</strong> We craft solutions aligned with your specific goals, informed by lean thinking from small business operations.</li>
+                <li><strong>Measurable Results:</strong> Our approach drives efficiency, innovation, and faster time-to-market for your business.</li>
+            </ul>
+        </section>
+        <!-- Section 5: CTA (Hero) -->
+        <section class="cta-section">
+            <div class="cta-background"></div>
+            <div class="cta-hero-content">
+                <p>Ready to kickstart your digital transformation? Reach out now!</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
         </section>
     </main>
     <footer>
@@ -196,4 +395,3 @@
     </script>
 </body>
 </html>
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​

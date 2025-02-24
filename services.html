@@ -30,6 +30,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
         .nav-container {
             max-width: 1200px;
@@ -61,34 +62,61 @@
         nav a:hover {
             color: #00A8E8;
         }
+        /* Hero Section */
         .hero {
-            background-color: #003366;
-            color: white;
+            position: relative;
+            height: 60vh;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('digital_transformation.jpg'); /* Matches index.html Section 3 */
+            background-size: cover;
+            background-position: center 40%; /* Matches index.html Services */
+            background-repeat: no-repeat;
+            filter: brightness(1);
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
-            padding: 20px 20px;
+            padding: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
         }
         .hero .logo {
             max-width: 150px;
-            height: auto;
             margin-bottom: 10px;
+            filter: none !important;
         }
         .hero h1 {
-            font-size: 2em;
-            margin: 5px 0;
+            font-size: 2.5em;
+            margin: 0;
             font-weight: bold;
         }
         main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 0;
             text-align: center;
         }
         .services-section {
-            background-color: white;
+            background-color: #fff;
             padding: 30px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin: 0;
+            width: 100%;
+        }
+        .services-section h2 {
+            color: #003366;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0 0 20px 0;
         }
         .service {
             margin-bottom: 30px;
@@ -104,12 +132,27 @@
             margin: 0 auto;
             color: #333;
         }
+        .cta-button {
+            background-color: #1A2A44;
+            color: #fff !important;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background-color: #0F1A2F;
+        }
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: 20px;
+            width: 100%;
+            margin: 0;
             font-size: 0.9em;
         }
         footer a {
@@ -146,11 +189,28 @@
             .nav-container {
                 justify-content: flex-end;
             }
-            .hero .logo { max-width: 120px; }
-            .hero h1 { font-size: 1.5em; }
-            .service h3 { font-size: 1.3em; }
-            footer { padding: 15px 0; font-size: 0.8em; }
-            footer img { width: 18px; }
+            .hero {
+                height: 40vh;
+            }
+            .hero .logo {
+                max-width: 120px;
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .services-section h2 {
+                font-size: 1.5em;
+            }
+            .service h3 {
+                font-size: 1.3em;
+            }
+            footer {
+                padding: 15px 0;
+                font-size: 0.8em;
+            }
+            footer img {
+                width: 18px;
+            }
         }
     </style>
 </head>
@@ -166,11 +226,16 @@
             </nav>
         </div>
     </header>
+    <!-- Hero Section -->
     <div class="hero">
-        <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions services logo for project management and digital transformation" class="logo">
-        <h1>Our Services</h1>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions services logo for project management and digital transformation" class="logo">
+            <h1>Our Services</h1>
+        </div>
     </div>
     <main>
+        <!-- Services Section -->
         <section class="services-section">
             <h2>Our Transformative Services</h2>
             <div class="service">
@@ -189,7 +254,7 @@
                 <h3>Powerful Agile Coaching and Support</h3>
                 <p>Empower your teams to thrive with our certified agile coaching and support. As CSPOs and seasoned Scrum Masters, we foster flexibility, innovation, and rapid adaptation, enabling your organization to respond to change and seize opportunities. Our remote agile solutions reduce time-to-market by 20% or more, driving sustained growth for businesses navigating digital transformation in Palm Beach and nationwide.</p>
             </div>
-            <a href="contact.html" style="display: inline-block; background-color: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px;">Contact Us to Transform Your Business Today</a>
+            <a href="contact.html" class="cta-button">Contact Us to Transform Your Business Today</a>
         </section>
     </main>
     <footer>
@@ -203,4 +268,3 @@
     </script>
 </body>
 </html>
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​

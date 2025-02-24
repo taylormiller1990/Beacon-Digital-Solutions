@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Beacon Digital Solutions for project management, digital transformation, and agile coaching services in Palm Beach, FL. Get in touch today to transform your business.">
     <meta name="keywords" content="Beacon Digital Solutions contact, project management contact, digital transformation Palm Beach, agile coaching, consulting services FL">
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P93ZDBJ3E4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -29,6 +30,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
         .nav-container {
             max-width: 1200px;
@@ -60,45 +62,66 @@
         nav a:hover {
             color: #00A8E8;
         }
+        /* Hero Section */
         .hero {
-            background-color: #003366;
-            color: white;
+            position: relative;
+            height: 60vh;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('digital_transformation.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.7); /* Matches about.html */
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
-            padding: 20px 20px;
+            padding: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
         }
         .hero .logo {
             max-width: 150px;
-            height: auto;
             margin-bottom: 10px;
+            filter: none !important;
         }
         .hero h1 {
-            font-size: 2em;
-            margin: 5px 0;
+            font-size: 2.5em;
+            margin: 0;
             font-weight: bold;
         }
         main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 0;
             text-align: center;
         }
         .contact-section {
-            background-color: white;
+            background-color: #fff;
             padding: 30px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin: 0;
+            width: 100%;
+        }
+        .contact-section h2 {
+            color: #003366;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0 0 20px 0;
         }
         .contact-section p {
             font-size: 1.1em;
             max-width: 800px;
-            margin: 0 auto;
-        }
-        .contact-section h2 {
-            color: #003366;
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto;
         }
         .contact-section a {
             color: #003366;
@@ -110,7 +133,7 @@
         }
         form {
             max-width: 500px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             text-align: left;
         }
         form input, form textarea {
@@ -126,23 +149,25 @@
             height: 100px;
         }
         form button {
-            background-color: #003366;
-            color: white;
-            padding: 10px 20px;
+            background-color: #1A2A44; /* Matches index.html CTA button */
+            color: #fff;
+            padding: 12px 24px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
+            transition: background-color 0.3s ease;
         }
         form button:hover {
-            background-color: #002244;
+            background-color: #0F1A2F; /* Matches index.html CTA hover */
         }
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: 20px;
+            width: 100%;
+            margin: 0;
             font-size: 0.9em;
         }
         footer a {
@@ -179,11 +204,25 @@
             .nav-container {
                 justify-content: flex-end;
             }
-            .hero .logo { max-width: 120px; }
-            .hero h1 { font-size: 1.5em; }
-            .contact-section h2 { font-size: 1.5em; }
-            footer { padding: 15px 0; font-size: 0.8em; }
-            footer img { width: 18px; }
+            .hero {
+                height: 40vh;
+            }
+            .hero .logo {
+                max-width: 120px;
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .contact-section h2 {
+                font-size: 1.5em;
+            }
+            footer {
+                padding: 15px 0;
+                font-size: 0.8em;
+            }
+            footer img {
+                width: 18px;
+            }
         }
     </style>
 </head>
@@ -199,11 +238,16 @@
             </nav>
         </div>
     </header>
+    <!-- Hero Section -->
     <div class="hero">
-        <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions contact logo" class="logo">
-        <h1>Contact Us</h1>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <img src="Beacon_Digital_Solutions.jpg" alt="Beacon Digital Solutions contact logo" class="logo">
+            <h1>Contact Us</h1>
+        </div>
     </div>
     <main>
+        <!-- Contact Section -->
         <section class="contact-section">
             <h2>Get in Touch</h2>
             <p>Ready to transform your business? Fill out the form below to contact Beacon Digital Solutions for expert project management, digital transformation, and agile coaching services.</p>
@@ -233,4 +277,3 @@
     </script>
 </body>
 </html>
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
