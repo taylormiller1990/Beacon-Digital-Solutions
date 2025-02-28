@@ -24,6 +24,7 @@
             line-height: 1.6;
             background-color: #f5f5f5;
             color: #333;
+            overflow-x: hidden;
         }
         header {
             background-color: #003366;
@@ -33,6 +34,7 @@
             top: 0;
             z-index: 1000;
             width: 100%;
+            box-sizing: border-box;
         }
         .nav-container {
             max-width: 1200px;
@@ -40,6 +42,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-sizing: border-box;
+            padding: 0 10px;
         }
         .menu-toggle {
             display: none;
@@ -70,12 +74,14 @@
             width: 100%;
             margin: 0;
             overflow: hidden;
+            box-sizing: border-box;
         }
         .hero {
-            height: 60vh; /* Desktop height */
+            height: 60vh;
         }
         .services {
-            height: 60vh;
+            height: auto;
+            min-height: 60vh;
         }
         .cta-section {
             height: 60vh;
@@ -109,9 +115,16 @@
             z-index: 1;
             text-align: center;
             padding: 20px;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .hero-content, .cta-hero-content {
             top: 50%;
             transform: translateY(-50%);
-            color: #fff;
+        }
+        .services-hero-content {
+            padding: 40px 20px;
         }
         .hero-content h1, .hero-content p, .hero-content .cta-button {
             color: #fff !important;
@@ -121,7 +134,7 @@
         }
         .hero .logo {
             max-width: 200px; /* Doubled from 100px for desktop */
-            margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+            margin-bottom: 5px; /* Reduced for closeness */
         }
         .hero h1 {
             font-size: 2.5em;
@@ -147,6 +160,8 @@
         main {
             margin: 0;
             text-align: center;
+            width: 100%;
+            box-sizing: border-box;
         }
         /* Non-Hero Sections (Welcome and Why Choose) */
         .intro-section, .why-choose-section {
@@ -155,6 +170,8 @@
             margin: 0;
             color: #333;
             width: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
         .intro-section h2, .why-choose-section h2 {
             color: #003366;
@@ -172,9 +189,13 @@
             color: #333;
             list-style: none;
             padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
         .intro-section li, .why-choose-section li {
             margin-bottom: 10px;
+            text-align: center;
         }
         /* Services Section (Hero) */
         .services h2 {
@@ -188,6 +209,9 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
         .service {
             background-color: #fff;
@@ -229,6 +253,7 @@
             padding: 20px 0;
             width: 100%;
             margin: 0;
+            box-sizing: border-box;
         }
         footer a {
             color: #00A8E8;
@@ -257,24 +282,36 @@
                 background-color: #003366;
                 padding: 20px;
                 gap: 15px;
+                box-sizing: border-box;
             }
             nav.active {
                 display: flex;
             }
             .nav-container {
                 justify-content: flex-end;
+                padding: 0 10px;
             }
             .hero {
-                height: auto; /* Changed from 40vh to fit content */
-                padding: 20px 0; /* Add padding to ensure visibility */
-                min-height: 40vh; /* Minimum height for background */
+                height: auto;
+                padding: 20px 0;
+                min-height: 40vh;
             }
-            .services, .cta-section {
+            .services {
+                min-height: auto;
+                padding: 20px 0;
+            }
+            .cta-section {
                 height: 40vh;
             }
+            .hero-background, .services-background, .cta-background {
+                background-position: center center;
+                width: 100vw;
+                left: 50%;
+                transform: translateX(-50%);
+            }
             .hero .logo {
-                max-width: 160px; /* Doubled from 80px for mobile */
-                margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+                max-width: 160px;
+                margin-bottom: 5px;
             }
             .hero h1 {
                 font-size: 1.8em;
@@ -282,14 +319,47 @@
             .hero p {
                 font-size: 1em;
             }
+            .intro-section, .why-choose-section {
+                padding: 20px;
+            }
             .intro-section h2, .services h2, .why-choose-section h2 {
                 font-size: 1.5em;
             }
+            .intro-section p, .why-choose-section p {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .intro-section ul, .why-choose-section ul {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .service-grid {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 10px;
+                overflow-x: auto;
+            }
+            .service {
+                flex: 1 0 30%;
+                min-width: 100px;
+                padding: 10px;
+            }
             .service i {
-                font-size: 60px;
+                font-size: 40px;
+                margin-bottom: 8px;
+            }
+            .service h3 {
+                font-size: 1em;
+                margin-bottom: 0;
+            }
+            .service p {
+                display: none;
             }
             .cta-section p {
                 font-size: 1.2em;
+                padding: 8px;
             }
             footer {
                 padding: 15px 0;
