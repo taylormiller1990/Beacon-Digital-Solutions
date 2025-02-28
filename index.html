@@ -77,14 +77,14 @@
             box-sizing: border-box;
         }
         .hero {
-            height: 60vh; /* Fixed height for hero */
+            height: 60vh;
         }
         .services {
-            height: auto; /* Allow services to expand */
-            min-height: 60vh; /* Minimum for desktop */
+            height: auto;
+            min-height: 60vh;
         }
         .cta-section {
-            height: 60vh; /* Fixed height for CTA */
+            height: 60vh;
         }
         .hero-background, .services-background, .cta-background {
             position: absolute;
@@ -124,7 +124,7 @@
             transform: translateY(-50%);
         }
         .services-hero-content {
-            padding: 40px 20px; /* Natural padding for flow */
+            padding: 40px 20px;
         }
         .hero-content h1, .hero-content p, .hero-content .cta-button {
             color: #fff !important;
@@ -291,13 +291,13 @@
                 height: 40vh;
             }
             .services {
-                min-height: auto; /* Remove height constraint on mobile */
-                padding: 20px 0; /* Add padding for content visibility */
+                min-height: auto;
+                padding: 20px 0;
             }
             .services-hero-content {
-                padding: 20px; /* Consistent padding */
-                top: 0; /* Remove vertical centering */
-                transform: none; /* Remove transform */
+                padding: 20px;
+                top: 0;
+                transform: none;
             }
             .cta-section {
                 height: 40vh;
@@ -328,12 +328,28 @@
                 padding: 0 10px;
             }
             .service-grid {
-                grid-template-columns: 1fr;
+                display: flex; /* Side-by-side layout */
+                flex-direction: row;
+                justify-content: space-between; /* Distribute items evenly */
+                gap: 10px; /* Reduced gap for mobile */
                 padding: 10px;
-                gap: 15px;
+                overflow-x: auto; /* Fallback for very narrow screens */
+            }
+            .service {
+                flex: 1 0 30%; /* Each service takes ~30% of width */
+                min-width: 100px; /* Minimum width to prevent squashing */
+                padding: 10px; /* Reduced padding */
             }
             .service i {
-                font-size: 60px;
+                font-size: 40px; /* Smaller icons for mobile */
+                margin-bottom: 8px;
+            }
+            .service h3 {
+                font-size: 1em; /* Smaller titles */
+                margin-bottom: 0; /* Remove extra spacing */
+            }
+            .service p {
+                display: none; /* Hide descriptions on mobile */
             }
             .cta-section p {
                 font-size: 1.2em;
