@@ -22,6 +22,7 @@
             line-height: 1.6;
             background-color: #f5f5f5;
             color: #333;
+            overflow-x: hidden; /* Prevent horizontal scrolling on body */
         }
         header {
             background-color: #003366;
@@ -31,6 +32,7 @@
             top: 0;
             z-index: 1000;
             width: 100%;
+            box-sizing: border-box; /* Include padding in width */
         }
         .nav-container {
             max-width: 1200px;
@@ -38,6 +40,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-sizing: border-box;
+            padding: 0 10px; /* Add padding to prevent edge clipping */
         }
         .menu-toggle {
             display: none;
@@ -69,6 +73,7 @@
             width: 100%;
             margin: 0;
             overflow: hidden;
+            box-sizing: border-box; /* Ensure width includes padding */
         }
         .hero-background {
             position: absolute;
@@ -91,6 +96,8 @@
             top: 50%;
             transform: translateY(-50%);
             color: #fff;
+            width: 100%;
+            box-sizing: border-box;
         }
         .hero .logo {
             max-width: 150px;
@@ -105,12 +112,15 @@
         main {
             margin: 0;
             text-align: center;
+            width: 100%;
         }
         .about-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
             width: 100%;
+            box-sizing: border-box; /* Include padding in width */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .about-section img {
             max-width: 200px;
@@ -118,6 +128,7 @@
             border-radius: 50%;
             margin: 20px auto;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: block; /* Ensure image centers properly */
         }
         .about-section h2 {
             color: #003366;
@@ -147,6 +158,7 @@
             width: 100%;
             margin: 0;
             font-size: 0.9em;
+            box-sizing: border-box;
         }
         footer a {
             color: #00A8E8;
@@ -175,15 +187,23 @@
                 background-color: #003366;
                 padding: 20px;
                 gap: 15px;
+                box-sizing: border-box;
             }
             nav.active {
                 display: flex;
             }
             .nav-container {
                 justify-content: flex-end;
+                padding: 0 10px;
             }
             .hero {
                 height: 40vh;
+            }
+            .hero-background {
+                width: 100vw; /* Full viewport width */
+                left: 50%;
+                transform: translateX(-50%); /* Center horizontally */
+                background-position: center center;
             }
             .hero .logo {
                 max-width: 120px;
@@ -191,8 +211,15 @@
             .hero h1 {
                 font-size: 1.8em;
             }
+            .about-section {
+                padding: 20px;
+            }
             .about-section h2 {
                 font-size: 1.5em;
+            }
+            .about-section p {
+                max-width: 100%; /* Full width on mobile */
+                padding: 0 10px; /* Add padding to prevent edge clipping */
             }
             .about-section img {
                 max-width: 150px;
