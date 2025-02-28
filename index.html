@@ -24,7 +24,7 @@
             line-height: 1.6;
             background-color: #f5f5f5;
             color: #333;
-            overflow-x: hidden; /* Prevent horizontal scrolling on body */
+            overflow-x: hidden;
         }
         header {
             background-color: #003366;
@@ -34,7 +34,7 @@
             top: 0;
             z-index: 1000;
             width: 100%;
-            box-sizing: border-box; /* Include padding in width */
+            box-sizing: border-box;
         }
         .nav-container {
             max-width: 1200px;
@@ -43,7 +43,7 @@
             justify-content: space-between;
             align-items: center;
             box-sizing: border-box;
-            padding: 0 10px; /* Add padding to prevent edge clipping */
+            padding: 0 10px;
         }
         .menu-toggle {
             display: none;
@@ -71,11 +71,20 @@
         /* Hero Section Styles (for Sections 1, 3, 5) */
         .hero, .services, .cta-section {
             position: relative;
-            height: 60vh;
             width: 100%;
             margin: 0;
             overflow: hidden;
-            box-sizing: border-box; /* Ensure width includes padding */
+            box-sizing: border-box;
+        }
+        .hero {
+            height: 60vh; /* Fixed height for hero */
+        }
+        .services {
+            height: auto; /* Allow services to expand */
+            min-height: 60vh; /* Minimum for desktop */
+        }
+        .cta-section {
+            height: 60vh; /* Fixed height for CTA */
         }
         .hero-background, .services-background, .cta-background {
             position: absolute;
@@ -106,11 +115,16 @@
             z-index: 1;
             text-align: center;
             padding: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             color: #fff;
             width: 100%;
             box-sizing: border-box;
+        }
+        .hero-content, .cta-hero-content {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .services-hero-content {
+            padding: 40px 20px; /* Natural padding for flow */
         }
         .hero-content h1, .hero-content p, .hero-content .cta-button {
             color: #fff !important;
@@ -155,8 +169,8 @@
             margin: 0;
             color: #333;
             width: 100%;
-            box-sizing: border-box; /* Include padding in width */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
         .intro-section h2, .why-choose-section h2 {
             color: #003366;
@@ -174,7 +188,7 @@
             color: #333;
             list-style: none;
             padding: 0;
-            max-width: 800px; /* Constrain width */
+            max-width: 800px;
             margin: 0 auto;
         }
         .intro-section li, .why-choose-section li {
@@ -192,7 +206,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 20px;
-            max-width: 1200px; /* Constrain width */
+            max-width: 1200px;
             margin: 0 auto;
         }
         .service {
@@ -273,14 +287,26 @@
                 justify-content: flex-end;
                 padding: 0 10px;
             }
-            .hero, .services, .cta-section {
+            .hero {
+                height: 40vh;
+            }
+            .services {
+                min-height: auto; /* Remove height constraint on mobile */
+                padding: 20px 0; /* Add padding for content visibility */
+            }
+            .services-hero-content {
+                padding: 20px; /* Consistent padding */
+                top: 0; /* Remove vertical centering */
+                transform: none; /* Remove transform */
+            }
+            .cta-section {
                 height: 40vh;
             }
             .hero-background, .services-background, .cta-background {
-                background-position: center center; /* Ensure image stays centered */
-                width: 100vw; /* Full viewport width */
+                background-position: center center;
+                width: 100vw;
                 left: 50%;
-                transform: translateX(-50%); /* Center horizontally */
+                transform: translateX(-50%);
             }
             .hero .logo {
                 max-width: 80px;
@@ -298,11 +324,11 @@
                 font-size: 1.5em;
             }
             .intro-section ul, .why-choose-section ul {
-                max-width: 100%; /* Full width on mobile */
-                padding: 0 10px; /* Add padding to prevent edge clipping */
+                max-width: 100%;
+                padding: 0 10px;
             }
             .service-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
+                grid-template-columns: 1fr;
                 padding: 10px;
                 gap: 15px;
             }
