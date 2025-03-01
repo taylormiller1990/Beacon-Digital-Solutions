@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Taylor Miller, PMP and CSPO, founder of Beacon Digital Solutions, offering project management, digital transformation, and agile coaching services in Palm Beach, FL.">
-    <meta name="keywords" content="Taylor Miller, Beacon Digital Solutions, project management professional, certified scrum product owner, digital transformation, agile coaching, Palm Beach FL">
+    <meta name="description" content="Beacon Digital Solutions offers expert digital transformation services, including agile project management, solutions architecture, and more. With a dedicated team and proven experience, we help businesses innovate and succeed.">
+    <meta name="keywords" content="Beacon Digital Solutions, digital transformation, agile coaching, project management, solutions architecture, data engineering, API development, UI/UX design, business intelligence, Palm Beach FL">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P93ZDBJ3E4"></script>
     <script>
@@ -13,7 +13,9 @@
         gtag('js', new Date());
         gtag('config', 'G-P93ZDBJ3E4');
     </script>
-    <title>Beacon Digital Solutions - About</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Beacon Digital Solutions - Home</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -66,89 +68,184 @@
         nav a:hover {
             color: #00A8E8;
         }
-        /* Hero Section */
-        .hero {
+        /* Hero Section Styles */
+        .hero, .services, .cta-section {
             position: relative;
-            height: 60vh;
             width: 100%;
             margin: 0;
             overflow: hidden;
             box-sizing: border-box;
         }
-        .hero-background {
+        .hero {
+            min-height: 60vh;
+        }
+        .services {
+            min-height: 60vh;
+        }
+        .cta-section {
+            min-height: 60vh;
+        }
+        .hero-background, .services-background, .cta-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('digital_transformation.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            filter: brightness(0.7);
             z-index: 0;
         }
-        .hero-content {
+        .hero-background {
+            background-image: url('digital_transformation.jpg');
+            filter: brightness(0.7);
+        }
+        .services-background {
+            background-image: url('services-hero.jpg');
+            background-position: center 40%;
+            filter: brightness(1);
+        }
+        .cta-background {
+            background-image: url('cta-hero.jpg');
+            filter: brightness(0.8);
+        }
+        .hero-content, .services-hero-content, .cta-hero-content {
             position: relative;
             z-index: 1;
             text-align: center;
             padding: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             color: #fff;
             width: 100%;
             box-sizing: border-box;
         }
-        .hero .logo {
-            max-width: 200px; /* Doubled from 100px equivalent for desktop */
-            margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+        .hero-content, .cta-hero-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .services-hero-content {
+            padding: 40px 20px;
+        }
+        .hero-content h1, .hero-content p, .hero-content .cta-button {
+            color: #fff !important;
+        }
+        .hero-content img {
             filter: none !important;
+        }
+        .hero .logo {
+            max-width: 200px;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .hero h1 {
             font-size: 2.5em;
             margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .cta-button {
+            background-color: #1A2A44;
+            color: #fff !important;
+            padding: 12px 24px;
+            text-decoration: none;
             font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #0F1A2F;
         }
         main {
             margin: 0;
             text-align: center;
             width: 100%;
+            box-sizing: border-box;
         }
-        .about-section {
+        .intro-section, .why-choose-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
+            color: #333;
             width: 100%;
             box-sizing: border-box;
             overflow-x: hidden;
         }
-        .about-section img {
-            max-width: 200px;
-            height: auto;
-            border-radius: 50%;
-            margin: 20px auto;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: block;
-        }
-        .about-section h2 {
+        .intro-section h2, .why-choose-section h2 {
             color: #003366;
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
-            margin: 30px 0 15px 0;
+            margin-bottom: 20px;
         }
-        .about-section p {
+        .intro-section p, .why-choose-section p {
             font-size: 1.1em;
             max-width: 800px;
-            margin: 0 auto 20px auto;
+            margin: 0 auto;
             color: #333;
         }
-        .about-section a {
-            color: #003366;
-            text-decoration: none;
-            font-weight: bold;
+        .intro-section ul, .why-choose-section ul {
+            color: #333;
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
-        .about-section a:hover {
-            text-decoration: underline;
+        .intro-section li, .why-choose-section li {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .services h2 {
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            color: #333;
+        }
+        .service i {
+            font-size: 80px;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+        .service h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+        .service p {
+            color: #333;
+        }
+        .cta-section p {
+            font-size: 1.4em;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .cta-section .cta-button {
+            margin: 0 auto;
         }
         footer {
             background-color: #003366;
@@ -157,7 +254,6 @@
             padding: 20px 0;
             width: 100%;
             margin: 0;
-            font-size: 0.9em;
             box-sizing: border-box;
         }
         footer a {
@@ -181,7 +277,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 60px;
+                top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -196,40 +292,70 @@
                 justify-content: flex-end;
                 padding: 0 10px;
             }
-            .hero {
-                height: auto; /* Changed from 40vh to fit content */
-                padding: 20px 0; /* Add padding to ensure visibility */
-                min-height: 40vh; /* Minimum height for background */
+            .hero, .services, .cta-section {
+                min-height: 40vh;
+                padding: 20px 0;
             }
-            .hero-background {
-                width: 100vw;
-                left: 50%;
-                transform: translateX(-50%);
+            .hero-background, .services-background, .cta-background {
                 background-position: center center;
+                width: 100%;
+            }
+            .hero-content {
+                position: relative;
+                top: 0;
+                transform: none;
+                padding: 15px;
             }
             .hero .logo {
-                max-width: 160px; /* Doubled from 80px equivalent for mobile */
-                margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+                max-width: 160px;
+                margin-bottom: 10px;
             }
             .hero h1 {
                 font-size: 1.8em;
             }
-            .about-section {
+            .hero p {
+                font-size: 1em;
+            }
+            .intro-section, .why-choose-section {
                 padding: 20px;
             }
-            .about-section h2 {
+            .intro-section h2, .services h2, .why-choose-section h2 {
                 font-size: 1.5em;
             }
-            .about-section p {
+            .intro-section p, .why-choose-section p {
+                font-size: 1em;
                 max-width: 100%;
                 padding: 0 10px;
             }
-            .about-section img {
-                max-width: 150px;
+            .intro-section ul, .why-choose-section ul {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 15px;
+            }
+            .service {
+                padding: 15px;
+            }
+            .service i {
+                font-size: 60px;
+            }
+            .service h3 {
+                font-size: 1.2em;
+            }
+            .service p {
+                display: block;
+                font-size: 0.9em;
+            }
+            .cta-section p {
+                font-size: 1.2em;
+                padding: 8px;
             }
             footer {
                 padding: 15px 0;
-                font-size: 0.8em;
+                font-size: 0.9em;
             }
             footer img {
                 width: 18px;
@@ -249,33 +375,74 @@
             </nav>
         </div>
     </header>
-    <!-- Hero Section -->
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="beacon_digital_solutions.png" alt="Beacon Digital Solutions logo for project management and digital transformation" class="logo">
-            <h1>About Beacon Digital Solutions</h1>
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo for digital transformation and project management" class="logo">
+            <h1>Beacon Digital Solutions</h1>
+            <p>Your Partner in Digital Transformation: Expert Strategy, Agile Execution</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
         </div>
     </div>
     <main>
-        <!-- About Section -->
-        <section class="about-section">
-            <img src="Taylor_photo.jpg" alt="Taylor Miller, founder of Beacon Digital Solutions">
-            <p>Taylor Miller founded Beacon Digital Solutions in Palm Beach, FL, leveraging over a decade of expertise in project management, digital transformation, and agile methodologies.</p>
-            
-            <h2>Proven Expertise</h2>
-            <p>Taylor Miller has delivered transformative results across diverse sectors. As a consultant with Booz Allen Hamilton, Taylor established an Agile Engineering and Test Automation Services Center of Excellence for the USCIS Office of Information Technology as well as launching the agency’s first annual Product Owner Summit in Crystal City, Arlington, VA. At Pratt & Whitney’s Military Engines division under RTX, Taylor crafted a digital transformation strategy and, as Product Owner, led the digitization of critical business processes, earning numerous awards for innovation and collaboration. Enhancing a family-owned commercial refrigeration business with growth strategies further refined Taylor’s operational skills. Certified as a Project Management Professional (PMP) and Certified Scrum Product Owner (CSPO), Taylor blends strategic insight with actionable outcomes.</p>
-            
-            <h2>Driving Transformation</h2>
-            <p>Beacon Digital Solutions embodies Taylor Miller’s vision of transforming challenges into opportunities through tailored, results-oriented strategies that foster innovation and operational excellence.</p>
-            
-            <h2>Ready to Collaborate?</h2>
-            <p>Contact Taylor Miller at Beacon Digital Solutions to explore how this expertise can elevate your organization. <a href="contact.html">Reach out today</a>.</p>
+        <section class="intro-section">
+            <h2>Welcome to Beacon Digital Solutions</h2>
+            <p>At Beacon Digital Solutions, we specialize in guiding businesses through their digital transformation journey. Our comprehensive services include:</p>
+            <ul>
+                <li>Digital Transformation Strategy</li>
+                <li>Agile Project Management</li>
+                <li>Scrum and Agile Coaching</li>
+                <li>Solutions Architecture</li>
+                <li>Data Engineering</li>
+                <li>API Development</li>
+                <li>UI/UX Design</li>
+                <li>Business Intelligence and Analytics</li>
+            </ul>
+            <p>Our team of certified professionals, including a Certified Scrum Product Owner, Project Management Professional, Scrum Master, Solutions Architect, Data Engineer, API Developer, UI Developer, and Business Intelligence Engineer, is dedicated to delivering tailored solutions that meet your unique needs.</p>
+        </section>
+        <section class="services" id="services">
+            <div class="services-background"></div>
+            <div class="services-hero-content">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Digital Transformation Strategy</h3>
+                        <p>Expert guidance to navigate your digital journey.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Agile Project Management</h3>
+                        <p>Streamline your projects with agile methodologies.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Solutions Architecture</h3>
+                        <p>Design robust systems tailored to your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-choose-section">
+            <h2>Why Choose Beacon Digital Solutions?</h2>
+            <ul>
+                <li><strong>Extensive Experience:</strong> Our team brings insights from leading digital transformation projects in both large enterprises and small businesses.</li>
+                <li><strong>Dedicated Agile Team:</strong> Our fully staffed team ensures every aspect of your project is handled by experts, from strategy to execution.</li>
+                <li><strong>Tailored Solutions:</strong> We craft solutions aligned with your specific goals, informed by lean thinking from small business operations.</li>
+                <li><strong>Measurable Results:</strong> Our approach drives efficiency, innovation, and faster time-to-market for your business.</li>
+            </ul>
+        </section>
+        <section class="cta-section">
+            <div class="cta-background"></div>
+            <div class="cta-hero-content">
+                <p>Ready to kickstart your digital transformation? Reach out now!</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
         </section>
     </main>
     <footer>
         <p>© 2025 Beacon Digital Solutions | Palm Beach, FL</p>
-        <p>Follow Taylor Miller on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
+        <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
     </footer>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
