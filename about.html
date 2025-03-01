@@ -71,11 +71,11 @@
         /* Hero Section Styles */
         .hero {
             position: relative;
+            min-height: 60vh; /* Changed to min-height for flexibility */
             width: 100%;
             margin: 0;
             overflow: hidden;
             box-sizing: border-box;
-            height: 60vh;
         }
         .hero-background {
             position: absolute;
@@ -83,12 +83,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('about-hero.jpg'); /* Placeholder; replace with your image */
+            background-image: url('digital_transformation.jpg'); /* Consistent with other pages */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            z-index: 0;
             filter: brightness(0.7);
+            z-index: 0;
         }
         .hero-content {
             position: relative;
@@ -98,28 +98,31 @@
             color: #fff;
             width: 100%;
             box-sizing: border-box;
-            display: flex; /* Added for better alignment */
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Center content vertically */
-            min-height: 100%; /* Ensure it takes full height of parent */
-            top: 50%;
-            transform: translateY(-50%);
         }
-        .hero-content h1, .hero-content p {
-            color: #fff !important;
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
         }
         .hero .logo {
             max-width: 200px;
             margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            filter: none !important;
         }
         .hero h1 {
             font-size: 2.5em;
             margin: 0;
+            font-weight: bold;
+            color: #fff !important;
         }
         .hero p {
             font-size: 1.2em;
             margin: 10px 0;
+            color: #fff !important;
         }
         main {
             margin: 0;
@@ -146,8 +149,15 @@
         .about-section p, .team-section p {
             font-size: 1.1em;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             color: #333;
+        }
+        .founder-photo {
+            max-width: 300px; /* Adjusted for desktop */
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
         }
         .team-grid {
             display: grid;
@@ -200,7 +210,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 60px;
+                top: 100%; /* Adjusted to sit below header */
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -216,27 +226,22 @@
                 padding: 0 10px;
             }
             .hero {
-                height: auto;
-                min-height: 40vh;
+                min-height: 40vh; /* Flexible height for mobile */
                 padding: 20px 0;
-                display: flex; /* Added for stacking */
-                align-items: center;
             }
             .hero-background {
                 background-position: center center;
-                width: 100vw;
-                left: 50%;
-                transform: translateX(-50%);
+                width: 100%;
             }
             .hero-content {
-                position: static; /* Remove absolute positioning on mobile */
-                transform: none; /* Remove transform on mobile */
+                position: relative; /* Switch to relative for mobile flow */
+                top: 0;
+                transform: none; /* Remove transform for natural stacking */
                 padding: 15px;
             }
             .hero .logo {
                 max-width: 160px;
                 margin-bottom: 10px;
-                display: block; /* Ensure it’s visible */
             }
             .hero h1 {
                 font-size: 1.8em;
@@ -244,7 +249,6 @@
             }
             .hero p {
                 font-size: 1em;
-                margin: 10px 0;
             }
             .about-section, .team-section {
                 padding: 20px;
@@ -253,25 +257,24 @@
                 font-size: 1.5em;
             }
             .about-section p, .team-section p {
+                font-size: 1em;
                 max-width: 100%;
                 padding: 0 10px;
             }
+            .founder-photo {
+                max-width: 200px; /* Smaller for mobile */
+                margin: 15px auto;
+            }
             .team-grid {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                gap: 10px;
-                padding: 10px;
-                overflow-x: auto;
+                grid-template-columns: 1fr; /* Stack vertically on mobile */
+                padding: 15px;
+                gap: 15px;
             }
             .team-member {
-                flex: 1 0 30%;
-                min-width: 100px;
-                padding: 10px;
+                padding: 15px;
             }
             .team-member h3 {
-                font-size: 1em;
-                margin-bottom: 0;
+                font-size: 1.2em;
             }
             footer {
                 padding: 15px 0;
@@ -299,7 +302,7 @@
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="beacon_digital_solutions.png" alt="Beacon Digital Solutions logo" class="logo">
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo" class="logo">
             <h1>About Us</h1>
             <p>Empowering Your Business Through Digital Innovation</p>
         </div>
@@ -311,25 +314,28 @@
             <p>At Beacon Digital Solutions, our mission is to guide businesses through the complexities of digital transformation with clarity, expertise, and a commitment to excellence. Based in Palm Beach, FL, we combine strategic insight with hands-on execution to deliver measurable results that drive growth and innovation.</p>
             <p>We believe every business deserves tailored solutions that align with its unique goals. Whether you’re a small startup or a large enterprise, we’re here to light the way forward, leveraging our extensive experience and agile methodologies to transform challenges into opportunities.</p>
         </section>
-        <!-- Team Section -->
+        <!-- Team Section with Founder Photo -->
         <section class="team-section">
+            <h2>Meet Our Founder</h2>
+            <img src="Taylor_photo.jpg" alt="Taylor Miller, Founder of Beacon Digital Solutions" class="founder-photo">
+            <p>Hi, I’m Taylor Miller, the founder of Beacon Digital Solutions. With years of experience in digital transformation and a passion for helping businesses thrive, I started this company to bring personalized, expert solutions to organizations ready to embrace the future. As a Certified Scrum Product Owner and Project Management Professional, I lead our team with a focus on agility, innovation, and results.</p>
             <h2>Our Team</h2>
-            <p>Meet the dedicated professionals behind Beacon Digital Solutions. Our team brings together certified experts with diverse skills to ensure every project succeeds.</p>
+            <p>Our dedicated professionals bring diverse skills to ensure every project succeeds. Here’s a snapshot of our expertise:</p>
             <div class="team-grid">
                 <div class="team-member">
-                    <h3>Certified Scrum Product Owner</h3>
-                    <p>Prioritizing value and guiding product vision with expertise.</p>
-                </div>
-                <div class="team-member">
-                    <h3>Project Management Professional</h3>
-                    <p>Delivering projects on time and within scope.</p>
+                    <h3>Scrum Master</h3>
+                    <p>Facilitating agile teams for seamless execution.</p>
                 </div>
                 <div class="team-member">
                     <h3>Solutions Architect</h3>
                     <p>Designing robust systems for your digital needs.</p>
                 </div>
+                <div class="team-member">
+                    <h3>Data Engineer</h3>
+                    <p>Turning data into actionable insights.</p>
+                </div>
             </div>
-            <p>Our full team includes specialists in Data Engineering, API Development, UI/UX Design, and Business Intelligence, all working together to provide comprehensive solutions.</p>
+            <p>Our full team also includes specialists in API Development, UI/UX Design, and Business Intelligence, all working together to provide comprehensive solutions.</p>
         </section>
     </main>
     <footer>
@@ -343,4 +349,3 @@
     </script>
 </body>
 </html>
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
