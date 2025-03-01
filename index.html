@@ -190,15 +190,14 @@
         }
         .intro-section ul, .why-choose-section ul {
             color: #333;
-            list-style: none;
-            padding: 0;
+            list-style-type: disc; /* Added for visible bullets */
+            padding-left: 20px; /* Adjusted for bullet spacing */
             max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 0 auto 20px auto; /* Added bottom margin for spacing */
+            text-align: left; /* Align bullets to the left for readability */
         }
         .intro-section li, .why-choose-section li {
             margin-bottom: 10px;
-            text-align: center;
         }
         .services h2 {
             color: #fff;
@@ -329,7 +328,7 @@
             }
             .intro-section ul, .why-choose-section ul {
                 max-width: 100%;
-                padding: 0 10px;
+                padding-left: 30px; /* Adjusted for bullet spacing on mobile */
             }
             .service-grid {
                 grid-template-columns: 1fr; /* Stack vertically on mobile */
@@ -375,6 +374,7 @@
             </nav>
         </div>
     </header>
+    <!-- Section 1: Beacon Digital Solutions (Hero) -->
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
@@ -385,6 +385,7 @@
         </div>
     </div>
     <main>
+        <!-- Section 2: Welcome to Beacon Digital Solutions (No Hero) -->
         <section class="intro-section">
             <h2>Welcome to Beacon Digital Solutions</h2>
             <p>At Beacon Digital Solutions, we specialize in guiding businesses through their digital transformation journey. Our comprehensive services include:</p>
@@ -400,6 +401,7 @@
             </ul>
             <p>Our team of certified professionals, including a Certified Scrum Product Owner, Project Management Professional, Scrum Master, Solutions Architect, Data Engineer, API Developer, UI Developer, and Business Intelligence Engineer, is dedicated to delivering tailored solutions that meet your unique needs.</p>
         </section>
+        <!-- Section 3: Our Services (Hero) -->
         <section class="services" id="services">
             <div class="services-background"></div>
             <div class="services-hero-content">
@@ -423,6 +425,7 @@
                 </div>
             </div>
         </section>
+        <!-- Section 4: Why Choose Beacon Digital Solutions (No Hero) -->
         <section class="why-choose-section">
             <h2>Why Choose Beacon Digital Solutions?</h2>
             <ul>
@@ -432,6 +435,7 @@
                 <li><strong>Measurable Results:</strong> Our approach drives efficiency, innovation, and faster time-to-market for your business.</li>
             </ul>
         </section>
+        <!-- Section 5: CTA (Hero) -->
         <section class="cta-section">
             <div class="cta-background"></div>
             <div class="cta-hero-content">
