@@ -77,7 +77,7 @@
             box-sizing: border-box;
         }
         .hero {
-            min-height: 60vh; /* Changed to min-height for flexibility */
+            min-height: 60vh;
         }
         .services {
             min-height: 60vh;
@@ -119,7 +119,7 @@
             box-sizing: border-box;
         }
         .hero-content, .cta-hero-content {
-            position: absolute; /* Ensure it stays centered */
+            position: absolute;
             top: 50%;
             left: 0;
             transform: translateY(-50%);
@@ -136,7 +136,7 @@
         .hero .logo {
             max-width: 200px;
             margin-bottom: 5px;
-            display: block; /* Ensure visibility */
+            display: block;
             margin-left: auto;
             margin-right: auto;
         }
@@ -190,11 +190,11 @@
         }
         .intro-section ul, .why-choose-section ul {
             color: #333;
-            list-style-type: disc; /* Added for visible bullets */
-            padding-left: 20px; /* Adjusted for bullet spacing */
+            list-style-type: disc; /* Visible bullets */
             max-width: 800px;
-            margin: 0 auto 20px auto; /* Added bottom margin for spacing */
-            text-align: left; /* Align bullets to the left for readability */
+            margin: 0 auto 20px auto;
+            padding-left: 40px; /* Indent to shift bullets away from far left */
+            text-align: left; /* Keep text and bullets aligned left within the block */
         }
         .intro-section li, .why-choose-section li {
             margin-bottom: 10px;
@@ -276,7 +276,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 100%; /* Adjusted to sit below header */
+                top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -292,7 +292,7 @@
                 padding: 0 10px;
             }
             .hero, .services, .cta-section {
-                min-height: 40vh; /* Flexible height for mobile */
+                min-height: 40vh;
                 padding: 20px 0;
             }
             .hero-background, .services-background, .cta-background {
@@ -300,13 +300,13 @@
                 width: 100%;
             }
             .hero-content {
-                position: relative; /* Switch to relative for mobile flow */
+                position: relative;
                 top: 0;
-                transform: none; /* Remove transform for natural stacking */
+                transform: none;
                 padding: 15px;
             }
             .hero .logo {
-                max-width: 160px; /* Slightly smaller for mobile */
+                max-width: 160px;
                 margin-bottom: 10px;
             }
             .hero h1 {
@@ -328,10 +328,10 @@
             }
             .intro-section ul, .why-choose-section ul {
                 max-width: 100%;
-                padding-left: 30px; /* Adjusted for bullet spacing on mobile */
+                padding-left: 30px; /* Slightly smaller indent for mobile */
             }
             .service-grid {
-                grid-template-columns: 1fr; /* Stack vertically on mobile */
+                grid-template-columns: 1fr;
                 padding: 15px;
                 gap: 15px;
             }
@@ -345,7 +345,7 @@
                 font-size: 1.2em;
             }
             .service p {
-                display: block; /* Show descriptions on mobile */
+                display: block;
                 font-size: 0.9em;
             }
             .cta-section p {
