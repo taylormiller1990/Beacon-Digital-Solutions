@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Taylor Miller, PMP and CSPO, founder of Beacon Digital Solutions, offering project management, digital transformation, and agile coaching services in Palm Beach, FL.">
-    <meta name="keywords" content="Taylor Miller, Beacon Digital Solutions, project management professional, certified scrum product owner, digital transformation, agile coaching, Palm Beach FL">
+    <meta name="description" content="Learn about Beacon Digital Solutions, your expert partner in digital transformation. Discover our mission, team, and commitment to driving business success through innovative solutions.">
+    <meta name="keywords" content="Beacon Digital Solutions, about us, digital transformation, agile team, mission, Palm Beach FL">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P93ZDBJ3E4"></script>
     <script>
@@ -13,7 +13,9 @@
         gtag('js', new Date());
         gtag('config', 'G-P93ZDBJ3E4');
     </script>
-    <title>Beacon Digital Solutions - About</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Beacon Digital Solutions - About Us</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -66,10 +68,10 @@
         nav a:hover {
             color: #00A8E8;
         }
-        /* Hero Section */
+        /* Hero Section Styles */
         .hero {
             position: relative;
-            height: 60vh;
+            min-height: 60vh; /* Changed to min-height for flexibility */
             width: 100%;
             margin: 0;
             overflow: hidden;
@@ -81,7 +83,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('digital_transformation.jpg');
+            background-image: url('digital_transformation.jpg'); /* Consistent with other pages */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -93,62 +95,90 @@
             z-index: 1;
             text-align: center;
             padding: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             color: #fff;
             width: 100%;
             box-sizing: border-box;
         }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
         .hero .logo {
-            max-width: 200px; /* Doubled from 100px equivalent for desktop */
-            margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+            max-width: 200px;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             filter: none !important;
         }
         .hero h1 {
             font-size: 2.5em;
             margin: 0;
             font-weight: bold;
+            color: #fff !important;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #fff !important;
         }
         main {
             margin: 0;
             text-align: center;
             width: 100%;
+            box-sizing: border-box;
         }
-        .about-section {
+        /* Non-Hero Sections */
+        .about-section, .team-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
+            color: #333;
             width: 100%;
             box-sizing: border-box;
             overflow-x: hidden;
         }
-        .about-section img {
-            max-width: 200px;
-            height: auto;
-            border-radius: 50%;
-            margin: 20px auto;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: block;
-        }
-        .about-section h2 {
+        .about-section h2, .team-section h2 {
             color: #003366;
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
-            margin: 30px 0 15px 0;
+            margin-bottom: 20px;
         }
-        .about-section p {
+        .about-section p, .team-section p {
             font-size: 1.1em;
             max-width: 800px;
             margin: 0 auto 20px auto;
             color: #333;
         }
-        .about-section a {
-            color: #003366;
-            text-decoration: none;
-            font-weight: bold;
+        .founder-photo {
+            max-width: 300px; /* Adjusted for desktop */
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
         }
-        .about-section a:hover {
-            text-decoration: underline;
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .team-member {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            color: #333;
+        }
+        .team-member h3 {
+            color: #003366;
+            margin-bottom: 10px;
         }
         footer {
             background-color: #003366;
@@ -157,7 +187,6 @@
             padding: 20px 0;
             width: 100%;
             margin: 0;
-            font-size: 0.9em;
             box-sizing: border-box;
         }
         footer a {
@@ -181,7 +210,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 60px;
+                top: 100%; /* Adjusted to sit below header */
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -197,35 +226,55 @@
                 padding: 0 10px;
             }
             .hero {
-                height: auto; /* Changed from 40vh to fit content */
-                padding: 20px 0; /* Add padding to ensure visibility */
-                min-height: 40vh; /* Minimum height for background */
+                min-height: 40vh; /* Flexible height for mobile */
+                padding: 20px 0;
             }
             .hero-background {
-                width: 100vw;
-                left: 50%;
-                transform: translateX(-50%);
                 background-position: center center;
+                width: 100%;
+            }
+            .hero-content {
+                position: relative; /* Switch to relative for mobile flow */
+                top: 0;
+                transform: none; /* Remove transform for natural stacking */
+                padding: 15px;
             }
             .hero .logo {
-                max-width: 160px; /* Doubled from 80px equivalent for mobile */
-                margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+                max-width: 160px;
+                margin-bottom: 10px;
             }
             .hero h1 {
                 font-size: 1.8em;
+                margin: 10px 0;
             }
-            .about-section {
+            .hero p {
+                font-size: 1em;
+            }
+            .about-section, .team-section {
                 padding: 20px;
             }
-            .about-section h2 {
+            .about-section h2, .team-section h2 {
                 font-size: 1.5em;
             }
-            .about-section p {
+            .about-section p, .team-section p {
+                font-size: 1em;
                 max-width: 100%;
                 padding: 0 10px;
             }
-            .about-section img {
-                max-width: 150px;
+            .founder-photo {
+                max-width: 200px; /* Smaller for mobile */
+                margin: 15px auto;
+            }
+            .team-grid {
+                grid-template-columns: 1fr; /* Stack vertically on mobile */
+                padding: 15px;
+                gap: 15px;
+            }
+            .team-member {
+                padding: 15px;
+            }
+            .team-member h3 {
+                font-size: 1.2em;
             }
             footer {
                 padding: 15px 0;
@@ -253,29 +302,45 @@
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="beacon_digital_solutions.png" alt="Beacon Digital Solutions logo for project management and digital transformation" class="logo">
-            <h1>About Beacon Digital Solutions</h1>
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo" class="logo">
+            <h1>About Us</h1>
+            <p>Empowering Your Business Through Digital Innovation</p>
         </div>
     </div>
     <main>
         <!-- About Section -->
         <section class="about-section">
-            <img src="Taylor_photo.jpg" alt="Taylor Miller, founder of Beacon Digital Solutions">
-            <p>Taylor Miller founded Beacon Digital Solutions in Palm Beach, FL, leveraging over a decade of expertise in project management, digital transformation, and agile methodologies.</p>
-            
-            <h2>Proven Expertise</h2>
-            <p>Taylor Miller has delivered transformative results across diverse sectors. As a consultant with Booz Allen Hamilton, Taylor established an Agile Engineering and Test Automation Services Center of Excellence for the USCIS Office of Information Technology as well as launching the agency’s first annual Product Owner Summit in Crystal City, Arlington, VA. At Pratt & Whitney’s Military Engines division under RTX, Taylor crafted a digital transformation strategy and, as Product Owner, led the digitization of critical business processes, earning numerous awards for innovation and collaboration. Enhancing a family-owned commercial refrigeration business with growth strategies further refined Taylor’s operational skills. Certified as a Project Management Professional (PMP) and Certified Scrum Product Owner (CSPO), Taylor blends strategic insight with actionable outcomes.</p>
-            
-            <h2>Driving Transformation</h2>
-            <p>Beacon Digital Solutions embodies Taylor Miller’s vision of transforming challenges into opportunities through tailored, results-oriented strategies that foster innovation and operational excellence.</p>
-            
-            <h2>Ready to Collaborate?</h2>
-            <p>Contact Taylor Miller at Beacon Digital Solutions to explore how this expertise can elevate your organization. <a href="contact.html">Reach out today</a>.</p>
+            <h2>Our Mission</h2>
+            <p>At Beacon Digital Solutions, our mission is to guide businesses through the complexities of digital transformation with clarity, expertise, and a commitment to excellence. Based in Palm Beach, FL, we combine strategic insight with hands-on execution to deliver measurable results that drive growth and innovation.</p>
+            <p>We believe every business deserves tailored solutions that align with its unique goals. Whether you’re a small startup or a large enterprise, we’re here to light the way forward, leveraging our extensive experience and agile methodologies to transform challenges into opportunities.</p>
+        </section>
+        <!-- Team Section with Founder Photo -->
+        <section class="team-section">
+            <h2>Meet Our Founder</h2>
+            <img src="Taylor_photo.jpg" alt="Taylor Miller, Founder of Beacon Digital Solutions" class="founder-photo">
+            <p>Hi, I’m Taylor Miller, the founder of Beacon Digital Solutions. With years of experience in digital transformation and a passion for helping businesses thrive, I started this company to bring personalized, expert solutions to organizations ready to embrace the future. As a Certified Scrum Product Owner and Project Management Professional, I lead our team with a focus on agility, innovation, and results.</p>
+            <h2>Our Team</h2>
+            <p>Our dedicated professionals bring diverse skills to ensure every project succeeds. Here’s a snapshot of our expertise:</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Scrum Master</h3>
+                    <p>Facilitating agile teams for seamless execution.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Solutions Architect</h3>
+                    <p>Designing robust systems for your digital needs.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Data Engineer</h3>
+                    <p>Turning data into actionable insights.</p>
+                </div>
+            </div>
+            <p>Our full team also includes specialists in API Development, UI/UX Design, and Business Intelligence, all working together to provide comprehensive solutions.</p>
         </section>
     </main>
     <footer>
         <p>© 2025 Beacon Digital Solutions | Palm Beach, FL</p>
-        <p>Follow Taylor Miller on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
+        <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
     </footer>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
