@@ -69,7 +69,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            height: 60vh;
+            min-height: 60vh; /* Changed to min-height for flexibility */
             width: 100%;
             margin: 0;
             overflow: hidden;
@@ -93,26 +93,40 @@
             z-index: 1;
             text-align: center;
             padding: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             color: #fff;
             width: 100%;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
         }
         .hero .logo {
-            max-width: 200px; /* Doubled from 100px equivalent for desktop */
-            margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+            max-width: 200px;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             filter: none !important;
         }
         .hero h1 {
             font-size: 2.5em;
             margin: 0;
             font-weight: bold;
+            color: #fff !important;
         }
         main {
             margin: 0;
             text-align: center;
             width: 100%;
+            box-sizing: border-box;
         }
         .services-section {
             background-color: #fff;
@@ -187,7 +201,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 60px;
+                top: 100%; /* Adjusted to sit below header */
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -203,22 +217,26 @@
                 padding: 0 10px;
             }
             .hero {
-                height: auto; /* Changed from 40vh to fit content */
-                padding: 20px 0; /* Add padding to ensure visibility */
-                min-height: 40vh; /* Minimum height for background */
+                min-height: 40vh; /* Flexible height for mobile */
+                padding: 20px 0;
             }
             .hero-background {
-                width: 100vw;
-                left: 50%;
-                transform: translateX(-50%);
                 background-position: center center;
+                width: 100%;
+            }
+            .hero-content {
+                position: relative; /* Switch to relative for mobile flow */
+                top: 0;
+                transform: none; /* Remove transform for natural stacking */
+                padding: 15px;
             }
             .hero .logo {
-                max-width: 160px; /* Doubled from 80px equivalent for mobile */
-                margin-bottom: 5px; /* Reduced from 10px to bring closer to text */
+                max-width: 160px;
+                margin-bottom: 10px;
             }
             .hero h1 {
                 font-size: 1.8em;
+                margin: 10px 0;
             }
             .services-section {
                 padding: 20px;
@@ -230,8 +248,12 @@
                 font-size: 1.3em;
             }
             .service p {
+                font-size: 1em;
                 max-width: 100%;
                 padding: 0 10px;
+            }
+            .cta-button {
+                padding: 10px 20px;
             }
             footer {
                 padding: 15px 0;
@@ -259,7 +281,7 @@
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="beacon_digital_solutions.png" alt="Beacon Digital Solutions services logo for project management and digital transformation" class="logo">
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions services logo for project management and digital transformation" class="logo">
             <h1>Our Services</h1>
         </div>
     </div>

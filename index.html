@@ -68,7 +68,7 @@
         nav a:hover {
             color: #00A8E8;
         }
-        /* Hero Section Styles (for Sections 1, 3, 5) */
+        /* Hero Section Styles */
         .hero, .services, .cta-section {
             position: relative;
             width: 100%;
@@ -77,14 +77,13 @@
             box-sizing: border-box;
         }
         .hero {
-            height: 60vh;
+            min-height: 60vh;
         }
         .services {
-            height: auto;
             min-height: 60vh;
         }
         .cta-section {
-            height: 60vh;
+            min-height: 60vh;
         }
         .hero-background, .services-background, .cta-background {
             position: absolute;
@@ -120,7 +119,9 @@
             box-sizing: border-box;
         }
         .hero-content, .cta-hero-content {
+            position: absolute;
             top: 50%;
+            left: 0;
             transform: translateY(-50%);
         }
         .services-hero-content {
@@ -133,8 +134,11 @@
             filter: none !important;
         }
         .hero .logo {
-            max-width: 200px; /* Doubled from 100px for desktop */
-            margin-bottom: 5px; /* Reduced for closeness */
+            max-width: 200px;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .hero h1 {
             font-size: 2.5em;
@@ -163,7 +167,6 @@
             width: 100%;
             box-sizing: border-box;
         }
-        /* Non-Hero Sections (Welcome and Why Choose) */
         .intro-section, .why-choose-section {
             background-color: #fff;
             padding: 30px;
@@ -187,17 +190,15 @@
         }
         .intro-section ul, .why-choose-section ul {
             color: #333;
-            list-style: none;
-            padding: 0;
+            list-style-type: disc; /* Visible bullets */
             max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 0 auto 20px auto;
+            padding-left: 40px; /* Indent to shift bullets away from far left */
+            text-align: left; /* Keep text and bullets aligned left within the block */
         }
         .intro-section li, .why-choose-section li {
             margin-bottom: 10px;
-            text-align: center;
         }
-        /* Services Section (Hero) */
         .services h2 {
             color: #fff;
             font-size: 2em;
@@ -233,7 +234,6 @@
         .service p {
             color: #333;
         }
-        /* CTA Section (Hero) */
         .cta-section p {
             font-size: 1.4em;
             max-width: 800px;
@@ -276,7 +276,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 60px;
+                top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -291,27 +291,23 @@
                 justify-content: flex-end;
                 padding: 0 10px;
             }
-            .hero {
-                height: auto;
-                padding: 20px 0;
+            .hero, .services, .cta-section {
                 min-height: 40vh;
-            }
-            .services {
-                min-height: auto;
                 padding: 20px 0;
-            }
-            .cta-section {
-                height: 40vh;
             }
             .hero-background, .services-background, .cta-background {
                 background-position: center center;
-                width: 100vw;
-                left: 50%;
-                transform: translateX(-50%);
+                width: 100%;
+            }
+            .hero-content {
+                position: relative;
+                top: 0;
+                transform: none;
+                padding: 15px;
             }
             .hero .logo {
                 max-width: 160px;
-                margin-bottom: 5px;
+                margin-bottom: 10px;
             }
             .hero h1 {
                 font-size: 1.8em;
@@ -326,36 +322,31 @@
                 font-size: 1.5em;
             }
             .intro-section p, .why-choose-section p {
+                font-size: 1em;
                 max-width: 100%;
                 padding: 0 10px;
             }
             .intro-section ul, .why-choose-section ul {
                 max-width: 100%;
-                padding: 0 10px;
+                padding-left: 30px; /* Slightly smaller indent for mobile */
             }
             .service-grid {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                gap: 10px;
-                padding: 10px;
-                overflow-x: auto;
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 15px;
             }
             .service {
-                flex: 1 0 30%;
-                min-width: 100px;
-                padding: 10px;
+                padding: 15px;
             }
             .service i {
-                font-size: 40px;
-                margin-bottom: 8px;
+                font-size: 60px;
             }
             .service h3 {
-                font-size: 1em;
-                margin-bottom: 0;
+                font-size: 1.2em;
             }
             .service p {
-                display: none;
+                display: block;
+                font-size: 0.9em;
             }
             .cta-section p {
                 font-size: 1.2em;
@@ -363,7 +354,7 @@
             }
             footer {
                 padding: 15px 0;
-                font-size: 0.8em;
+                font-size: 0.9em;
             }
             footer img {
                 width: 18px;
@@ -387,7 +378,7 @@
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="beacon_digital_solutions.png" alt="Beacon Digital Solutions logo for digital transformation and project management" class="logo">
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo for digital transformation and project management" class="logo">
             <h1>Beacon Digital Solutions</h1>
             <p>Your Partner in Digital Transformation: Expert Strategy, Agile Execution</p>
             <a href="#services" class="cta-button">Explore Our Services</a>
