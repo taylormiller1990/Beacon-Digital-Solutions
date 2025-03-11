@@ -71,7 +71,7 @@
         /* Hero Section Styles */
         .hero {
             position: relative;
-            min-height: 60vh; /* Changed to min-height for flexibility */
+            min-height: 60vh;
             width: 100%;
             margin: 0;
             overflow: hidden;
@@ -83,7 +83,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('digital_transformation.jpg'); /* Consistent with other pages */
+            background-image: url('digital_transformation.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -153,7 +153,7 @@
             color: #333;
         }
         .founder-photo {
-            max-width: 300px; /* Adjusted for desktop */
+            max-width: 300px;
             height: auto;
             border-radius: 8px;
             margin: 20px auto;
@@ -179,6 +179,28 @@
         .team-member h3 {
             color: #003366;
             margin-bottom: 10px;
+        }
+        /* Toptal-like Skill Buttons */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 8px;
+        }
+        .skill-button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.9em;
+            color: #333;
+            border-radius: 15px;
+            cursor: default; /* Changed from pointer to match Toptal's non-clickable tags */
+            transition: background-color 0.3s ease;
+        }
+        .skill-button:hover {
+            background-color: #00A8E8;
+            color: #fff;
         }
         footer {
             background-color: #003366;
@@ -210,7 +232,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 100%; /* Adjusted to sit below header */
+                top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -226,7 +248,7 @@
                 padding: 0 10px;
             }
             .hero {
-                min-height: 40vh; /* Flexible height for mobile */
+                min-height: 40vh;
                 padding: 20px 0;
             }
             .hero-background {
@@ -234,9 +256,9 @@
                 width: 100%;
             }
             .hero-content {
-                position: relative; /* Switch to relative for mobile flow */
+                position: relative;
                 top: 0;
-                transform: none; /* Remove transform for natural stacking */
+                transform: none;
                 padding: 15px;
             }
             .hero .logo {
@@ -262,11 +284,11 @@
                 padding: 0 10px;
             }
             .founder-photo {
-                max-width: 200px; /* Smaller for mobile */
+                max-width: 200px;
                 margin: 15px auto;
             }
             .team-grid {
-                grid-template-columns: 1fr; /* Stack vertically on mobile */
+                grid-template-columns: 1fr;
                 padding: 15px;
                 gap: 15px;
             }
@@ -275,6 +297,10 @@
             }
             .team-member h3 {
                 font-size: 1.2em;
+            }
+            .skill-button {
+                font-size: 0.8em;
+                padding: 5px 10px;
             }
             footer {
                 padding: 15px 0;
@@ -314,11 +340,26 @@
             <p>At Beacon Digital Solutions, our mission is to guide businesses through the complexities of digital transformation with clarity, expertise, and a commitment to excellence. Based in Palm Beach, FL, we combine strategic insight with hands-on execution to deliver measurable results that drive growth and innovation.</p>
             <p>We believe every business deserves tailored solutions that align with its unique goals. Whether you’re a small startup or a large enterprise, we’re here to light the way forward, leveraging our extensive experience and agile methodologies to transform challenges into opportunities.</p>
         </section>
-        <!-- Team Section with Founder Photo -->
+        <!-- Team Section with Founder Photo and Skill Buttons -->
         <section class="team-section">
             <h2>Meet Our Founder</h2>
-            <img src="Taylor_photo.jpg" alt="Taylor Miller, Founder of Beacon Digital Solutions" class="founder-photo">
-            <p>Hi, I’m Taylor Miller, the founder of Beacon Digital Solutions. With years of experience in digital transformation and a passion for helping businesses thrive, I started this company to bring personalized, expert solutions to organizations ready to embrace the future. As a Certified Scrum Product Owner and Project Management Professional, I lead our team with a focus on agility, innovation, and results.</p>
+            <img src="Taylor_photo.jpg" alt="Taylor Miller, Owner and Lead Program / Product Manager" class="founder-photo">
+            <h3>Taylor Miller</h3>
+            <p>Owner and Lead Program / Product Manager</p>
+            <div class="skills">
+                <button class="skill-button">Program Management</button>
+                <button class="skill-button">Project Management</button>
+                <button class="skill-button">Digital Transformation</button>
+                <button class="skill-button">Financial Digitization</button>
+                <button class="skill-button">Data Products</button>
+                <button class="skill-button">API Development</button>
+                <button class="skill-button">Dashboards</button>
+                <button class="skill-button">Agile Methodologies</button>
+                <button class="skill-button">Change Management</button>
+                <button class="skill-button">Mid-Sized Business Focus</button>
+                <button class="skill-button">Results-Oriented Approach</button>
+            </div>
+            <p>Hi, I’m Taylor Miller, the founder of Beacon Digital Solutions. With over 13 years of experience in digital transformation and a passion for helping businesses thrive, I started this company to bring personalized, expert solutions to mid-sized organizations ready to embrace the future. As a Certified Scrum Product Owner and Project Management Professional, I lead our team with a focus on agility, innovation, and results.</p>
             <h2>Our Team</h2>
             <p>Our dedicated professionals bring diverse skills to ensure every project succeeds. Here’s a snapshot of our expertise:</p>
             <div class="team-grid">
