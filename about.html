@@ -127,7 +127,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .ABOUT-section, .team-section {
+        .about-section, .team-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
@@ -231,7 +231,7 @@
             max-width: 1200px;
             margin: 0 auto;
             box-sizing: border-box;
-            justify-content: center; /* Center the grid items horizontally */
+            justify-content: center;
         }
         .team-member {
             background-color: #f5f5f5;
@@ -240,7 +240,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             text-align: center;
             color: #333;
-            max-width: 300px; /* Limit card width for consistency */
+            max-width: 300px;
         }
         .team-member i {
             font-size: 50px;
@@ -251,6 +251,40 @@
         .team-member h3 {
             color: #003366;
             margin-bottom: 10px;
+        }
+        .rtx-awards-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Single row with 5 columns for desktop */
+            gap: 10px; /* Reduced gap for tighter fit */
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            justify-content: center;
+        }
+        .award-item {
+            background-color: #f5f5f5;
+            padding: 15px; /* Reduced padding to fit in single row */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            color: #333;
+            max-width: 100%; /* Adjusted from 300px to fit grid */
+        }
+        .award-item i {
+            font-size: 40px; /* Slightly reduced for compactness */
+            color: #003366;
+            margin-bottom: 8px; /* Adjusted spacing */
+            display: block;
+        }
+        .award-item h3 {
+            color: #003366;
+            font-size: 1.1em; /* Reduced for fit */
+            margin-bottom: 8px; /* Adjusted spacing */
+        }
+        .award-item p {
+            font-size: 0.9em; /* Reduced for fit */
+            margin: 0; /* Tightened spacing */
         }
         footer {
             background-color: #003366;
@@ -348,19 +382,24 @@
                 font-size: 1em;
             }
             .team-grid {
-                grid-template-columns: 1fr; /* Single column for mobile */
+                grid-template-columns: 1fr;
                 padding: 15px;
                 gap: 15px;
-                justify-content: center; /* Maintain centering on mobile */
+                justify-content: center;
             }
-            .team-member {
+            .rtx-awards-grid {
+                grid-template-columns: 1fr; /* Single column for mobile */
+                gap: 15px; /* Consistent with other mobile grids */
                 padding: 15px;
-                max-width: 100%; /* Full width on mobile for readability */
             }
-            .team-member i {
+            .team-member, .award-item {
+                padding: 15px;
+                max-width: 100%;
+            }
+            .team-member i, .award-item i {
                 font-size: 40px;
             }
-            .team-member h3 {
+            .team-member h3, .award-item h3 {
                 font-size: 1.2em;
             }
             .skill-button {
@@ -405,7 +444,7 @@
             <p>At Beacon Digital Solutions, our mission is to guide businesses through the complexities of digital transformation with clarity, expertise, and a commitment to excellence. Based in Palm Beach, FL, we combine strategic insight with hands-on execution to deliver measurable results that drive growth and innovation.</p>
             <p>We believe every business deserves tailored solutions that align with its unique goals. Whether you’re a small startup or a large enterprise, we’re here to light the way forward, leveraging our extensive experience and agile methodologies to transform challenges into opportunities.</p>
         </section>
-        <!-- Team Section with Founder Photo, Name, Title, and Experience -->
+        <!-- Team Section with Founder Photo, Name, Title, Experience, and Awards -->
         <section class="team-section">
             <h2>Meet Our Founder</h2>
             <div class="founder-container">
@@ -441,6 +480,40 @@
                         <h4>Coastline Cooling</h4>
                         <p>At Coastline Cooling, Taylor implemented lean process improvements, digitizing operations for a small business, boosting efficiency, and laying the groundwork for scalable growth.</p>
                     </div>
+                </div>
+            </div>
+            <!-- New Awards Section -->
+            <h2>Awards & Recognition</h2>
+            <div class="rtx-awards-grid">
+                <div class="award-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <img src="rtx_logo.png" alt="RTX Logo" class="rtx-logo" style="max-width: 50px; margin-bottom: 10px;">
+                    <h3>Innovation Award 2022</h3>
+                    <p>For strategy for digitizing the Conceptual Design process</p>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-handshake"></i>
+                    <img src="rtx_logo.png" alt="RTX Logo" class="rtx-logo" style="max-width: 50px; margin-bottom: 10px;">
+                    <h3>Collaboration Award 2022</h3>
+                    <p>For organizing an initiative effectively in a cross functional environment</p>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <img src="rtx_logo.png" alt="RTX Logo" class="rtx-logo" style="max-width: 50px; margin-bottom: 10px;">
+                    <h3>Innovation Award 2023</h3>
+                    <p>For delivering a strategic digital initiative</p>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-trophy"></i>
+                    <img src="rtx_logo.png" alt="RTX Logo" class="rtx-logo" style="max-width: 50px; margin-bottom: 10px;">
+                    <h3>Leadership Award 2024</h3>
+                    <p>For effective leadership in digital transformation</p>
+                </div>
+                <div class="award-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <img src="rtx_logo.png" alt="RTX Logo" class="rtx-logo" style="max-width: 50px; margin-bottom: 10px;">
+                    <h3>Innovation Award 2024</h3>
+                    <p>For delivering a digital program financial process driving over $4M in annual benefit</p>
                 </div>
             </div>
             <h2>Our Team</h2>
