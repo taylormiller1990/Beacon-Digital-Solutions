@@ -253,44 +253,27 @@
             color: #003366;
             margin-bottom: 10px;
         }
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
+        /* Toptal-like Skill Buttons */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 8px;
         }
-        .award {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-        .award i {
-            font-size: 50px;
-            color: #003366;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .award img {
-            width: 50px;
-            height: auto;
-            margin-bottom: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .award h3 {
-            color: #003366;
-            font-size: 1.2em;
-            margin: 0 0 5px 0;
-        }
-        .award p {
-            color: #555;
+        .skill-button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 6px 12px;
             font-size: 0.9em;
-            margin: 0;
+            color: #333;
+            border-radius: 15px;
+            cursor: default; /* Changed from pointer to match Toptal's non-clickable tags */
+            transition: background-color 0.3s ease;
+        }
+        .skill-button:hover {
+            background-color: #00A8E8;
+            color: #fff;
         }
         footer {
             background-color: #003366;
@@ -379,35 +362,9 @@
             }
             .founder-photo {
                 max-width: 200px;
-                margin: 0 auto;
+                margin: 15px auto;
             }
-            .founder-photo-container h3 {
-                font-size: 1.3em;
-                margin: 10px 0 5px 0;
-            }
-            .founder-photo-container p {
-                font-size: 1em;
-            }
-            .founder-bio {
-                text-align: center;
-            }
-            .skills {
-                margin-bottom: 15px; /* Slightly reduced for mobile */
-            }
-            .experience img {
-                width: 40px;
-            }
-            .experience .booz-allen-logo {
-                width: 60px; /* Adjusted for mobile */
-            }
-            .experience h4 {
-                font-size: 1.1em;
-            }
-            .skill-button {
-                font-size: 0.8em;
-                padding: 5px 10px;
-            }
-            .team-grid, .awards-grid {
+            .team-grid {
                 grid-template-columns: 1fr;
                 padding: 15px;
                 gap: 15px;
@@ -421,8 +378,9 @@
             .team-member h3, .award h3 {
                 font-size: 1.2em;
             }
-            .award img {
-                width: 40px;
+            .skill-button {
+                font-size: 0.8em;
+                padding: 5px 10px;
             }
             footer {
                 padding: 15px 0;
@@ -462,82 +420,28 @@
             <p>At Beacon Digital Solutions, our mission is to guide businesses through the complexities of digital transformation with clarity, expertise, and a commitment to excellence. Based in Palm Beach, FL, we combine strategic insight with hands-on execution to deliver measurable results that drive growth and innovation.</p>
             <p>We believe every business deserves tailored solutions that align with its unique goals. Whether you’re a small startup or a large enterprise, we’re here to light the way forward, leveraging our extensive experience and agile methodologies to transform challenges into opportunities.</p>
         </section>
-        <!-- Team Section with Founder Photo and Awards -->
+        <!-- Team Section with Founder Photo and Skill Buttons -->
         <section class="team-section">
             <h2>Meet Our Founder</h2>
-            <div class="founder-container">
-                <div class="founder-photo-container">
-                    <img src="Taylor_photo.jpg" alt="Taylor Miller, Owner and Lead Program / Product Manager" class="founder-photo">
-                    <h3>Taylor Miller</h3>
-                    <p>Owner and Lead Program / Product Manager</p>
-                </div>
-                <div class="founder-bio">
-                    <div class="skills">
-                        <button class="skill-button">Program Management</button>
-                        <button class="skill-button">Project Management</button>
-                        <button class="skill-button">Digital Transformation</button>
-                        <button class="skill-button">Financial Digitization</button>
-                        <button class="skill-button">Data Products</button>
-                        <button class="skill-button">Dashboards</button>
-                        <button class="skill-button">Agile Methodologies</button>
-                        <button class="skill-button">Change Management</button>
-                        <button class="skill-button">Digital Strategy</button>
-                    </div>
-                    <div class="experience">
-                        <img src="pratt_whitney.png" alt="Pratt & Whitney Logo">
-                        <h4>Digital Program Manager - Pratt & Whitney</h4>
-                        <p>Currently, Taylor leads digital transformation initiatives at Pratt & Whitney, delivering program financial management solutions that reduced process execution time by 62%, saving over $4M annually.</p>
-                    </div>
-                    <div class="experience">
-                        <img src="booz_allen.png" alt="Booz Allen Hamilton Logo" class="booz-allen-logo">
-                        <h4>Program Manager - Booz Allen Hamilton</h4>
-                        <p>At Booz Allen Hamilton, Taylor drove the transformation of DHS USCIS, embedding Agile Engineering and Test Automation into their Office of Information Technology. He also spearheaded the inaugural Product Owner Summit, uniting leaders to share IT product ownership best practices.</p>
-                    </div>
-                    <div class="experience">
-                        <img src="coastline_cooling.png" alt="Coastline Cooling Logo">
-                        <h4>Director of Service - Coastline Cooling</h4>
-                        <p>At his family’s business, Coastline Cooling, Taylor served as Director of Service, overseeing operations and implementing process improvements that enhanced efficiency and customer satisfaction.</p>
-                    </div>
-                </div>
+            <img src="Taylor_photo.jpg" alt="Taylor Miller, Owner and Lead Program / Product Manager" class="founder-photo">
+            <h3>Taylor Miller</h3>
+            <p>Owner and Lead Program / Product Manager</p>
+            <div class="skills">
+                <button class="skill-button">Program Management</button>
+                <button class="skill-button">Project Management</button>
+                <button class="skill-button">Digital Transformation</button>
+                <button class="skill-button">Financial Digitization</button>
+                <button class="skill-button">Data Products</button>
+                <button class="skill-button">API Development</button>
+                <button class="skill-button">Dashboards</button>
+                <button class="skill-button">Agile Methodologies</button>
+                <button class="skill-button">Change Management</button>
+                <button class="skill-button">Mid-Sized Business Focus</button>
+                <button class="skill-button">Results-Oriented Approach</button>
             </div>
-            <!-- Awards Subsection -->
-            <h2>Awards & Recognition</h2>
-            <p>My work has been recognized with multiple awards at Raytheon Technologies, reflecting a track record of excellence in innovation, efficiency, and leadership:</p>
-            <div class="awards-grid">
-                <div class="award">
-                    <i class="fas fa-trophy"></i>
-                    <img src="RTX_logo.png" alt="RTX Logo">
-                    <h3>Innovation Award 2022</h3>
-                    <p>For digital strategy in conceptual design process.</p>
-                </div>
-                <div class="award">
-                    <i class="fas fa-medal"></i>
-                    <img src="RTX_logo.png" alt="RTX Logo">
-                    <h3>Organizational Effectiveness Award 2022</h3>
-                    <p>For driving efficiency across the Product Lifecycle Management cross functional team.</p>
-                </div>
-                <div class="award">
-                    <i class="fas fa-award"></i>
-                    <img src="RTX_logo.png" alt="RTX Logo">
-                    <h3>Product Delivery Award 2023</h3>
-                    <p>For delivering high-impact digital engineering projects on time and budget.</p>
-                </div>
-                <div class="award">
-                    <i class="fas fa-trophy"></i>
-                    <img src="RTX_logo.png" alt="RTX Logo">
-                    <h3>Leadership Award 2024</h3>
-                    <p>For exceptional leadership in digital transformation.</p>
-                </div>
-                <div class="award">
-                    <i class="fas fa-medal"></i>
-                    <img src="RTX_logo.png" alt="RTX Logo">
-                    <h3>Innovation Award 2024</h3>
-                    <p>For delivering 46 data products enabling automated financial management processes.</p>
-                </div>
-            </div>
-            <!-- Updated Team Section -->
-            <h2>Our Team Expertise</h2>
-            <p>Want a fully dedicated agile team? We have proven experience in leading IT product delivery teams in digital transformation:</p>
+            <p>Hi, I’m Taylor Miller, the founder of Beacon Digital Solutions. With over 13 years of experience in digital transformation and a passion for helping businesses thrive, I started this company to bring personalized, expert solutions to mid-sized organizations ready to embrace the future. As a Certified Scrum Product Owner and Project Management Professional, I lead our team with a focus on agility, innovation, and results.</p>
+            <h2>Our Team</h2>
+            <p>Our dedicated professionals bring diverse skills to ensure every project succeeds. Here’s a snapshot of our expertise:</p>
             <div class="team-grid">
                 <div class="team-member">
                     <i class="fas fa-running"></i>
