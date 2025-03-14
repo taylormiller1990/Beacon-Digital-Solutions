@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Beacon Digital Solutions, your expert partner in digital transformation. Discover our mission, team, and commitment to driving business success through innovative solutions.">
-    <meta name="keywords" content="Beacon Digital Solutions, about us, digital transformation, agile team, mission, Palm Beach FL">
+    <meta name="description" content="Learn about Beacon Digital Solutions and Taylor Miller’s 13+ years of digital transformation expertise at Booz Allen Hamilton, Pratt & Whitney, and Coastline Cooling, delivering $4M in savings and innovative solutions.">
+    <meta name="keywords" content="Beacon Digital Solutions, Taylor Miller, digital transformation, Booz Allen Hamilton, Pratt & Whitney, Coastline Cooling, Palm Beach FL">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P93ZDBJ3E4"></script>
     <script>
@@ -97,8 +97,6 @@
             color: #fff;
             width: 100%;
             box-sizing: border-box;
-        }
-        .hero-content {
             position: absolute;
             top: 50%;
             left: 0;
@@ -129,7 +127,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .about-section, .team-section {
+        .ABOUT-section, .team-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
@@ -154,10 +152,10 @@
         .founder-container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             max-width: 1200px;
             margin: 20px auto;
-            gap: 20px;
+            gap: 30px;
         }
         .founder-photo-container {
             flex-shrink: 0;
@@ -177,7 +175,7 @@
         }
         .founder-photo-container p {
             font-size: 1.1em;
-            margin: 0;
+            margin: 0 0 15px 0;
             color: #555;
         }
         .founder-bio {
@@ -185,7 +183,7 @@
             text-align: left;
         }
         .skills {
-            margin-bottom: 20px; /* Added space between skills and experience */
+            margin-bottom: 20px;
         }
         .experience {
             margin-bottom: 15px;
@@ -197,7 +195,7 @@
             margin-right: 10px;
         }
         .experience .booz-allen-logo {
-            width: 75px; /* Increased size for Booz Allen logo */
+            width: 75px;
         }
         .experience h4 {
             color: #003366;
@@ -205,7 +203,6 @@
             margin: 0 0 5px 0;
             display: inline-block;
         }
-        /* Skill Buttons */
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -234,6 +231,7 @@
             max-width: 1200px;
             margin: 0 auto;
             box-sizing: border-box;
+            justify-content: center; /* Center the grid items horizontally */
         }
         .team-member {
             background-color: #f5f5f5;
@@ -242,6 +240,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             text-align: center;
             color: #333;
+            max-width: 300px; /* Limit card width for consistency */
         }
         .team-member i {
             font-size: 50px;
@@ -252,28 +251,6 @@
         .team-member h3 {
             color: #003366;
             margin-bottom: 10px;
-        }
-        /* Toptal-like Skill Buttons */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 10px;
-            gap: 8px;
-        }
-        .skill-button {
-            background-color: #f0f0f0;
-            border: none;
-            padding: 6px 12px;
-            font-size: 0.9em;
-            color: #333;
-            border-radius: 15px;
-            cursor: default; /* Changed from pointer to match Toptal's non-clickable tags */
-            transition: background-color 0.3s ease;
-        }
-        .skill-button:hover {
-            background-color: #00A8E8;
-            color: #fff;
         }
         footer {
             background-color: #003366;
@@ -364,18 +341,26 @@
                 max-width: 200px;
                 margin: 15px auto;
             }
+            .founder-photo-container h3 {
+                font-size: 1.3em;
+            }
+            .founder-photo-container p {
+                font-size: 1em;
+            }
             .team-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Single column for mobile */
                 padding: 15px;
                 gap: 15px;
+                justify-content: center; /* Maintain centering on mobile */
             }
-            .team-member, .award {
+            .team-member {
                 padding: 15px;
+                max-width: 100%; /* Full width on mobile for readability */
             }
-            .team-member i, .award i {
+            .team-member i {
                 font-size: 40px;
             }
-            .team-member h3, .award h3 {
+            .team-member h3 {
                 font-size: 1.2em;
             }
             .skill-button {
@@ -420,51 +405,78 @@
             <p>At Beacon Digital Solutions, our mission is to guide businesses through the complexities of digital transformation with clarity, expertise, and a commitment to excellence. Based in Palm Beach, FL, we combine strategic insight with hands-on execution to deliver measurable results that drive growth and innovation.</p>
             <p>We believe every business deserves tailored solutions that align with its unique goals. Whether you’re a small startup or a large enterprise, we’re here to light the way forward, leveraging our extensive experience and agile methodologies to transform challenges into opportunities.</p>
         </section>
-        <!-- Team Section with Founder Photo and Skill Buttons -->
+        <!-- Team Section with Founder Photo, Name, Title, and Experience -->
         <section class="team-section">
             <h2>Meet Our Founder</h2>
-            <img src="Taylor_photo.jpg" alt="Taylor Miller, Owner and Lead Program / Product Manager" class="founder-photo">
-            <h3>Taylor Miller</h3>
-            <p>Owner and Lead Program / Product Manager</p>
-            <div class="skills">
-                <button class="skill-button">Program Management</button>
-                <button class="skill-button">Project Management</button>
-                <button class="skill-button">Digital Transformation</button>
-                <button class="skill-button">Financial Digitization</button>
-                <button class="skill-button">Data Products</button>
-                <button class="skill-button">API Development</button>
-                <button class="skill-button">Dashboards</button>
-                <button class="skill-button">Agile Methodologies</button>
-                <button class="skill-button">Change Management</button>
-                <button class="skill-button">Mid-Sized Business Focus</button>
-                <button class="skill-button">Results-Oriented Approach</button>
+            <div class="founder-container">
+                <div class="founder-photo-container">
+                    <img src="Taylor_photo.jpg" alt="Taylor Miller, Owner and Lead Program / Product Manager" class="founder-photo">
+                    <h3>Taylor Miller</h3>
+                    <p>Owner and Lead Program / Product Manager</p>
+                </div>
+                <div class="founder-bio">
+                    <div class="skills">
+                        <button class="skill-button">Program Management</button>
+                        <button class="skill-button">Project Management</button>
+                        <button class="skill-button">Digital Transformation</button>
+                        <button class="skill-button">Financial Digitization</button>
+                        <button class="skill-button">Data Products</button>
+                        <button class="skill-button">API Development</button>
+                        <button class="skill-button">Dashboards</button>
+                        <button class="skill-button">Agile Methodologies</button>
+                        <button class="skill-button">Change Management</button>
+                    </div>
+                    <div class="experience">
+                        <img src="pratt_whitney.png" alt="Pratt & Whitney Logo" class="company-logo">
+                        <h4>Pratt & Whitney</h4>
+                        <p>At Pratt & Whitney, I spearheaded Program Financial Management improvements, developing 46 data products and APIs that reduced process times to up to 38% of the original time, saving $4M annually through streamlined workflows and Business Intelligence solutions.</p>
+                    </div>
+                    <div class="experience">
+                        <img src="booz_allen.png" alt="Booz Allen Hamilton Logo" class="company-logo booz-allen-logo">
+                        <h4>Booz Allen Hamilton</h4>
+                        <p>At Booz Allen Hamilton, I led Agile Engineering efforts for DHS USCIS, transforming IT delivery with Scrum practices, enhancing system efficiency, and driving rapid adaptation to federal needs.</p>
+                    </div>
+                    <div class="experience">
+                        <img src="coastline_cooling.png" alt="Coastline Cooling Logo" class="company-logo">
+                        <h4>Coastline Cooling</h4>
+                        <p>At Coastline Cooling, I implemented lean process improvements, digitizing operations for a small business, boosting efficiency, and laying the groundwork for scalable growth.</p>
+                    </div>
+                </div>
             </div>
-            <p>Hi, I’m Taylor Miller, the founder of Beacon Digital Solutions. With over 13 years of experience in digital transformation and a passion for helping businesses thrive, I started this company to bring personalized, expert solutions to mid-sized organizations ready to embrace the future. As a Certified Scrum Product Owner and Project Management Professional, I lead our team with a focus on agility, innovation, and results.</p>
             <h2>Our Team</h2>
-            <p>Our dedicated professionals bring diverse skills to ensure every project succeeds. Here’s a snapshot of our expertise:</p>
+            <p>Need a fully dedicated Agile team? With Beacon Digital Solutions’ leadership, we have experience guiding the following types of IT professionals to deliver transformative results:</p>
             <div class="team-grid">
                 <div class="team-member">
-                    <i class="fas fa-running"></i>
-                    <h3>Agile Program Leadership</h3>
-                    <p>Driving projects with Scrum and agile best practices for rapid, reliable results.</p>
+                    <i class="fas fa-tasks"></i>
+                    <h3>Product Managers</h3>
+                    <p>Guiding product vision and delivery, under Taylor’s direction as your Senior PM.</p>
                 </div>
                 <div class="team-member">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Process Digitization</h3>
-                    <p>Transforming workflows into automated, data-driven systems.</p>
-                </div>
-                <div class="team-member">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Data & Analytics Solutions</h3>
-                    <p>Building dashboards and data products for actionable insights.</p>
+                    <i class="fas fa-database"></i>
+                    <h3>Data Transformation Engineers</h3>
+                    <p>Turning raw data into actionable insights with advanced engineering.</p>
                 </div>
                 <div class="team-member">
                     <i class="fas fa-plug"></i>
-                    <h3>API & System Integration</h3>
-                    <p>Connecting tools and platforms for seamless operations.</p>
+                    <h3>API Developers</h3>
+                    <p>Building seamless integrations for efficient system connectivity.</p>
+                </div>
+                <div class="team-member">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Developers</h3>
+                    <p>Crafting intuitive interfaces for optimal user experiences.</p>
+                </div>
+                <div class="team-member">
+                    <i class="fas fa-running"></i>
+                    <h3>Scrum Masters</h3>
+                    <p>Leading Agile teams to deliver rapid, reliable outcomes.</p>
+                </div>
+                <div class="team-member">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>Solutions Architects</h3>
+                    <p>Designing robust systems for long-term success.</p>
                 </div>
             </div>
-            <p>We assemble the right expertise—spanning development, design, and strategy—to meet your unique needs, all under Taylor's direction as your Senior PM.</p>
         </section>
     </main>
     <footer>
