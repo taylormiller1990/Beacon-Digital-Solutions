@@ -127,7 +127,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .about-section, .team-section {
+        .about-section, .team-section, .awards-section, .our-team-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
@@ -135,14 +135,36 @@
             width: 100%;
             box-sizing: border-box;
             overflow-x: hidden;
+            position: relative;
         }
-        .about-section h2, .team-section h2 {
+        .team-section {
+            min-height: 60vh; /* For background height */
+        }
+        .team-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('services-hero.jpg');
+            background-size: cover;
+            background-position: center 40%;
+            background-repeat: no-repeat;
+            filter: brightness(1);
+            z-index: 0;
+            opacity: 0.2; /* Subtle background */
+        }
+        .team-content {
+            position: relative;
+            z-index: 1;
+        }
+        .about-section h2, .team-section h2, .awards-section h2, .our-team-section h2 {
             color: #003366;
             font-size: 2em;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        .about-section p, .team-section p {
+        .about-section p, .team-section p, .awards-section p, .our-team-section p {
             font-size: 1.1em;
             max-width: 800px;
             margin: 0 auto 20px auto;
@@ -254,8 +276,8 @@
         }
         .rtx-awards-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* Single row with 5 columns for desktop */
-            gap: 10px; /* Reduced gap for tighter fit */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -264,27 +286,27 @@
         }
         .award-item {
             background-color: #f5f5f5;
-            padding: 15px; /* Reduced padding to fit in single row */
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             text-align: center;
             color: #333;
-            max-width: 100%; /* Adjusted from 300px to fit grid */
+            max-width: 100%;
         }
         .award-item i {
-            font-size: 40px; /* Slightly reduced for compactness */
+            font-size: 40px;
             color: #003366;
-            margin-bottom: 8px; /* Adjusted spacing */
+            margin-bottom: 8px;
             display: block;
         }
         .award-item h3 {
             color: #003366;
-            font-size: 1.1em; /* Reduced for fit */
-            margin-bottom: 8px; /* Adjusted spacing */
+            font-size: 1.1em;
+            margin-bottom: 8px;
         }
         .award-item p {
-            font-size: 0.9em; /* Reduced for fit */
-            margin: 0; /* Tightened spacing */
+            font-size: 0.9em;
+            margin: 0;
         }
         footer {
             background-color: #003366;
@@ -356,13 +378,19 @@
             .hero p {
                 font-size: 1em;
             }
-            .about-section, .team-section {
+            .about-section, .team-section, .awards-section, .our-team-section {
                 padding: 20px;
             }
-            .about-section h2, .team-section h2 {
+            .team-section {
+                min-height: 40vh;
+            }
+            .team-background {
+                background-position: center center;
+            }
+            .about-section h2, .team-section h2, .awards-section h2, .our-team-section h2 {
                 font-size: 1.5em;
             }
-            .about-section p, .team-section p {
+            .about-section p, .team-section p, .awards-section p, .our-team-section p {
                 font-size: 1em;
                 max-width: 100%;
                 padding: 0 10px;
@@ -388,8 +416,8 @@
                 justify-content: center;
             }
             .rtx-awards-grid {
-                grid-template-columns: 1fr; /* Single column for mobile */
-                gap: 15px; /* Consistent with other mobile grids */
+                grid-template-columns: 1fr;
+                gap: 15px;
                 padding: 15px;
             }
             .team-member, .award-item {
@@ -444,45 +472,50 @@
             <p>At Beacon Digital Solutions, our mission is to guide businesses through the complexities of digital transformation with clarity, expertise, and a commitment to excellence. Based in Palm Beach, FL, we combine strategic insight with hands-on execution to deliver measurable results that drive growth and innovation.</p>
             <p>We believe every business deserves tailored solutions that align with its unique goals. Whether you’re a small startup or a large enterprise, we’re here to light the way forward, leveraging our extensive experience and agile methodologies to transform challenges into opportunities.</p>
         </section>
-        <!-- Team Section with Founder Photo, Name, Title, Experience, and Awards -->
+        <!-- Team Section (Meet Our Founder) -->
         <section class="team-section">
-            <h2>Meet Our Founder</h2>
-            <div class="founder-container">
-                <div class="founder-photo-container">
-                    <img src="Taylor_photo.png" alt="Taylor Miller, Owner and Lead Program / Product Manager" class="founder-photo">
-                    <h3>Taylor Miller</h3>
-                    <p>Owner and Lead Program / Product Manager</p>
-                </div>
-                <div class="founder-bio">
-                    <div class="skills">
-                        <button class="skill-button">Program Management</button>
-                        <button class="skill-button">IT Product Management</button>
-                        <button class="skill-button">Digital Transformation</button>
-                        <button class="skill-button">Financial Digitization</button>
-                        <button class="skill-button">Data Products</button>
-                        <button class="skill-button">API Development</button>
-                        <button class="skill-button">Business Intelligence Tools</button>
-                        <button class="skill-button">Agile Methodologies</button>
-                        <button class="skill-button">Change Management</button>
+            <div class="team-background"></div>
+            <div class="team-content">
+                <h2>Meet Our Founder</h2>
+                <div class="founder-container">
+                    <div class="founder-photo-container">
+                        <img src="Taylor_photo.png" alt="Taylor Miller, Owner and Lead Program / Product Manager" class="founder-photo">
+                        <h3>Taylor Miller</h3>
+                        <p>Owner and Lead Program / Product Manager</p>
                     </div>
-                    <div class="experience">
-                        <img src="pratt_whitney.png" alt="Pratt & Whitney Logo" class="company-logo">
-                        <h4>Pratt & Whitney</h4>
-                        <p>At Pratt & Whitney, Taylor spearheaded Program Financial Management improvements, developing 46 data products and APIs that reduced process times to up to 62% of the original time, saving $4M annually through streamlined workflows and Business Intelligence solutions.</p>
-                    </div>
-                    <div class="experience">
-                        <img src="booz_allen.png" alt="Booz Allen Hamilton Logo" class="company-logo booz-allen-logo">
-                        <h4>Booz Allen Hamilton</h4>
-                        <p>At Booz Allen Hamilton, Taylor led Agile Engineering efforts for DHS USCIS, transforming IT delivery with Scrum practices, enhancing system efficiency, and driving rapid adaptation to federal needs.</p>
-                    </div>
-                    <div class="experience">
-                        <img src="coastline_cooling.png" alt="Coastline Cooling Logo" class="company-logo">
-                        <h4>Coastline Cooling</h4>
-                        <p>At Coastline Cooling, Taylor implemented lean process improvements, digitizing operations for a small business, boosting efficiency, and laying the groundwork for scalable growth.</p>
+                    <div class="founder-bio">
+                        <div class="skills">
+                            <button class="skill-button">Program Management</button>
+                            <button class="skill-button">IT Product Management</button>
+                            <button class="skill-button">Digital Transformation</button>
+                            <button class="skill-button">Financial Digitization</button>
+                            <button class="skill-button">Data Products</button>
+                            <button class="skill-button">API Development</button>
+                            <button class="skill-button">Business Intelligence Tools</button>
+                            <button class="skill-button">Agile Methodologies</button>
+                            <button class="skill-button">Change Management</button>
+                        </div>
+                        <div class="experience">
+                            <img src="pratt_whitney.png" alt="Pratt & Whitney Logo" class="company-logo">
+                            <h4>Pratt & Whitney</h4>
+                            <p>At Pratt & Whitney, Taylor spearheaded Program Financial Management improvements, developing 46 data products and APIs that reduced process times to up to 62% of the original time, saving $4M annually through streamlined workflows and Business Intelligence solutions.</p>
+                        </div>
+                        <div class="experience">
+                            <img src="booz_allen.png" alt="Booz Allen Hamilton Logo" class="company-logo booz-allen-logo">
+                            <h4>Booz Allen Hamilton</h4>
+                            <p>At Booz Allen Hamilton, Taylor led Agile Engineering efforts for DHS USCIS, transforming IT delivery with Scrum practices, enhancing system efficiency, and driving rapid adaptation to federal needs.</p>
+                        </div>
+                        <div class="experience">
+                            <img src="coastline_cooling.png" alt="Coastline Cooling Logo" class="company-logo">
+                            <h4>Coastline Cooling</h4>
+                            <p>At Coastline Cooling, Taylor implemented lean process improvements, digitizing operations for a small business, boosting efficiency, and laying the groundwork for scalable growth.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- New Awards Section -->
+        </section>
+        <!-- Awards Section -->
+        <section class="awards-section">
             <h2>Awards & Recognition</h2>
             <div class="rtx-awards-grid">
                 <div class="award-item">
@@ -516,6 +549,9 @@
                     <p>For delivering a digital program financial process driving over $4M in annual benefit</p>
                 </div>
             </div>
+        </section>
+        <!-- Our Team Section -->
+        <section class="our-team-section">
             <h2>Our Team</h2>
             <p>Need a fully dedicated Agile team? With Beacon Digital Solutions’ leadership, we have experience guiding the following types of IT professionals to deliver transformative results:</p>
             <div class="team-grid">
