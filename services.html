@@ -175,6 +175,15 @@
         .cta-button:hover {
             background-color: #0F1A2F;
         }
+        /* Header-specific CTA override */
+        #header-cta.cta-button {
+            background-color: #00A8E8;
+            padding: 10px 20px;
+            font-size: 1.1em;
+        }
+        #header-cta.cta-button:hover {
+            background-color: #003366;
+        }
         footer {
             background-color: #003366;
             color: white;
@@ -218,8 +227,13 @@
                 display: flex;
             }
             .nav-container {
-                justify-content: flex-end;
+                justify-content: space-between;
                 padding: 0 10px;
+                align-items: center;
+            }
+            #header-cta.cta-button {
+                font-size: 1em;
+                padding: 8px 16px;
             }
             .hero {
                 min-height: 40vh;
@@ -276,6 +290,7 @@
 <body>
     <header>
         <div class="nav-container">
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button" id="header-cta" target="_blank">Book a Consult Today!</a>
             <button class="menu-toggle" aria-label="Menu">☰</button>
             <nav>
                 <a href="https://beacondigitalsolutionsllc.com/index.html">Home</a>
