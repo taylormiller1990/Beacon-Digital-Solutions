@@ -127,13 +127,17 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .services-section {
+        .services-section, .cta-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
             width: 100%;
             box-sizing: border-box;
             overflow-x: hidden;
+        }
+        .cta-section {
+            min-height: 50vh;
+            position: relative;
         }
         .services-section h2 {
             color: #003366;
@@ -168,14 +172,13 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
-            margin-top: 20px;
         }
         .cta-button:hover {
             background-color: #0F1A2F;
+            transform: scale(1.05);
         }
-        /* Header-specific CTA override */
         #header-cta.cta-button {
             background-color: #00A8E8;
             padding: 10px 20px;
@@ -183,6 +186,50 @@
         }
         #header-cta.cta-button:hover {
             background-color: #003366;
+            transform: scale(1.05);
+        }
+        .cta-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('cta-hero.jpg');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            filter: brightness(1);
+        }
+        .cta-section {
+            background-color: #f5f5f5;
+        }
+        .cta-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .cta-hero-content .cta-button {
+            padding: 16px 32px;
+            font-size: 1.3em;
+            background-color: #ff4500;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-hero-content .cta-button:hover {
+            background-color: #e03e00;
+            transform: scale(1.1);
         }
         footer {
             background-color: #003366;
@@ -191,8 +238,13 @@
             padding: 20px 0;
             width: 100%;
             margin: 0;
-            font-size: 0.9em;
             box-sizing: border-box;
+        }
+        footer .venture-text {
+            font-size: 0.6em;
+        }
+        footer p:not(.venture-text) {
+            font-size: 1em;
         }
         footer a {
             color: #00A8E8;
@@ -257,14 +309,17 @@
                 font-size: 1.8em;
                 margin: 10px 0;
             }
-            .services-section {
+            .services-section, .cta-section {
                 padding: 20px;
+            }
+            .cta-section {
+                min-height: 35vh;
             }
             .services-section h2 {
                 font-size: 1.5em;
             }
             .service i {
-                font-size: 40px; /* Smaller icons on mobile */
+                font-size: 40px;
             }
             .service h3 {
                 font-size: 1.3em;
@@ -274,12 +329,22 @@
                 max-width: 100%;
                 padding: 0 10px;
             }
-            .cta-button {
-                padding: 10px 20px;
+            .cta-hero-content {
+                padding: 15px;
+            }
+            .cta-hero-content .cta-button {
+                padding: 12px 24px;
+                font-size: 1.1em;
             }
             footer {
                 padding: 15px 0;
                 font-size: 0.8em;
+            }
+            footer .venture-text {
+                font-size: 0.55em;
+            }
+            footer p:not(.venture-text) {
+                font-size: 0.9em;
             }
             footer img {
                 width: 18px;
@@ -333,13 +398,20 @@
                 <h3>Dedicated Agile Teams</h3>
                 <p>Dedicated Agile Teams deliver your digital projects with speed and precision. Our cross-functional experts leverage digital workflows and AI-driven insights to drive efficiency, helping medium-sized businesses scale operations and compete in a technology-driven market.</p>
             </div>
-            <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Contact Us Today</a>
+        </section>
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-background"></div>
+            <div class="cta-hero-content">
+                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Contact Us Today</a>
+            </div>
         </section>
     </main>
     <footer>
-        <p>Beacon Digital Solutions LLC is a part-time venture dedicated to supporting medium-sized businesses, operating outside regular business hours in compliance with all professional commitments.</p>
+        <p class="venture-text">Beacon Digital Solutions LLC is a part-time venture dedicated to supporting medium-sized businesses, operating outside regular business hours in compliance with all professional commitments.</p>
         <p>2025 Beacon Digital Solutions | Palm Beach, FL</p>
         <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
+        <p><a href="https://beacondigitalsolutionsllc.com/policies.html">Privacy Policy & Terms of Service</a></p>
     </footer>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
