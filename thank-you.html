@@ -69,7 +69,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            min-height: 60vh; /* Changed to min-height for flexibility */
+            min-height: 60vh;
             width: 100%;
             margin: 0;
             overflow: hidden;
@@ -96,8 +96,6 @@
             color: #fff;
             width: 100%;
             box-sizing: border-box;
-        }
-        .hero-content {
             position: absolute;
             top: 50%;
             left: 0;
@@ -120,7 +118,7 @@
         main {
             margin: 0;
             text-align: center;
-            width:  yel;
+            width: 100%; /* Fixed typo from 'yel' to '100%' */
             box-sizing: border-box;
         }
         .thank-you-section {
@@ -158,12 +156,13 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
             font-size: 1.1em;
         }
         .cta-button:hover {
             background-color: #003366;
+            transform: scale(1.05);
         }
         footer {
             background-color: #003366;
@@ -172,8 +171,13 @@
             padding: 20px 0;
             width: 100%;
             margin: 0;
-            font-size: 0.9em;
             box-sizing: border-box;
+        }
+        footer .venture-text {
+            font-size: 0.6em;
+        }
+        footer p:not(.venture-text) {
+            font-size: 1em;
         }
         footer a {
             color: #00A8E8;
@@ -196,7 +200,7 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 100%; /* Adjusted to sit below header */
+                top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -217,7 +221,7 @@
                 padding: 8px 16px;
             }
             .hero {
-                min-height: 40vh; /* Flexible height for mobile */
+                min-height: 40vh;
                 padding: 20px 0;
             }
             .hero-background {
@@ -225,9 +229,9 @@
                 width: 100%;
             }
             .hero-content {
-                position: relative; /* Switch to relative for mobile flow */
+                position: relative;
                 top: 0;
-                transform: none; /* Remove transform for natural stacking */
+                transform: none;
                 padding: 15px;
             }
             .hero .logo {
@@ -252,6 +256,12 @@
             footer {
                 padding: 15px 0;
                 font-size: 0.8em;
+            }
+            footer .venture-text {
+                font-size: 0.55em;
+            }
+            footer p:not(.venture-text) {
+                font-size: 0.9em;
             }
             footer img {
                 width: 18px;
@@ -290,9 +300,10 @@
         </section>
     </main>
     <footer>
-        <p>Beacon Digital Solutions LLC is a part-time venture dedicated to supporting medium-sized businesses, operating outside regular business hours in compliance with all professional commitments.</p>
+        <p class="venture-text">Beacon Digital Solutions LLC is a part-time venture dedicated to supporting medium-sized businesses, operating outside regular business hours in compliance with all professional commitments.</p>
         <p>2025 Beacon Digital Solutions | Palm Beach, FL</p>
         <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
+        <p><a href="https://beacondigitalsolutionsllc.com/policies.html">Privacy Policy & Terms of Service</a></p>
     </footer>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {

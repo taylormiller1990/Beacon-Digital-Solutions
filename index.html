@@ -76,13 +76,13 @@
             box-sizing: border-box;
         }
         .hero {
-            min-height: 60vh;
+            min-height: 50vh;
         }
         .services {
-            min-height: 60vh;
+            min-height: 50vh;
         }
         .cta-section {
-            min-height: 60vh;
+            min-height: 50vh; /* Keep the increased height */
         }
         .hero-background, .services-background, .cta-background {
             position: absolute;
@@ -106,22 +106,33 @@
         }
         .cta-background {
             background-image: url('cta-hero.jpg');
-            filter: brightness(0.8);
+            background-size: contain; /* Changed to contain to show more of the image */
+            background-position: center center; /* Ensure it’s centered */
+            background-repeat: no-repeat;
+            z-index: 0;
+            filter: brightness(1);
+        }
+        /* Add a fallback background color in case contain leaves empty space */
+        .cta-section {
+            background-color: #f5f5f5; /* Match body background color */
         }
         .hero-content, .services-hero-content, .cta-hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             text-align: center;
-            padding: 20px;
             color: #fff;
             width: 100%;
             box-sizing: border-box;
         }
         .hero-content, .cta-hero-content {
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 0;
-            transform: translateY(-50%);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
         .services-hero-content {
             padding: 40px 20px;
@@ -154,11 +165,12 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
         }
         .cta-button:hover {
             background-color: #0F1A2F;
+            transform: scale(1.05);
         }
         /* Header-specific CTA override */
         #header-cta.cta-button {
@@ -168,6 +180,18 @@
         }
         #header-cta.cta-button:hover {
             background-color: #003366;
+            transform: scale(1.05);
+        }
+        .cta-hero-content .cta-button {
+            padding: 16px 32px;
+            font-size: 1.3em;
+            background-color: #ff4500;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-hero-content .cta-button:hover {
+            background-color: #e03e00;
+            transform: scale(1.1);
         }
         main {
             margin: 0;
@@ -242,18 +266,6 @@
         .service p {
             color: #333;
         }
-        .cta-section p {
-            font-size: 1.4em;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .cta-section .cta-button {
-            margin: 0 auto;
-        }
         footer {
             background-color: #003366;
             color: white;
@@ -262,6 +274,12 @@
             width: 100%;
             margin: 0;
             box-sizing: border-box;
+        }
+        footer .venture-text {
+            font-size: 0.6em;
+        }
+        footer p:not(.venture-text) {
+            font-size: 1em;
         }
         footer a {
             color: #00A8E8;
@@ -305,8 +323,11 @@
                 padding: 8px 16px;
             }
             .hero, .services, .cta-section {
-                min-height: 40vh;
+                min-height: 25vh;
                 padding: 20px 0;
+            }
+            .cta-section {
+                min-height: 35vh;
             }
             .hero-background, .services-background, .cta-background {
                 background-position: center center;
@@ -361,12 +382,21 @@
                 display: block;
                 font-size: 0.9em;
             }
-            .cta-section p {
-                font-size: 1.2em;
-                padding: 8px;
+            .cta-hero-content {
+                padding: 15px;
+            }
+            .cta-hero-content .cta-button {
+                padding: 12px 24px;
+                font-size: 1.1em;
             }
             footer {
                 padding: 15px 0;
+                font-size: 0.9em;
+            }
+            footer .venture-text {
+                font-size: 0.55em;
+            }
+            footer p:not(.venture-text) {
                 font-size: 0.9em;
             }
             footer img {
@@ -448,15 +478,15 @@
         <section class="cta-section">
             <div class="cta-background"></div>
             <div class="cta-hero-content">
-                <p>Need a digital transformation leader? Beacon Digital Solutions can save your business time and money—contact us today!</p>
                 <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Contact Us Today</a>
             </div>
         </section>
     </main>
     <footer>
-        <p>Beacon Digital Solutions LLC is a part-time venture dedicated to supporting medium-sized businesses, operating outside regular business hours in compliance with all professional commitments.</p>
+        <p class="venture-text">Beacon Digital Solutions LLC is a part-time venture dedicated to supporting medium-sized businesses, operating outside regular business hours in compliance with all professional commitments.</p>
         <p>2025 Beacon Digital Solutions | Palm Beach, FL</p>
         <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
+        <p><a href="https://beacondigitalsolutionsllc.com/policies.html">Privacy Policy & Terms of Service</a></p>
     </footer>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
