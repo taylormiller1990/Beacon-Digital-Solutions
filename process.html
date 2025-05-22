@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beacon Digital Solutions offers expert digital execution for medium-sized businesses in healthcare, manufacturing, retail, and professional services, delivering 62% time savings at a leading aerospace company.">
-    <meta name="keywords" content="Beacon Digital Solutions, digital strategy execution, agile program management, dedicated agile teams, medium-sized businesses, Palm Beach FL">
+    <meta name="description" content="Explore Beacon Digital Solutions' proven process for optimizing your business, from analysis to scaling, delivering precise efficiency gains.">
+    <meta name="keywords" content="Beacon Digital Solutions, business process optimization, agile transformation, Palm Beach FL">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P93ZDBJ3E4"></script>
     <script>
@@ -15,7 +15,7 @@
     </script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Beacon Digital Solutions - Services</title>
+    <title>Our Process - Beacon Digital Solutions</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -128,7 +128,7 @@
             position: relative;
             z-index: 1;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             color: #fff;
             width: 100%;
             box-sizing: border-box;
@@ -144,7 +144,7 @@
         }
         .hero .logo {
             max-width: 200px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -152,9 +152,41 @@
         }
         .hero h1 {
             font-size: 2.5em;
-            margin: 0;
+            margin: 0 0 10px;
             font-weight: bold;
             color: #fff !important;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0;
+        }
+        .sub-nav {
+            position: sticky;
+            top: 60px;
+            background: #003366;
+            padding: 10px 0;
+            z-index: 900;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .sub-nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .sub-nav a:hover {
+            background: #00A8E8;
+        }
+        .sub-nav i {
+            font-size: 0.9em;
         }
         main {
             margin: 0;
@@ -162,7 +194,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .services-section, .cta-section {
+        .process-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
@@ -170,38 +202,85 @@
             box-sizing: border-box;
             overflow-x: hidden;
         }
-        .cta-section {
-            min-height: 50vh;
-            position: relative;
-        }
-        .services-section h2 {
+        .process-section h2 {
             color: #003366;
             font-size: 1.8em;
             font-weight: bold;
             margin: 0 0 20px 0;
         }
-        .service {
-            margin-bottom: 30px;
+        .step-section {
+            margin-bottom: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .service i {
-            font-size: 50px;
+        .step-section:nth-child(odd) {
+            background-color: #fff;
+        }
+        .step-section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .step-section i {
+            font-size: 40px;
             color: #003366;
             margin-bottom: 10px;
             display: block;
+            text-align: center;
         }
-        .service h3 {
+        .step-section h3 {
             color: #003366;
             font-size: 1.5em;
             margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid #00A8E8;
+            padding-bottom: 5px;
         }
-        .service p {
+        .step-section p {
             font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto;
             color: #333;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        .method {
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .method i {
+            font-size: 30px;
+            color: #003366;
+            margin-top: 5px;
+        }
+        .method-content {
+            flex: 1;
+        }
+        .method h4 {
+            color: #003366;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        .method p {
+            font-size: 1em;
+            color: #333;
+            margin: 0;
+        }
+        hr.step-divider {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 30px auto;
+            max-width: 800px;
         }
         .cta-button {
-            background-color: #1A2A44;
+            background-color: #00A8E8;
             color: #fff !important;
             padding: 12px 24px;
             text-decoration: none;
@@ -209,62 +288,11 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
+            margin-top: 20px;
         }
         .cta-button:hover {
-            background-color: #0F1A2F;
-            transform: scale(1.05);
-        }
-        #header-cta.cta-button {
-            background-color: #00A8E8;
-            padding: 10px 20px;
-            font-size: 1.1em;
-        }
-        #header-cta.cta-button:hover {
             background-color: #003366;
             transform: scale(1.05);
-        }
-        .cta-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('cta-hero.jpg');
-            background-size: contain;
-            background-position: center center;
-            background-repeat: no-repeat;
-            z-index: 0;
-            filter: brightness(1);
-        }
-        .cta-section {
-            background-color: #f5f5f5;
-        }
-        .cta-hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #fff;
-            width: 100%;
-            box-sizing: border-box;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .cta-hero-content .cta-button {
-            padding: 16px 32px;
-            font-size: 1.3em;
-            background-color: #ff4500;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .cta-hero-content .cta-button:hover {
-            background-color: #e03e00;
-            transform: scale(1.1);
         }
         footer {
             background-color: #003366;
@@ -294,104 +322,7 @@
             height: auto;
             vertical-align: middle;
         }
-        /* Styles for process section */
-        .process-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            flex-wrap: nowrap;
-        }
-        .process-step {
-            flex: 1;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            min-width: 200px;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .process-step:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-        }
-        .process-step i {
-            font-size: 40px;
-            color: #003366;
-            margin-bottom: 10px;
-        }
-        .process-step h4 {
-            color: #003366;
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-        .process-step p {
-            font-size: 1em;
-            color: #333;
-            margin: 0;
-        }
-        .process-arrow {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            color: #003366;
-        }
-        /* Styles for process wrapper and hover effects */
-        .process-wrapper {
-            background: linear-gradient(135deg, #e6ecef 0%, #f0f4f8 100%);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #d3d9df;
-        }
-        hr.services-divider {
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
-        }
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .process-cta {
-            background-color: #00A8E8;
-            color: #fff !important;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .process-cta:hover {
-            background-color: #003366;
-            transform: scale(1.05);
-        }
         @media (max-width: 768px) {
-            .process-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            .process-step {
-                width: 100%;
-                min-width: unset;
-            }
-            .process-arrow {
-                display: none;
-            }
-            .process-wrapper {
-                padding: 15px;
-            }
             .menu-toggle {
                 display: block;
             }
@@ -459,32 +390,59 @@
                 font-size: 1.8em;
                 margin: 10px 0;
             }
-            .services-section, .cta-section {
-                padding: 20px;
-            }
-            .cta-section {
-                min-height: 35vh;
-            }
-            .services-section h2 {
-                font-size: 1.5em;
-            }
-            .service i {
-                font-size: 40px;
-            }
-            .service h3 {
-                font-size: 1.3em;
-            }
-            .service p {
+            .hero p {
                 font-size: 1em;
-                max-width: 100%;
                 padding: 0 10px;
             }
-            .cta-hero-content {
+            .sub-nav {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 8px 0;
+            }
+            .sub-nav a {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+            .process-section {
+                padding: 20px;
+            }
+            .process-section h2 {
+                font-size: 1.5em;
+            }
+            .step-section {
+                margin-bottom: 40px;
                 padding: 15px;
             }
-            .cta-hero-content .cta-button {
-                padding: 12px 24px;
-                font-size: 1.1em;
+            .step-section i {
+                font-size: 30px;
+            }
+            .step-section h3 {
+                font-size: 1.3em;
+                border-bottom: 1px solid #00A8E8;
+            }
+            .step-section p {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+            .method {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .method i {
+                font-size: 25px;
+            }
+            .method h4 {
+                font-size: 1.2em;
+                text-align: center;
+            }
+            .method p {
+                font-size: 0.9em;
+                padding: 0 10px;
+                text-align: center;
+            }
+            hr.step-divider {
+                margin: 20px auto;
             }
             footer {
                 padding: 15px 0;
@@ -527,70 +485,130 @@
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions services logo" class="logo">
-            <h1>Our Services</h1>
-            <p>Transform Your Business with Process Optimization and Digital Solutions</p>
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions process logo" class="logo">
+            <h1>Our Proven Process</h1>
+            <p>Transform your business with our four-step approach to optimization and growth</p>
         </div>
     </div>
+    <!-- Sub-Navigation -->
+    <nav class="sub-nav">
+        <a href="#analyze"><i class="fas fa-search"></i> 1. Analyze</a>
+        <a href="#document"><i class="fas fa-file-alt"></i> 2. Document</a>
+        <a href="#recommend-pilot"><i class="fas fa-lightbulb"></i> 3. Recommend & Pilot</a>
+        <a href="#measure-scale"><i class="fas fa-chart-line"></i> 4. Measure & Scale</a>
+    </nav>
     <main>
-        <!-- Services Section -->
-        <section class="services-section">
-            <h2>Our Comprehensive Process</h2>
-            <div class="process-wrapper">
-                <div class="service">
-                    <h3>Our Process</h3>
-                    <div class="process-container">
-                        <a href="process.html#analyze" class="process-step">
-                            <i class="fas fa-search"></i>
-                            <h4>1. Analyze</h4>
-                            <p>We dive deep into your operations to uncover inefficiencies, identifying bottlenecks that slow growth. This matters because thorough analysis can boost productivity by up to 30%, as proven in process optimization studies.</p>
-                        </a>
-                        <div class="process-arrow">→</div>
-                        <a href="process.html#document" class="process-step">
-                            <i class="fas fa-file-alt"></i>
-                            <h4>2. Document</h4>
-                            <p>We map your workflows clearly to align teams and highlight improvement opportunities. Clear documentation reduces operational errors by 25%, as shown in standardized process frameworks.</p>
-                        </a>
-                        <div class="process-arrow">→</div>
-                        <a href="process.html#recommend-pilot" class="process-step">
-                            <i class="fas fa-lightbulb"></i>
-                            <h4>3. Recommend & Pilot</h4>
-                            <p>We design tailored solutions and test them in agile pilots to ensure practical results. Pilots minimize risk, delivering up to 20% cost savings, as evidenced by agile project successes.</p>
-                        </a>
-                        <div class="process-arrow">→</div>
-                        <a href="process.html#measure-scale" class="process-step">
-                            <i class="fas fa-chart-line"></i>
-                            <h4>4. Measure & Scale</h4>
-                            <p>We track key metrics to validate impact and expand solutions for maximum efficiency. Data-driven scaling can increase ROI by 15-20%, per business optimization research.</p>
-                        </a>
+        <!-- Process Section -->
+        <section class="process-section">
+            <h2>How We Optimize Your Business</h2>
+            <div class="step-section" id="analyze">
+                <i class="fas fa-search"></i>
+                <h3>1. Analyze</h3>
+                <p>Our analysis uncovers inefficiencies by diving deep into your operations, setting the stage for measurable efficiency gains through proven methods.</p>
+                <div class="method">
+                    <i class="fas fa-users"></i>
+                    <div class="method-content">
+                        <h4>Stakeholder Interviews</h4>
+                        <p>We conduct structured interviews to understand workflows, challenges, and goals, improving decision-making accuracy by 20% by identifying critical operational gaps.</p>
                     </div>
-                    <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button process-cta">Start Your Transformation</a>
+                </div>
+                <div class="method">
+                    <i class="fas fa-project-diagram"></i>
+                    <div class="method-content">
+                        <h4>Value Stream Mapping</h4>
+                        <p>We map end-to-end processes to identify waste, reducing process cycle time by 20-30% by eliminating non-value-adding activities.</p>
+                    </div>
+                </div>
+                <div class="method">
+                    <i class="fas fa-chart-bar"></i>
+                    <div class="method-content">
+                        <h4>Data Analysis</h4>
+                        <p>We analyze operational data with tools like Excel, Tableau, Power BI, and Qlik Sense, identifying inefficiencies that reduce operational costs by 15-25%.</p>
+                    </div>
                 </div>
             </div>
-            <hr class="services-divider">
-            <h2>Additional Services</h2>
-            <div class="service">
-                <i class="fas fa-tasks"></i>
-                <h3>Program Management Support</h3>
-                <p>Let our certified PMP and CSPO experts drive your existing strategies to success with proven project management methodologies. We ensure on-time, on-budget delivery, boosting project success rates by up to 40%, as shown in PMI research.</p>
+            <hr class="step-divider">
+            <div class="step-section" id="document">
+                <i class="fas fa-file-alt"></i>
+                <h3>2. Document</h3>
+                <p>We create clear, accessible process maps to align teams and reduce errors, ensuring a solid foundation for optimization.</p>
+                <div class="method">
+                    <i class="fas fa-sitemap"></i>
+                    <div class="method-content">
+                        <h4>Process Flow Diagrams</h4>
+                        <p>We use tools like Lucidchart to visualize workflows, decreasing process errors by 20% by improving team alignment.</p>
+                    </div>
+                </div>
+                <div class="method">
+                    <i class="fas fa-file-contract"></i>
+                    <div class="method-content">
+                        <h4>Standard Operating Procedures (SOPs)</h4>
+                        <p>We draft clear procedures to ensure consistency, increasing process compliance by 20%.</p>
+                    </div>
+                </div>
+                <div class="method">
+                    <i class="fas fa-database"></i>
+                    <div class="method-content">
+                        <h4>Knowledge Repositories</h4>
+                        <p>We build digital repositories with tools like Confluence, reducing employee onboarding time by 15%.</p>
+                    </div>
+                </div>
             </div>
-            <div class="service">
-                <i class="fas fa-rocket"></i>
-                <h3>Dedicated Agile Execution</h3>
-                <p>Our dedicated agile teams execute your digital projects with speed and precision, leveraging cutting-edge tools and workflows. Agile execution can accelerate delivery by 25%, per Agile Alliance studies, ensuring rapid results.</p>
+            <hr class="step-divider">
+            <div class="step-section" id="recommend-pilot">
+                <i class="fas fa-lightbulb"></i>
+                <h3>3. Recommend & Pilot</h3>
+                <p>We design and test tailored solutions through agile pilots, ensuring practical results before full rollout.</p>
+                <div class="method">
+                    <i class="fas fa-users-cog"></i>
+                    <div class="method-content">
+                        <h4>Solution Brainstorming Workshops</h4>
+                        <p>We facilitate collaborative sessions using Design Thinking, boosting solution adoption by 25% through stakeholder buy-in.</p>
+                    </div>
+                </div>
+                <div class="method">
+                    <i class="fas fa-running"></i>
+                    <div class="method-content">
+                        <h4>Agile Pilot Projects</h4>
+                        <p>We implement solutions in short sprints with tools like Monday.com, reducing project implementation costs by 15-20%.</p>
+                    </div>
+                </div>
+                <div class="method">
+                    <i class="fas fa-balance-scale"></i>
+                    <div class="method-content">
+                        <h4>Vendor Evaluation</h4>
+                        <p>We assess tools based on cost and scalability, decreasing solution implementation failures by 20%.</p>
+                    </div>
+                </div>
             </div>
-            <div class="service">
-                <i class="fas fa-compass"></i>
-                <h3>Transformation Strategy Consulting</h3>
-                <p>We craft tailored digital transformation strategies to align your business with future-ready goals, setting the stage for growth. Strategic planning can improve organizational agility by 30%, as evidenced by McKinsey transformation reports.</p>
+            <hr class="step-divider">
+            <div class="step-section" id="measure-scale">
+                <i class="fas fa-chart-line"></i>
+                <h3>4. Measure & Scale</h3>
+                <p>We track metrics and scale solutions to maximize efficiency with data-driven strategies.</p>
+                <div class="method">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div class="method-content">
+                        <h4>Key Performance Indicators (KPIs)</h4>
+                        <p>We define and track metrics with tools like Power BI, Tableau, or Qlik Sense, enhancing performance visibility by 25%.</p>
+                    </div>
+                </div>
+                <div class="method">
+                    <i class="fas fa-exchange-alt"></i>
+                    <div class="method-content">
+                        <h4>A/B Testing</h4>
+                        <p>We compare pilot outcomes to quantify improvements, improving process effectiveness by 15%.</p>
+                    </div>
+                </div>
+                <div class="method">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <div class="method-content">
+                        <h4>Scaling Plans</h4>
+                        <p>We develop phased rollouts with PROSCI models, increasing ROI by 15-20%.</p>
+                    </div>
+                </div>
             </div>
-        </section>
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-background"></div>
-            <div class="cta-hero-content">
-                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Contact Us Today</a>
-            </div>
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button">Book a Consultation</a>
         </section>
     </main>
     <footer>

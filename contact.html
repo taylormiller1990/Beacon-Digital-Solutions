@@ -13,6 +13,8 @@
         gtag('js', new Date());
         gtag('config', 'G-P93ZDBJ3E4');
     </script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Beacon Digital Solutions - Contact</title>
     <style>
         body {
@@ -55,6 +57,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
+            align-items: center;
         }
         nav a {
             color: white;
@@ -66,7 +69,40 @@
         nav a:hover {
             color: #00A8E8;
         }
-        /* Hero Section */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #003366;
+            min-width: 150px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-radius: 5px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            text-align: left;
+        }
+        .dropdown-menu a:hover {
+            background: #00A8E8;
+        }
         .hero {
             position: relative;
             min-height: 60vh;
@@ -241,6 +277,24 @@
             nav.active {
                 display: flex;
             }
+            .dropdown {
+                position: relative;
+            }
+            .dropdown-menu {
+                position: static;
+                background: #004080;
+                box-shadow: none;
+                margin-left: 20px;
+            }
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            .dropdown-toggle i {
+                transform: rotate(0);
+            }
+            .dropdown.active .dropdown-toggle i {
+                transform: rotate(180deg);
+            }
             .nav-container {
                 justify-content: space-between;
                 padding: 0 10px;
@@ -314,7 +368,15 @@
             <nav>
                 <a href="https://beacondigitalsolutionsllc.com/index.html">Home</a>
                 <a href="https://beacondigitalsolutionsllc.com/about.html">About</a>
-                <a href="https://beacondigitalsolutionsllc.com/services.html">Services</a>
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        <a href="https://beacondigitalsolutionsllc.com/services.html">Services</a>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="https://beacondigitalsolutionsllc.com/process.html">Process</a>
+                    </div>
+                </div>
                 <a href="https://beacondigitalsolutionsllc.com/contact.html">Contact</a>
             </nav>
         </div>
@@ -325,7 +387,7 @@
         <div class="hero-content">
             <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions contact logo" class="logo">
             <h1>Contact Us</h1>
-            <p>Providing Expert Digital Execution for Medium-Sized Businesses in Healthcare, Manufacturing, Retail, and Professional Services</p>
+            <p>Transform Your Business with Process Optimization and Digital Solutions</p>
         </div>
     </div>
     <main>
@@ -358,6 +420,11 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
+        });
+        document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
         });
     </script>
 </body>

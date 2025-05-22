@@ -57,6 +57,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
+            align-items: center;
         }
         nav a {
             color: white;
@@ -68,6 +69,40 @@
         nav a:hover {
             color: #00A8E8;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #003366;
+            min-width: 150px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-radius: 5px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            text-align: left;
+        }
+        .dropdown-menu a:hover {
+            background: #00A8E8;
+        }
         .cta-button {
             background-color: #00A8E8;
             color: #fff;
@@ -78,11 +113,11 @@
             font-weight: bold;
             text-decoration: none;
             display: inline-block;
-            transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for consistency */
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .cta-button:hover {
             background-color: #003366;
-            transform: scale(1.05); /* Added scale effect */
+            transform: scale(1.05);
         }
         .hero {
             position: relative;
@@ -157,7 +192,7 @@
             min-height: 60vh;
         }
         .cta-section {
-            min-height: 50vh; /* Match index page */
+            min-height: 50vh;
         }
         .team-background {
             position: absolute;
@@ -222,7 +257,7 @@
             color: #333;
         }
         .founder-container {
-            display: flex; /* Fixed typo from 'flexed' to 'flex' */
+            display: flex;
             justify-content: center;
             align-items: flex-start;
             max-width: 1200px;
@@ -416,6 +451,24 @@
             nav.active {
                 display: flex;
             }
+            .dropdown {
+                position: relative;
+            }
+            .dropdown-menu {
+                position: static;
+                background: #004080;
+                box-shadow: none;
+                margin-left: 20px;
+            }
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            .dropdown-toggle i {
+                transform: rotate(0);
+            }
+            .dropdown.active .dropdown-toggle i {
+                transform: rotate(180deg);
+            }
             .nav-container {
                 justify-content: space-between;
                 padding: 0 10px;
@@ -457,7 +510,7 @@
                 min-height: 40vh;
             }
             .cta-section {
-                min-height: 35vh; /* Match index page */
+                min-height: 35vh;
             }
             .team-background {
                 background-position: center center;
@@ -540,7 +593,15 @@
             <nav>
                 <a href="https://beacondigitalsolutionsllc.com/index.html">Home</a>
                 <a href="https://beacondigitalsolutionsllc.com/about.html">About</a>
-                <a href="https://beacondigitalsolutionsllc.com/services.html">Services</a>
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        <a href="https://beacondigitalsolutionsllc.com/services.html">Services</a>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="https://beacondigitalsolutionsllc.com/process.html">Process</a>
+                    </div>
+                </div>
                 <a href="https://beacondigitalsolutionsllc.com/contact.html">Contact</a>
             </nav>
         </div>
@@ -551,7 +612,7 @@
         <div class="hero-content">
             <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo" class="logo">
             <h1>About Us</h1>
-            <p>Providing Expert Digital Execution for Medium-Sized Businesses in Healthcare, Manufacturing, Retail, and Professional Services</p>
+            <p>Transform Your Business with Process Optimization and Digital Solutions</p>
         </div>
     </div>
     <main>
@@ -690,6 +751,11 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
+        });
+        document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
         });
     </script>
 </body>
