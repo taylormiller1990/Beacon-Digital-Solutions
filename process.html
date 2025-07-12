@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Beacon Digital Solutions' proven process for optimizing your business, from analysis to scaling, delivering precise efficiency gains.">
-    <meta name="keywords" content="Beacon Digital Solutions, business process optimization, agile transformation, Jupiter FL">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-88GV74L2RT');
-</script>
+    <meta name="description" content="Beacon Digital Solutions empowers small businesses with digital tools and streamlined operations to compete with large corporations.">
+    <meta name="keywords" content="Beacon Digital Solutions, small business support, digital optimization, operational efficiency, Jupiter FL, digital transformation">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-88GV74L2RT');
+    </script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Our Process - Beacon Digital Solutions</title>
@@ -107,184 +106,104 @@
         .dropdown-menu a:hover {
             background: #00A8E8;
         }
-        .hero {
+        .hero, .services, .cta-section {
             position: relative;
-            min-height: 60vh;
             width: 100%;
             margin: 0;
             overflow: hidden;
             box-sizing: border-box;
         }
-        .hero-background {
+        .hero {
+            min-height: 60vh;
+        }
+        .services {
+            min-height: 50vh;
+        }
+        .cta-section {
+            min-height: 50vh;
+        }
+        .hero-background, .services-background, .cta-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('digital_transformation.jpg');
             background-size: cover;
-            background-position: center 40%;
+            background-position: center;
             background-repeat: no-repeat;
-            filter: brightness(0.7);
             z-index: 0;
         }
-        .hero-content {
+        .hero-background {
+            background-image: url('digital_transformation.jpg');
+            filter: brightness(0.7);
+        }
+        .services-background {
+            background-image: url('services-hero.jpg');
+            background-position: center 40%;
+            filter: brightness(1);
+        }
+        .cta-background {
+            background-image: url('cta-hero.jpg');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            filter: brightness(1);
+        }
+        .cta-section {
+            background-color: #f5f5f5;
+        }
+        .hero-content, .services-hero-content, .cta-hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             text-align: center;
-            padding: 30px;
             color: #fff;
             width: 100%;
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100%;
+        }
+        .hero-content {
             position: absolute;
             top: 50%;
             left: 0;
             transform: translateY(-50%);
+            padding: 20px;
+        }
+        .cta-hero-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .services-hero-content {
+            padding: 40px 20px;
+        }
+        .hero-content h1, .hero-content p, .hero-content .cta-button {
+            color: #fff !important;
+        }
+        .hero-content img {
+            filter: none !important;
         }
         .hero .logo {
             max-width: 200px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            filter: none !important;
         }
         .hero h1 {
             font-size: 2.5em;
-            margin: 0 0 10px;
-            font-weight: bold;
-            color: #fff !important;
+            margin: 0;
         }
         .hero p {
             font-size: 1.2em;
-            max-width: 600px;
-            margin: 0;
-        }
-        .sub-nav {
-            position: sticky;
-            top: 60px;
-            background: #003366;
-            padding: 10px 0;
-            z-index: 900;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .sub-nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: background 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .sub-nav a:hover {
-            background: #00A8E8;
-        }
-        .sub-nav i {
-            font-size: 0.9em;
-        }
-        main {
-            margin: 0;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .process-section {
-            background-color: #fff;
-            padding: 30px;
-            margin: 0;
-            width: 100%;
-            box-sizing: border-box;
-            overflow-x: hidden;
-        }
-        .process-section h2 {
-            color: #003366;
-            font-size: 1.8em;
-            font-weight: bold;
-            margin: 0 0 20px 0;
-        }
-        .step-section {
-            margin-bottom: 60px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .step-section:nth-child(odd) {
-            background-color: #fff;
-        }
-        .step-section:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .step-section i {
-            font-size: 40px;
-            color: #003366;
-            margin-bottom: 10px;
-            display: block;
-            text-align: center;
-        }
-        .step-section h3 {
-            color: #003366;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            text-align: center;
-            border-bottom: 2px solid #00A8E8;
-            padding-bottom: 5px;
-        }
-        .step-section p {
-            font-size: 1.1em;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto 20px;
-            text-align: center;
-        }
-        .method {
-            margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        .method i {
-            font-size: 30px;
-            color: #003366;
-            margin-top: 5px;
-        }
-        .method-content {
-            flex: 1;
-        }
-        .method h4 {
-            color: #003366;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-        .method p {
-            font-size: 1em;
-            color: #333;
-            margin: 0;
-        }
-        hr.step-divider {
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 30px auto;
-            max-width: 800px;
+            margin: 10px 0;
         }
         .cta-button {
-            background-color: #00A8E8;
+            background-color: #1A2A44;
             color: #fff !important;
             padding: 12px 24px;
             text-decoration: none;
@@ -292,11 +211,104 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
         .cta-button:hover {
+            background-color: #0F1A2F;
+            transform: scale(1.05);
+        }
+        #header-cta.cta-button {
+            background-color: #00A8E8;
+            padding: 10px 20px;
+            font-size: 1.1em;
+        }
+        #header-cta.cta-button:hover {
             background-color: #003366;
             transform: scale(1.05);
+        }
+        .cta-hero-content .cta-button {
+            padding: 16px 32px;
+            font-size: 1.3em;
+            background-color: #ff4500;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-hero-content .cta-button:hover {
+            background-color: #e03e00;
+            transform: scale(1.1);
+        }
+        main {
+            margin: 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .intro-section, .why-choose-section {
+            background-color: #fff;
+            padding: 30px;
+            margin: 0;
+            color: #333;
+            width: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        .intro-section h2, .why-choose-section h2 {
+            color: #003366;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .intro-section p, .why-choose-section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
+        }
+        .intro-section ul, .why-choose-section ul {
+            color: #333;
+            list-style-type: disc;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            padding-left: 40px;
+            text-align: left;
+        }
+        .intro-section li, .why-choose-section li {
+            margin-bottom: 10px;
+        }
+        .services h2 {
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            color: #333;
+        }
+        .service i {
+            font-size: 80px;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+        .service h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+        .service p {
+            color: #333;
         }
         footer {
             background-color: #003366;
@@ -325,6 +337,54 @@
             width: 20px;
             height: auto;
             vertical-align: middle;
+        }
+        /* Sub-Navigation Styles */
+        .sub-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 20px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ccc;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .sub-nav a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .sub-nav a:hover {
+            background-color: #00A8E8;
+            color: #fff;
+        }
+        /* Process Section Enhancements */
+        .step-section {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        .step-section i {
+            color: #00A8E8;
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        .step-divider {
+            border: 0;
+            height: 2px;
+            background: #003366;
+            margin: 40px 0;
         }
         @media (max-width: 768px) {
             .menu-toggle {
@@ -372,11 +432,14 @@
                 font-size: 1em;
                 padding: 8px 16px;
             }
-            .hero {
-                min-height: 40vh;
+            .hero, .services, .cta-section {
+                min-height: 25vh;
                 padding: 20px 0;
             }
-            .hero-background {
+            .cta-section {
+                min-height: 35vh;
+            }
+            .hero-background, .services-background, .cta-background {
                 background-position: center center;
                 width: 100%;
             }
@@ -396,61 +459,50 @@
             }
             .hero p {
                 font-size: 1em;
-                padding: 0 10px;
             }
-            .sub-nav {
-                overflow-x: auto;
-                white-space: nowrap;
-                padding: 8px 0;
-            }
-            .sub-nav a {
-                font-size: 0.9em;
-                padding: 8px 15px;
-            }
-            .process-section {
+            .intro-section, .why-choose-section {
                 padding: 20px;
             }
-            .process-section h2 {
+            .intro-section h2, .services h2, .why-choose-section h2 {
                 font-size: 1.5em;
             }
-            .step-section {
-                margin-bottom: 40px;
+            .intro-section p, .why-choose-section p {
+                font-size: 1em;
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .intro-section ul, .why-choose-section ul {
+                max-width: 100%;
+                padding-left: 30px;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 15px;
+            }
+            .service {
                 padding: 15px;
             }
-            .step-section i {
-                font-size: 30px;
+            .service i {
+                font-size: 60px;
             }
-            .step-section h3 {
-                font-size: 1.3em;
-                border-bottom: 1px solid #00A8E8;
-            }
-            .step-section p {
-                font-size: 1em;
-                padding: 0 10px;
-            }
-            .method {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            .method i {
-                font-size: 25px;
-            }
-            .method h4 {
+            .service h3 {
                 font-size: 1.2em;
-                text-align: center;
             }
-            .method p {
+            .service p {
+                display: block;
                 font-size: 0.9em;
-                padding: 0 10px;
-                text-align: center;
             }
-            hr.step-divider {
-                margin: 20px auto;
+            .cta-hero-content {
+                padding: 15px;
+            }
+            .cta-hero-content .cta-button {
+                padding: 12px 24px;
+                font-size: 1.1em;
             }
             footer {
                 padding: 15px 0;
-                font-size: 0.8em;
+                font-size: 0.9em;
             }
             footer .venture-text {
                 font-size: 0.55em;
@@ -460,6 +512,25 @@
             }
             footer img {
                 width: 18px;
+            }
+            .sub-nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            .sub-nav a {
+                font-size: 1em;
+                padding: 8px 12px;
+            }
+            .step-section {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            .step-section i {
+                font-size: 50px;
+            }
+            .step-divider {
+                margin: 20px 0;
             }
         }
     </style>
@@ -491,7 +562,7 @@
         <div class="hero-content">
             <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions process logo" class="logo">
             <h1>Our Proven Process</h1>
-            <p>Streamline Your Business with Smarter Processes and Data-Driven Solutions</p>
+            <p>Empowering Small Businesses to Outpace the Giants</p>
         </div>
     </div>
     <!-- Sub-Navigation -->
@@ -506,115 +577,113 @@
         <section class="process-section">
             <h2>How We Optimize Your Business</h2>
             <div class="step-section" id="analyze">
-                <i class="fas fa-magnifying-glass"></i>
+                <i class="fas fa-search"></i>
                 <h3>1. Analyze</h3>
-                <p>Your operations are slowed by inefficiencies. We dive deep to uncover these gaps, setting the stage for measurable gains.</p>
+                <p>Our analysis uncovers inefficiencies by diving deep into your operations, setting the stage for measurable efficiency gains through proven methods.</p>
                 <div class="method">
                     <i class="fas fa-users"></i>
                     <div class="method-content">
                         <h4>Stakeholder Interviews</h4>
-                        <p>We engage your team to understand workflows and challenges, boosting decision-making accuracy by 20%.</p>
+                        <p>We conduct structured interviews to understand workflows, challenges, and goals, improving decision-making accuracy by 20% by identifying critical operational gaps.</p>
                     </div>
                 </div>
                 <div class="method">
                     <i class="fas fa-project-diagram"></i>
                     <div class="method-content">
                         <h4>Value Stream Mapping</h4>
-                        <p>We map processes to eliminate waste, cutting cycle time by 20-30%.</p>
+                        <p>We map end-to-end processes to identify waste, reducing process cycle time by 20-30% by eliminating non-value-adding activities.</p>
                     </div>
                 </div>
                 <div class="method">
                     <i class="fas fa-chart-bar"></i>
                     <div class="method-content">
                         <h4>Data Analysis</h4>
-                        <p>We use tools like Tableau and Power BI to identify inefficiencies, reducing costs by 15-25%.</p>
+                        <p>We analyze operational data with tools like Excel, Tableau, Power BI, and Qlik Sense, identifying inefficiencies that reduce operational costs by 15-25%.</p>
                     </div>
                 </div>
-                <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button" style="font-size: 0.9em;">Start Analyzing</a>
             </div>
             <hr class="step-divider">
             <div class="step-section" id="document">
-                <i class="fas fa-file-lines"></i>
+                <i class="fas fa-file-alt"></i>
                 <h3>2. Document</h3>
-                <p>Disconnected teams lead to errors. We create clear process maps in Confluence to align your team and reduce errors by 20%.</p>
+                <p>We create clear, accessible process maps to align teams and reduce errors, ensuring a solid foundation for optimization.</p>
                 <div class="method">
                     <i class="fas fa-sitemap"></i>
                     <div class="method-content">
                         <h4>Process Flow Diagrams</h4>
-                        <p>We visualize workflows in Lucidchart, improving team alignment and reducing errors by 20%.</p>
+                        <p>We use tools like Lucidchart to visualize workflows, decreasing process errors by 20% by improving team alignment.</p>
                     </div>
                 </div>
                 <div class="method">
                     <i class="fas fa-file-contract"></i>
                     <div class="method-content">
                         <h4>Standard Operating Procedures (SOPs)</h4>
-                        <p>We draft clear SOPs to ensure consistency, increasing compliance by 20%.</p>
+                        <p>We draft clear procedures to ensure consistency, increasing process compliance by 20%.</p>
                     </div>
                 </div>
                 <div class="method">
                     <i class="fas fa-database"></i>
                     <div class="method-content">
                         <h4>Knowledge Repositories</h4>
-                        <p>We build Confluence repositories with Jira integration, cutting onboarding time by 15%.</p>
+                        <p>We build digital repositories with tools like Confluence, reducing employee onboarding time by 15%.</p>
                     </div>
                 </div>
-                <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button" style="font-size: 0.9em;">Start Documenting</a>
             </div>
             <hr class="step-divider">
             <div class="step-section" id="recommend-pilot">
                 <i class="fas fa-lightbulb"></i>
                 <h3>3. Recommend & Pilot</h3>
-                <p>Uncertain solutions waste resources. Our Certified Scrum Product Owners and PMPs design and test tailored solutions through Agile pilots for practical results.</p>
+                <p>We design and test tailored solutions through agile pilots, ensuring practical results before full rollout.</p>
                 <div class="method">
                     <i class="fas fa-users-cog"></i>
                     <div class="method-content">
-                        <h4>Training Workshops</h4>
-                        <p>We train your team in Agile and Design Thinking, boosting solution adoption by 25%.</p>
+                        <h4>Solution Brainstorming Workshops</h4>
+                        <p>We facilitate collaborative sessions using Design Thinking, boosting solution adoption by 25% through stakeholder buy-in.</p>
                     </div>
                 </div>
                 <div class="method">
                     <i class="fas fa-running"></i>
                     <div class="method-content">
                         <h4>Agile Pilot Projects</h4>
-                        <p>We run sprints with Monday.com, cutting implementation costs by 15-20%.</p>
+                        <p>We implement solutions in short sprints with tools like Monday.com, reducing project implementation costs by 15-20%.</p>
                     </div>
                 </div>
                 <div class="method">
                     <i class="fas fa-balance-scale"></i>
                     <div class="method-content">
-                        <h4>Change Management</h4>
-                        <p>We guide transitions with PROSCI, reducing implementation failures by 20%.</p>
+                        <h4>Vendor Evaluation</h4>
+                        <p>We assess tools based on cost and scalability, decreasing solution implementation failures by 20%.</p>
                     </div>
                 </div>
-                <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button" style="font-size: 0.9em;">Start Piloting</a>
             </div>
             <hr class="step-divider">
             <div class="step-section" id="measure-scale">
                 <i class="fas fa-chart-line"></i>
                 <h3>4. Measure & Scale</h3>
-                <p>Lack of data stalls progress. We track KPIs and scale solutions with data-driven strategies to maximize efficiency.</p>
+                <p>We track metrics and scale solutions to maximize efficiency with data-driven strategies.</p>
                 <div class="method">
                     <i class="fas fa-tachometer-alt"></i>
                     <div class="method-content">
                         <h4>Key Performance Indicators (KPIs)</h4>
-                        <p>We track metrics with Power BI and eazyBI, enhancing visibility by 25%.</p>
-                    </div>
-                </div>
-                <div class="method">
-                    <i class="fas fa-exchange-alt"></i>
-                    <div class="method-content">
-                        <h4>A/B Testing</h4>
-                        <p>We quantify improvements, boosting process effectiveness by 15%.</p>
+                        <p>We define and track metrics with tools like Power BI, Tableau, or Qlik Sense, enhancing performance visibility by 25%.</p>
                     </div>
                 </div>
                 <div class="method">
                     <i class="fas fa-expand-arrows-alt"></i>
                     <div class="method-content">
                         <h4>Scaling Plans</h4>
-                        <p>We roll out solutions with PROSCI change management, increasing ROI by 15-20%.</p>
+                        <p>We develop phased rollouts with PROSCI models, increasing ROI by 15-20%.</p>
                     </div>
                 </div>
+            </div>
             <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button">Book a Consultation</a>
+        </section>
+        <!-- Section 5: CTA -->
+        <section class="cta-section">
+            <div class="cta-background"></div>
+            <div class="cta-hero-content">
+                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Start Growing Today</a>
+            </div>
         </section>
     </main>
     <footer>
