@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Beacon Digital Solutions’ expert digital execution for medium-sized businesses in healthcare, manufacturing, retail, and professional services, with 13+ years of experience delivering 62% time savings at a leading aerospace company.">
-    <meta name="keywords" content="Beacon Digital Solutions, digital strategy execution, agile program management, medium-sized businesses, Jupiter FL">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-88GV74L2RT');
-</script>
+    <meta name="description" content="Discover Beacon Digital Solutions’ mission to empower small businesses with tailored digital solutions to compete and strengthen communities. Our founder, Taylor Miller, brings 13+ years of expertise with awards in innovation and leadership.">
+    <meta name="keywords" content="Beacon Digital Solutions, small business support, digital solutions, process optimization, community prosperity, Jupiter FL">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-88GV74L2RT');
+    </script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Beacon Digital Solutions - About Us</title>
@@ -182,7 +181,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .about-section, .team-section, .awards-section, .our-team-section, .cta-section {
+        .purpose-section, .story-section, .founder-section, .cta-section {
             background-color: #fff;
             padding: 30px;
             margin: 0;
@@ -192,13 +191,13 @@
             overflow-x: hidden;
             position: relative;
         }
-        .team-section {
+        .founder-section {
             min-height: 60vh;
         }
         .cta-section {
             min-height: 50vh;
         }
-        .team-background {
+        .founder-background {
             position: absolute;
             top: 0;
             left: 0;
@@ -228,7 +227,7 @@
         .cta-section {
             background-color: #f5f5f5;
         }
-        .team-content {
+        .founder-content {
             position: relative;
             z-index: 1;
         }
@@ -248,17 +247,54 @@
             align-items: center;
             padding: 20px;
         }
-        .about-section h2, .team-section h2, .awards-section h2, .our-team-section h2 {
+        .purpose-section h2, .story-section h2, .founder-section h2 {
             color: #003366;
             font-size: 2em;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        .about-section p, .team-section p, .awards-section p, .our-team-section p {
+        .purpose-section h3, .story-section h3, .founder-section h3 {
+            color: #003366;
+            font-size: 1.5em;
+            margin: 20px 0 10px 0;
+        }
+        .purpose-section p, .story-section p, .founder-section p {
             font-size: 1.1em;
             max-width: 800px;
             margin: 0 auto 20px auto;
             color: #333;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .value-item {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            color: #333;
+        }
+        .value-item i {
+            font-size: 40px;
+            color: #003366;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .value-item h4 {
+            color: #003366;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .value-item p {
+            font-size: 1em;
+            margin: 0;
         }
         .founder-container {
             display: flex;
@@ -333,69 +369,6 @@
         .skill-button:hover {
             background-color: #00A8E8;
             color: #fff;
-        }
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-            justify-content: center;
-        }
-        .team-member {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            color: #333;
-            max-width: 300px;
-        }
-        .team-member i {
-            font-size: 50px;
-            color: #003366;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .team-member h3 {
-            color: #003366;
-            margin-bottom: 10px;
-        }
-        .rtx-awards-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-            justify-content: center;
-        }
-        .award-item {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            color: #333;
-            max-width: 100%;
-        }
-        .award-item i {
-            font-size: 40px;
-            color: #003366;
-            margin-bottom: 8px;
-            display: block;
-        }
-        .award-item h3 {
-            color: #003366;
-            font-size: 1.1em;
-            margin-bottom: 8px;
-        }
-        .award-item p {
-            font-size: 0.9em;
-            margin: 0;
         }
         .cta-hero-content .cta-button {
             padding: 16px 32px;
@@ -507,25 +480,45 @@
             .hero p {
                 font-size: 1em;
             }
-            .about-section, .team-section, .awards-section, .our-team-section, .cta-section {
+            .purpose-section, .story-section, .founder-section, .cta-section {
                 padding: 20px;
             }
-            .team-section {
+            .founder-section {
                 min-height: 40vh;
             }
             .cta-section {
                 min-height: 35vh;
             }
-            .team-background {
+            .founder-background {
                 background-position: center center;
             }
-            .about-section h2, .team-section h2, .awards-section h2, .our-team-section h2 {
+            .purpose-section h2, .story-section h2, .founder-section h2 {
                 font-size: 1.5em;
             }
-            .about-section p, .team-section p, .awards-section p, .our-team-section p {
+            .purpose-section h3, .story-section h3, .founder-section h3 {
+                font-size: 1.3em;
+            }
+            .purpose-section p, .story-section p, .founder-section p {
                 font-size: 1em;
                 max-width: 100%;
                 padding: 0 10px;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 15px;
+            }
+            .value-item {
+                padding: 15px;
+            }
+            .value-item i {
+                font-size: 30px;
+            }
+            .value-item h4 {
+                font-size: 1.1em;
+            }
+            .value-item p {
+                font-size: 0.9em;
             }
             .founder-container {
                 flex-direction: column;
@@ -540,27 +533,6 @@
             }
             .founder-photo-container p {
                 font-size: 1em;
-            }
-            .team-grid {
-                grid-template-columns: 1fr;
-                padding: 15px;
-                gap: 15px;
-                justify-content: center;
-            }
-            .rtx-awards-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                padding: 15px;
-            }
-            .team-member, .award-item {
-                padding: 15px;
-                max-width: 100%;
-            }
-            .team-member i, .award-item i {
-                font-size: 40px;
-            }
-            .team-member h3, .award-item h3 {
-                font-size: 1.2em;
             }
             .skill-button {
                 font-size: 0.8em;
@@ -616,20 +588,49 @@
         <div class="hero-content">
             <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo" class="logo">
             <h1>About Us</h1>
-            <p>Streamline Your Business with Smarter Processes and Data-Driven Solutions</p>
+            <p>Empowering Small Businesses to Outpace the Giants</p>
+            <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a>
         </div>
     </div>
     <main>
-        <!-- About Section -->
-        <section class="about-section">
-            <h2>Our Mission</h2>
-            <p>At Beacon Digital Solutions, our mission is to empower businesses to overcome inefficiencies and thrive in a data-driven world. We guide you through the complexity of disconnected systems and outdated processes with tailored, agile solutions.</p>
-            <p>With over 13 years of expertise, we deliver hands-on digital strategies and streamlined operations that transform challenges into opportunities, driving measurable efficiency and sustainable growth for your business.</p>
+        <!-- Purpose Section (Mission, Vision, Core Values) -->
+        <section class="purpose-section">
+            <h2>Our Purpose</h2>
+            <h3>Mission</h3>
+            <p>To empower local small businesses, the backbone of our nation, by optimizing their operations with tailored digital solutions. We enable small businesses to better compete against large corporations through tailored digital solutions, empowering them to thrive in a rapidly digitized world and strengthen their local communities.</p>
+            <h3>Vision</h3>
+            <p>To create a vibrant local economy where small businesses reclaim market share by revolutionizing their operations to be lean, scalable, and competitive through innovative digital solutions.</p>
+            <h3>Core Values</h3>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h4>Community First</h4>
+                    <p>Prioritize local businesses and their role in strengthening our communities.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Empowerment Through Innovation</h4>
+                    <p>Use digital tools to level the playing field for small businesses.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Integrity and Collaboration</h4>
+                    <p>Partner with small businesses transparently to achieve shared success.</p>
+                </div>
+            </div>
+            <p><a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a></p>
         </section>
-        <!-- Team Section (Meet Our Founder) -->
-        <section class="team-section">
-            <div class="team-background"></div>
-            <div class="team-content">
+        <!-- Our Story Section -->
+        <section class="story-section">
+            <h2>Our Story</h2>
+            <p>Growing up in a family that built and runs a commercial refrigeration small business, our founder, Taylor Miller, saw the passion and community connection small businesses bring. As the backbone of our economy, small businesses employ nearly half the U.S. workforce, yet their market share has declined—from 50.1% of private sector sales in 2000 to 46.2% in 2023 (U.S. Census Bureau), with a 2.3% drop in revenue share over the past decade (SBA, 2024).</p>
+            <p>At Beacon Digital Solutions, we see a transformative opportunity for small businesses to reclaim market share. Affordable digital tools and standardized processes, once out of reach, are now accessible, enabling you to revolutionize your operations to be lean, scalable, and competitive. With tailored deliverables like opportunity audits, streamlined process maps, and optimized SOPs, we empower you to boost efficiency, deliver exceptional service, and strengthen your community. Join us to transform your small business and reclaim your market share.</p>
+            <p><a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a></p>
+        </section>
+        <!-- Founder Section (Meet Our Founder) -->
+        <section class="founder-section">
+            <div class="founder-background"></div>
+            <div class="founder-content">
                 <h2>Meet Our Founder</h2>
                 <div class="founder-container">
                     <div class="founder-photo-container">
@@ -638,6 +639,7 @@
                         <p>President and Lead Consultant</p>
                     </div>
                     <div class="founder-bio">
+                        <p>Through these endeavors, Taylor has earned numerous awards for innovation, leadership, and collaboration, reflecting his commitment to delivering measurable, high-impact solutions.</p>
                         <div class="skills">
                             <button class="skill-button">Program Management</button>
                             <button class="skill-button">IT Product Management</button>
@@ -665,84 +667,11 @@
                 </div>
             </div>
         </section>
-        <!-- Awards Section -->
-        <section class="awards-section">
-            <h2>Awards & Recognition</h2>
-            <div class="rtx-awards-grid">
-                <div class="award-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Innovation Award 2022</h3>
-                    <p>For executing digital improvements in product design processes</p>
-                </div>
-                <div class="award-item">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Collaboration Award 2022</h3>
-                    <p>For leading cross-functional digital execution initiatives</p>
-                </div>
-                <div class="award-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Innovation Award 2023</h3>
-                    <p>For delivering digital execution projects</p>
-                </div>
-                <div class="award-item">
-                    <i class="fas fa-trophy"></i>
-                    <h3>Leadership Award 2024</h3>
-                    <p>For leading digital execution efforts</p>
-                </div>
-                <div class="award-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Innovation Award 2024</h3>
-                    <p>For guiding data product execution, exceeding delivery goals by 53%</p>
-                </div>
-                <div class="award-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Innovation Award 2025</h3>
-                    <p>For executing a scalable financial process improvement</p>
-                </div>
-            </div>
-        </section>
-        <!-- Our Team Section -->
-        <section class="our-team-section">
-            <h2>Our Team</h2>
-            <p>Need Dedicated Agile Teams? Beacon Digital Solutions provides leadership to guide IT professionals in delivering results for medium-sized businesses in healthcare, manufacturing, retail, and professional services.</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <i class="fas fa-tasks"></i>
-                    <h3>Product Managers</h3>
-                    <p>Executing product delivery under Taylor’s leadership as a Certified PMP & Scrum Product Owner.</p>
-                </div>
-                <div class="team-member">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Transformation Engineers</h3>
-                    <p>Turning raw data into actionable insights with advanced engineering.</p>
-                </div>
-                <div class="team-member">
-                    <i class="fas fa-plug"></i>
-                    <h3>API Developers</h3>
-                    <p>Building seamless integrations for efficient system connectivity.</p>
-                </div>
-                <div class="team-member">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Developers</h3>
-                    <p>Crafting intuitive interfaces for optimal user experiences.</p>
-                </div>
-                <div class="team-member">
-                    <i class="fas fa-running"></i>
-                    <h3>Scrum Masters</h3>
-                    <p>Supporting Agile Transformation with rapid, reliable outcomes.</p>
-                </div>
-                <div class="team-member">
-                    <i class="fas fa-sitemap"></i>
-                    <h3>Solutions Architects</h3>
-                    <p>Designing robust systems for long-term success.</p>
-                </div>
-            </div>
-        </section>
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="cta-background"></div>
             <div class="cta-hero-content">
-                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Contact Us Today</a>
+                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a>
             </div>
         </section>
     </main>
