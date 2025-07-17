@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Beacon Digital Solutions for expert digital execution services for medium-sized businesses in healthcare, manufacturing, retail, and professional services in Jupiter, FL. Leverage our solutions to stay competitive.">
-    <meta name="keywords" content="Beacon Digital Solutions contact, digital strategy execution, agile transformation support, product management, dedicated agile teams, medium-sized businesses, Jupiter FL">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-88GV74L2RT');
-</script>
+    <meta name="description" content="Beacon Digital Solutions drives small business growth with tailored transformation strategies, aligning technology and processes for scalability and success.">
+    <meta name="keywords" content="Beacon Digital Solutions, transformation strategy, digital transformation, small businesses, Jupiter FL">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-88GV74L2RT');
+    </script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Beacon Digital Solutions - Contact</title>
+    <title>Transformation Strategy Consulting - Beacon Digital Solutions</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -123,7 +122,7 @@
             height: 100%;
             background-image: url('digital_transformation.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center 40%;
             background-repeat: no-repeat;
             filter: brightness(0.7);
             z-index: 0;
@@ -136,6 +135,11 @@
             color: #fff;
             width: 100%;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
             position: absolute;
             top: 50%;
             left: 0;
@@ -155,58 +159,92 @@
             font-weight: bold;
             color: #fff !important;
         }
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
         main {
             margin: 0;
             text-align: center;
             width: 100%;
             box-sizing: border-box;
         }
-        .contact-section {
+        .section {
             background-color: #fff;
             padding: 30px;
-            margin: 0;
-            width: 100%;
-            box-sizing: border-box;
-            overflow-x: hidden;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            max-width: 1200px;
         }
-        .contact-section h2 {
+        .section h2 {
             color: #003366;
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
-            margin: 0 0 20px 0;
+            margin-bottom: 20px;
         }
-        .contact-section p {
+        .section h3 {
+            color: #003366;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .section p {
             font-size: 1.1em;
             max-width: 800px;
-            margin: 0 auto 20px auto;
+            margin: 0 auto 20px;
+            color: #333;
         }
-        .contact-section a {
-            color: #003366;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact-section a:hover {
-            text-decoration: underline;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto 20px auto;
+        .section ul {
+            list-style-type: disc;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            padding-left: 40px;
             text-align: left;
+            color: #333;
         }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
+        .section li {
             margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        }
+        .process-flow-image {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .process-flow-caption {
             font-size: 1em;
-            box-sizing: border-box;
+            color: #333;
+            margin: 10px auto;
+            max-width: 800px;
+            text-align: center;
         }
-        form textarea {
-            height: 100px;
+        .deliverable-visual {
+            margin: 20px 0;
         }
-        form button.cta-button {
-            width: 100%;
+        .success-snapshot {
+            background: linear-gradient(135deg, #e6ecef 0%, #f0f4f8 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .faq-item {
+            margin: 20px 0;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-item h4 {
+            color: #003366;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            font-size: 1em;
+            margin: 0;
         }
         .cta-button {
             background-color: #1A2A44;
@@ -217,9 +255,7 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
+            margin: 20px 0;
         }
         .cta-button:hover {
             background-color: #0F1A2F;
@@ -233,6 +269,51 @@
         #header-cta.cta-button:hover {
             background-color: #003366;
             transform: scale(1.05);
+        }
+        .cta-section {
+            min-height: 50vh;
+            position: relative;
+            background-color: #f5f5f5;
+        }
+        .cta-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('cta-hero.jpg');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            filter: brightness(1);
+        }
+        .cta-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .cta-hero-content .cta-button {
+            padding: 16px 32px;
+            font-size: 1.3em;
+            background-color: #ff4500;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-hero-content .cta-button:hover {
+            background-color: #e03e00;
+            transform: scale(1.1);
         }
         footer {
             background-color: #003366;
@@ -304,7 +385,7 @@
                 padding: 0 10px;
                 align-items: center;
             }
-            .cta-button {
+            #header-cta.cta-button {
                 font-size: 1em;
                 padding: 8px 16px;
             }
@@ -330,23 +411,52 @@
                 font-size: 1.8em;
                 margin: 10px 0;
             }
-            .contact-section {
-                padding: 20px;
+            .hero p {
+                font-size: 1em;
             }
-            .contact-section h2 {
+            .section {
+                padding: 20px;
+                margin: 15px auto;
+            }
+            .section h2 {
                 font-size: 1.5em;
             }
-            .contact-section p {
+            .section h3 {
+                font-size: 1.3em;
+            }
+            .section p {
                 font-size: 1em;
-                max-width: 100%;
                 padding: 0 10px;
             }
-            form {
-                max-width: 100%;
-                padding: 0 10px;
+            .section ul {
+                padding-left: 30px;
             }
-            form input, form textarea {
+            .process-flow-image {
+                max-width: 100%;
+                margin: 10px auto;
+            }
+            .process-flow-caption {
                 font-size: 0.9em;
+                padding: 0 10px;
+            }
+            .success-snapshot {
+                padding: 15px;
+            }
+            .faq-item h4 {
+                font-size: 1.1em;
+            }
+            .faq-item p {
+                font-size: 0.9em;
+            }
+            .cta-section {
+                min-height: 35vh;
+            }
+            .cta-hero-content {
+                padding: 15px;
+            }
+            .cta-hero-content .cta-button {
+                padding: 12px 24px;
+                font-size: 1.1em;
             }
             footer {
                 padding: 15px 0;
@@ -391,32 +501,84 @@
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions contact logo" class="logo">
-            <h1>Contact Us</h1>
-            <p>Empowering Small Businesses to Outpace the Giants</p>
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions transformation strategy logo" class="logo">
+            <h1>Transformation Strategy Consulting</h1>
+            <p>Build a Roadmap for Sustainable Growth and Success</p>
         </div>
     </div>
     <main>
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h2>Get in Touch</h2>
-            <p>We are excited to equip your business with tailored digital strategies and optimized operations to compete and thrive.</p>
-            <form action="https://formsubmit.co/taylor@beacondigitalsolutionsllc.com" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone">
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <input type="hidden" name="_replyto" value="taylor@beacondigitalsolutionsllc.com">
-                <input type="hidden" name="_next" value="https://beacondigitalsolutionsllc.com/thank-you.html">
-                <input type="hidden" name="_subject" value="New Contact Form Submission - Beacon Digital Solutions">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="true">
-                <button type="submit" class="cta-button">Submit</button>
-            </form>
-            <p><strong>Phone:</strong> <a href="tel:5616358715">561.635.8715</a></p>
-            <p><strong>Address:</strong> Jupiter, FL</p>
+        <!-- Benefits Section -->
+        <section class="section">
+            <h2>Why Transformation Strategy Consulting?</h2>
+            <p>Is your small business ready to scale but unsure where to start? Our Transformation Strategy Consulting service aligns your technology, processes, and business goals to drive sustainable growth. Proven in our work with small businesses, we deliver up to 30% improvements in efficiency and revenue by creating clear roadmaps and prioritizing high-impact initiatives.</p>
+            <ul>
+                <li>Scale operations with confidence</li>
+                <li>Gain a competitive edge through technology</li>
+                <li>Align teams with a unified vision</li>
+                <li>Achieve up to 30% growth in efficiency or revenue</li>
+            </ul>
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button">Start Your Transformation</a>
+        </section>
+        <!-- How It Works Section -->
+        <section class="section">
+            <h2>How We Build Your Transformation Strategy</h2>
+            <p>Our four-phase process—Assess, Strategize, Implement, Scale—creates a tailored roadmap for your business’s long-term success.</p>
+            <div class="deliverable-visual">
+                <img src="transformation_phases.png" alt="Transformation Phases" class="process-flow-image">
+                <p class="process-flow-caption">This diagram illustrates our four-phase transformation process with clear steps, guiding your business to up to 30% efficiency or revenue growth.</p>
+            </div>
+        </section>
+        <!-- Example Deliverables Section -->
+        <section class="section">
+            <h2>Example Deliverables</h2>
+            <p>Our deliverables provide a clear path to transform your business for growth.</p>
+            <div class="deliverable-visual">
+                <img src="transformation_roadmap.png" alt="Transformation Roadmap" class="process-flow-image">
+                <p class="process-flow-caption">This sample high level roadmap outlines your transformation journey with clear steps and timelines, aligning technology and processes for up to 30% efficiency or revenue growth.</p>
+            </div>
+            <div class="deliverable-visual">
+                <img src="kpi_dashboard.png" alt="KPI Dashboard" class="process-flow-image">
+                <p class="process-flow-caption">This KPI dashboard tracks transformation success metrics like efficiency and revenue, ensuring up to 30% growth.</p>
+            </div>
+            <h3>Full Deliverables</h3>
+            <ul>
+                <li>Transformation roadmap aligning goals and technology</li>
+                <li>Business impact matrix for prioritizing initiatives</li>
+                <li>Stakeholder alignment workshop summaries</li>
+                <li>Technology stack recommendations for scalability</li>
+                <li>KPI dashboards to measure transformation success</li>
+            </ul>
+        </section>
+        <!-- Client Success Snapshot Section -->
+        <section class="section success-snapshot">
+            <h2>Client Success Snapshot</h2>
+            <p>A small manufacturing business aimed to modernize but lacked a clear strategy. Our transformation roadmap and impact matrix prioritized cloud adoption and process automation, boosting efficiency by 25% and reducing costs by 20% within six months.</p>
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button">Discover Transformation Benefits</a>
+        </section>
+        <!-- FAQ Section -->
+        <section class="section">
+            <h2>Common Questions</h2>
+            <div class="faq-item">
+                <h4>How long does a transformation strategy take?</h4>
+                <p>Our assessment and strategy phase typically takes 4-6 weeks, depending on your business complexity.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do I need to overhaul my entire business?</h4>
+                <p>No, we prioritize high-impact, feasible changes, often enhancing existing systems for scalability.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do you measure transformation success?</h4>
+                <p>We use KPI dashboards to track metrics like efficiency and revenue growth, ensuring up to 30% improvements.</p>
+            </div>
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button">Ask Us Anything</a>
         </section>
     </main>
+    <section class="cta-section">
+        <div class="cta-background"></div>
+        <div class="cta-hero-content">
+            <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Start Your Transformation Journey</a>
+        </div>
+    </section>
     <footer>
         <p>2025 Beacon Digital Solutions | Jupiter, FL</p>
         <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>

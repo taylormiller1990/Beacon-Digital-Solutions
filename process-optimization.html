@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beacon Digital Solutions offers deliverable-based solutions for small businesses in healthcare, manufacturing, retail, and professional services, delivering 62% time savings at a leading aerospace company.">
-    <meta name="keywords" content="Beacon Digital Solutions, process optimization, agile project delivery, transformation strategy, small businesses, Jupiter FL">
+    <meta name="description" content="Beacon Digital Solutions streamlines your small business operations with audits and actionable plans, boosting productivity by up to 30%.">
+    <meta name="keywords" content="Beacon Digital Solutions, process optimization, business audit, tooling audit, process map, small businesses, Jupiter FL">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
     <script>
@@ -15,7 +15,7 @@
     </script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Beacon Digital Solutions - Services</title>
+    <title>Process Optimization - Beacon Digital Solutions</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -169,45 +169,32 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .services-section, .cta-section {
+        .section {
             background-color: #fff;
             padding: 30px;
-            margin: 0;
-            width: 100%;
-            box-sizing: border-box;
-            overflow-x: hidden;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            max-width: 1200px;
         }
-        .cta-section {
-            min-height: 50vh;
-            position: relative;
-        }
-        .services-section h2 {
+        .section h2 {
             color: #003366;
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
-            margin: 0 0 20px 0;
+            margin-bottom: 20px;
         }
-        .service {
-            margin-bottom: 30px;
-        }
-        .service i {
-            font-size: 50px;
-            color: #003366;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .service h3 {
+        .section h3 {
             color: #003366;
             font-size: 1.5em;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
-        .service p {
+        .section p {
             font-size: 1.1em;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
             color: #333;
         }
-        .service ul {
+        .section ul {
             list-style-type: disc;
             max-width: 800px;
             margin: 0 auto 20px;
@@ -215,8 +202,86 @@
             text-align: left;
             color: #333;
         }
-        .service li {
+        .section li {
             margin-bottom: 10px;
+        }
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .process-step {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .process-step:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .process-step i {
+            font-size: 40px;
+            color: #00A8E8;
+            margin-bottom: 10px;
+        }
+        .process-step h4 {
+            color: #003366;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .process-step p {
+            font-size: 1em;
+            color: #333;
+            margin: 0;
+        }
+        .process-flow-image {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .process-flow-caption {
+            font-size: 1em;
+            color: #333;
+            margin: 10px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .deliverable-visual {
+            margin: 20px 0;
+        }
+        .success-snapshot {
+            background: linear-gradient(135deg, #e6ecef 0%, #f0f4f8 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .faq-item {
+            margin: 20px 0;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-item h4 {
+            color: #003366;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            font-size: 1em;
+            margin: 0;
         }
         .cta-button {
             background-color: #1A2A44;
@@ -227,6 +292,7 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.2s ease;
             display: inline-block;
+            margin: 20px 0;
         }
         .cta-button:hover {
             background-color: #0F1A2F;
@@ -241,6 +307,11 @@
             background-color: #003366;
             transform: scale(1.05);
         }
+        .cta-section {
+            min-height: 50vh;
+            position: relative;
+            background-color: #f5f5f5;
+        }
         .cta-background {
             position: absolute;
             top: 0;
@@ -253,9 +324,6 @@
             background-repeat: no-repeat;
             z-index: 0;
             filter: brightness(1);
-        }
-        .cta-section {
-            background-color: #f5f5f5;
         }
         .cta-hero-content {
             position: relative;
@@ -311,53 +379,6 @@
             width: 20px;
             height: auto;
             vertical-align: middle;
-        }
-        .process-wrapper {
-            background: linear-gradient(135deg, #e6ecef 0%, #f0f4f8 100%);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid #d3d9df;
-        }
-        hr.services-divider {
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
-        }
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .process-cta {
-            background-color: #00A8E8;
-            color: #fff !important;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .process-cta:hover {
-            background-color: #003366;
-            transform: scale(1.05);
-        }
-        .process-flow-image {
-            max-width: 50%;
-            height: auto;
-            display: block;
-            margin: 15px auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .process-flow-caption {
-            font-size: 1em;
-            color: #333;
-            margin: 10px auto;
-            max-width: 800px;
-            text-align: center;
         }
         @media (max-width: 768px) {
             .menu-toggle {
@@ -430,28 +451,30 @@
             .hero p {
                 font-size: 1em;
             }
-            .services-section, .cta-section {
+            .section {
                 padding: 20px;
+                margin: 15px auto;
             }
-            .cta-section {
-                min-height: 35vh;
-            }
-            .services-section h2 {
+            .section h2 {
                 font-size: 1.5em;
             }
-            .service i {
-                font-size: 40px;
-            }
-            .service h3 {
+            .section h3 {
                 font-size: 1.3em;
             }
-            .service p {
+            .section p {
                 font-size: 1em;
-                max-width: 100%;
                 padding: 0 10px;
             }
-            .service ul {
+            .section ul {
                 padding-left: 30px;
+            }
+            .process-steps {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .process-step {
+                min-width: unset;
+                width: 100%;
             }
             .process-flow-image {
                 max-width: 100%;
@@ -461,8 +484,24 @@
                 font-size: 0.9em;
                 padding: 0 10px;
             }
-            .process-wrapper {
+            .success-snapshot {
                 padding: 15px;
+            }
+            .faq-item h4 {
+                font-size: 1.1em;
+            }
+            .faq-item p {
+                font-size: 0.9em;
+            }
+            .cta-section {
+                min-height: 35vh;
+            }
+            .cta-hero-content {
+                padding: 15px;
+            }
+            .cta-hero-content .cta-button {
+                padding: 12px 24px;
+                font-size: 1.1em;
             }
             footer {
                 padding: 15px 0;
@@ -507,69 +546,102 @@
     <div class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions services logo" class="logo">
-            <h1>Our Services</h1>
-            <p>Empowering Small Businesses to Outpace the Giants</p>
+            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions process optimization logo" class="logo">
+            <h1>Process Optimization</h1>
+            <p>Streamline Your Operations to Save Time and Money</p>
         </div>
     </div>
     <main>
-        <section class="services-section">
-            <h2>Our Deliverable-Based Solutions</h2>
-            <div class="process-wrapper">
-                <div class="service">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Process Optimization</h3>
-                    <p>Streamline operations to outpace competitors and scale efficiently. Our four-step process—Analyze, Document, Recommend & Pilot, Measure & Scale—delivers a prioritized roadmap for efficiency, boosting productivity by up to 30%, as shown in our <a href="https://beacondigitalsolutionsllc.com/case-studies.html">aerospace case study</a>.</p>
-                    <h4>Deliverables</h4>
-                    <ul>
-                        <li>Business/process audit report prioritizing high-value, low-effort processes</li>
-                        <li>Tooling audit report mapping tools, functions, and cost-effective recommendations</li>
-                        <li>Visual process maps for team alignment</li>
-                        <li>Tailored recommendations with pilot plans</li>
-                        <li>Standard Operating Procedures (SOPs) for consistent operations</li>
-                        <li>Data-driven KPI dashboards</li>
-                    </ul>
-                    <a href="https://beacondigitalsolutionsllc.com/process-optimization.html" class="process-cta">Learn More About Process Optimization</a>
+        <!-- Benefits Section -->
+        <section class="section">
+            <h2>Why Optimize Your Processes?</h2>
+            <p>Are inefficiencies slowing your small business down? From manual tasks to fragmented tools, these bottlenecks cost you time, money, and competitive edge. Our Process Optimization service delivers up to 30% productivity gains, as proven in our <a href="https://beacondigitalsolutionsllc.com/case-studies.html">aerospace case study</a>. We identify high-impact processes and optimize your technology stack to make your operations leaner, faster, and more cost-effective.</p>
+            <ul>
+                <li>Reduce operational costs by up to 25%</li>
+                <li>Boost team productivity with clear workflows</li>
+                <li>Enhance data flow for better decision-making</li>
+                <li>Strengthen your community impact with efficient operations</li>
+            </ul>
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button">Start Streamlining Now</a>
+        </section>
+        <!-- How It Works Section -->
+        <section class="section">
+            <h2>How We Optimize Your Business</h2>
+            <p>Our four-step process—Analyze, Document, Recommend & Pilot, Measure & Scale—ensures measurable results tailored to your small business needs.</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <i class="fas fa-search"></i>
+                    <h4>Analyze</h4>
+                    <p>Conduct a business/process audit to identify bottlenecks and prioritize high-value, low-effort processes, paired with a tooling audit to map your technology stack.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Document</h4>
+                    <p>Create visual process maps and Standard Operating Procedures (SOPs) to align your team and ensure consistency.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Recommend & Pilot</h4>
+                    <p>Deliver tailored recommendations and test them through Agile pilots to validate improvements.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Measure & Scale</h4>
+                    <p>Track progress with KPI dashboards and scale successful optimizations across your business.</p>
                 </div>
             </div>
-            <hr class="services-divider">
-            <div class="service">
-                <i class="fas fa-tasks"></i>
-                <h3>Agile Project Delivery</h3>
-                <p>Accelerate digital projects with Agile methodologies, delivering precise, measurable outcomes to reclaim market share. Our Certified Scrum Product Owner-led approach reduces delivery time by 25% (Agile Alliance), empowering your team with training and tools to thrive.</p>
-                <h4>Deliverables</h4>
-                <ul>
-                    <li>Agile project roadmap with sprint plans</li>
-                    <li>Automated workflows for efficiency</li>
-                    <li>Performance dashboards for real-time tracking</li>
-                    <li>Product Owner, Scrum Master, and Project Management coaching</li>
-                </ul>
-                <a href="https://beacondigitalsolutionsllc.com/agile-project-delivery.html" class="process-cta">Learn More About Agile Project Delivery</a>
-            </div>
-            <hr class="services-divider">
-            <div class="service">
-                <i class="fas fa-compass"></i>
-                <h3>Transformation Strategy Consulting</h3>
-                <p>Build a practical, growth-focused roadmap to make your small business more efficient and competitive. Our tailored strategies and training improve agility by 30% (McKinsey), helping you scale smartly and strengthen your community impact.</p>
-                <h4>Deliverables</h4>
-                <ul>
-                    <li>Growth roadmap with prioritized initiatives</li>
-                    <li>Data governance frameworks for streamlined operations</li>
-                    <li>Team training programs for strategy adoption</li>
-                    <li>Change management plans for smooth transitions</li>
-                    <li>KPI dashboards to track progress</li>
-                </ul>
-                <a href="https://beacondigitalsolutionsllc.com/transformation-strategy-consulting.html" class="process-cta">Learn More About Transformation Strategy</a>
-            </div>
         </section>
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-background"></div>
-            <div class="cta-hero-content">
-                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Contact Us Today</a>
+        <!-- Example Deliverables Section -->
+        <section class="section">
+            <h2>Example Deliverables</h2>
+            <p>Our deliverables provide actionable insights and tools to transform your operations.</p>
+            <div class="deliverable-visual">
+                <img src="process_prioritization_matrix.png" alt="Process Prioritization Matrix" class="process-flow-image">
+                <p class="process-flow-caption">This table highlights the greatest opportunities for efficiency, like automating order processing (score: 4.2/5), backed by our in-depth process audits to deliver 20-30% gains, as proven in our aerospace case study.</p>
             </div>
+            <div class="deliverable-visual">
+                <img src="Business_process_flow_example.png" alt="Process Map" class="process-flow-image">
+                <p class="process-flow-caption">This process map visualizes your current operations, pinpointing inefficiencies like data silos and manual tasks, with optimized solutions from our tooling audit to achieve 20-30% efficiency gains.</p>
+            </div>
+            <h3>Full Deliverables</h3>
+            <ul>
+                <li>Business/process audit report prioritizing high-value, low-effort processes</li>
+                <li>Tooling audit report mapping tools, functions, and cost-effective recommendations</li>
+                <li>Visual process maps for team alignment</li>
+                <li>Tailored recommendations with pilot plans</li>
+                <li>Standard Operating Procedures (SOPs) for consistent operations</li>
+                <li>Data-driven KPI dashboards</li>
+            </ul>
+        </section>
+        <!-- Client Success Snapshot Section -->
+        <section class="section success-snapshot">
+            <h2>Client Success Snapshot</h2>
+            <p>A small retail business struggled with manual inventory tracking and costly, disconnected tools. Our business/process audit identified automation opportunities, and our process map revealed data silos. The result? A 25% reduction in operational costs and a 20% boost in order processing speed within three months.</p>
+        </section>
+        <!-- FAQ Section -->
+        <section class="section">
+            <h2>Common Questions</h2>
+            <div class="faq-item">
+                <h4>How long does the audit process take?</h4>
+                <p>Our business/process and tooling audits typically take 2-4 weeks, depending on your business size and complexity.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Will I need to replace all my tools?</h4>
+                <p>Not necessarily. Our process maps and tooling audits identify cost-effective, interoperable solutions, often leveraging your existing tools more efficiently.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do you measure success?</h4>
+                <p>We use KPI dashboards to track metrics like productivity (up to 30% improvement) and cost savings, ensuring measurable results.</p>
+            </div>
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button">Ask Us Anything</a>
         </section>
     </main>
+    <section class="cta-section">
+        <div class="cta-background"></div>
+        <div class="cta-hero-content">
+            <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Start Optimizing Today</a>
+        </div>
+    </section>
     <footer>
         <p>2025 Beacon Digital Solutions | Jupiter, FL</p>
         <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
