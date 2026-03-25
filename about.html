@@ -3,694 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover Beacon Digital Solutions’ mission to empower small businesses with tailored digital solutions to compete and strengthen communities. Our founder, Taylor Miller, brings 13+ years of expertise with awards in innovation and leadership.">
-    <meta name="keywords" content="Beacon Digital Solutions, small business support, digital solutions, process optimization, community prosperity, Jupiter FL">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-88GV74L2RT');
-    </script>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Beacon Digital Solutions - About Us</title>
+    <meta name="description" content="About Taylor Miller and Beacon Digital Solutions – AI power user turning real tools and workflows into business results for small businesses.">
+    <title>About | Beacon Digital Solutions</title>
+    
+<!-- Favicon with cache buster -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+<link rel="manifest" href="site.webmanifest?v=1">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #003366;
-            padding: 15px 20px;
-            border-bottom: 1px solid #ccc;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: border-box;
-            padding: 0 10px;
-        }
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            align-items: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #00A8E8;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-toggle {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .dropdown-caret {
-            cursor: pointer;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #003366;
-            min-width: 150px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            border-radius: 5px;
-        }
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        .dropdown-menu a {
-            display: block;
-            padding: 10px 15px;
-            font-size: 1em;
-            color: #fff;
-            text-align: left;
-        }
-        .dropdown-menu a:hover {
-            background: #00A8E8;
-        }
-        .cta-button {
-            background-color: #00A8E8;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .cta-button:hover {
-            background-color: #003366;
-            transform: scale(1.05);
-        }
-        .hero {
-            position: relative;
-            min-height: 60vh;
-            width: 100%;
-            margin: 0;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('digital_transformation.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            filter: brightness(0.7);
-            z-index: 0;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 20px;
-            color: #fff;
-            width: 100%;
-            box-sizing: border-box;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-        }
-        .hero .logo {
-            max-width: 200px;
-            margin-bottom: 5px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            filter: none !important;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
-            font-weight: bold;
-            color: #fff !important;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin: 10px 0;
-            color: #fff !important;
-        }
-        main {
-            margin: 0;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .purpose-section, .story-section, .founder-section, .cta-section {
-            background-color: #fff;
-            padding: 30px;
-            margin: 0;
-            color: #333;
-            width: 100%;
-            box-sizing: border-box;
-            overflow-x: hidden;
-            position: relative;
-        }
-        .founder-section {
-            min-height: 60vh;
-        }
-        .cta-section {
-            min-height: 50vh;
-        }
-        .founder-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('services-hero.jpg');
-            background-size: cover;
-            background-position: center 40%;
-            background-repeat: no-repeat;
-            filter: brightness(1);
-            z-index: 0;
-            opacity: 0.2;
-        }
-        .cta-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('cta-hero.jpg');
-            background-size: contain;
-            background-position: center center;
-            background-repeat: no-repeat;
-            z-index: 0;
-            filter: brightness(1);
-        }
-        .cta-section {
-            background-color: #f5f5f5;
-        }
-        .founder-content {
-            position: relative;
-            z-index: 1;
-        }
-        .cta-hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #fff;
-            width: 100%;
-            box-sizing: border-box;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .purpose-section h2, .story-section h2, .founder-section h2 {
-            color: #003366;
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .purpose-section h3, .story-section h3, .founder-section h3 {
-            color: #003366;
-            font-size: 1.5em;
-            margin: 20px 0 10px 0;
-        }
-        .purpose-section p, .story-section p, .founder-section p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-            color: #333;
-        }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-        .value-item {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            color: #333;
-        }
-        .value-item i {
-            font-size: 40px;
-            color: #003366;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .value-item h4 {
-            color: #003366;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .value-item p {
-            font-size: 1em;
-            margin: 0;
-        }
-        .founder-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            max-width: 1200px;
-            margin: 20px auto;
-            gap: 30px;
-        }
-        .founder-photo-container {
-            flex-shrink: 0;
-            text-align: center;
-        }
-        .founder-photo {
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto;
-        }
-        .founder-photo-container h3 {
-            color: #003366;
-            font-size: 1.5em;
-            margin: 10px 0 5px 0;
-        }
-        .founder-photo-container p {
-            font-size: 1.1em;
-            margin: 0 0 15px 0;
-            color: #555;
-        }
-        .founder-bio {
-            flex: 1;
-            text-align: left;
-        }
-        .skills {
-            margin-bottom: 20px;
-        }
-        .experience {
-            margin-bottom: 15px;
-        }
-        .experience img {
-            width: 50px;
-            height: auto;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .experience .booz-allen-logo {
-            width: 75px;
-        }
-        .experience h4 {
-            color: #003366;
-            font-size: 1.2em;
-            margin: 0 0 5px 0;
-            display: inline-block;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        .skill-button {
-            background-color: #f0f0f0;
-            border: none;
-            padding: 6px 12px;
-            font-size: 0.9em;
-            color: #333;
-            border-radius: 15px;
-            cursor: default;
-            transition: background-color 0.3s ease;
-        }
-        .skill-button:hover {
-            background-color: #00A8E8;
-            color: #fff;
-        }
-        .cta-hero-content .cta-button {
-            padding: 16px 32px;
-            font-size: 1.3em;
-            background-color: #ff4500;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .cta-hero-content .cta-button:hover {
-            background-color: #e03e00;
-            transform: scale(1.1);
-        }
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        footer .venture-text {
-            font-size: 0.6em;
-        }
-        footer p:not(.venture-text) {
-            font-size: 1em;
-        }
-        footer a {
-            color: #00A8E8;
-            text-decoration: none;
-            margin-left: 5px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        footer img {
-            width: 20px;
-            height: auto;
-            vertical-align: middle;
-        }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            nav {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #003366;
-                padding: 20px;
-                gap: 15px;
-                box-sizing: border-box;
-            }
-            nav.active {
-                display: flex;
-            }
-            .dropdown {
-                position: relative;
-            }
-            .dropdown-menu {
-                position: static;
-                background: #004080;
-                box-shadow: none;
-                margin-left: 20px;
-            }
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-            .dropdown-toggle i {
-                transform: rotate(0);
-            }
-            .dropdown.active .dropdown-toggle i {
-                transform: rotate(180deg);
-            }
-            .nav-container {
-                justify-content: space-between;
-                padding: 0 10px;
-                align-items: center;
-            }
-            .cta-button {
-                font-size: 1em;
-                padding: 8px 16px;
-            }
-            .hero {
-                min-height: 40vh;
-                padding: 20px 0;
-            }
-            .hero-background {
-                background-position: center center;
-                width: 100%;
-            }
-            .hero-content {
-                position: relative;
-                top: 0;
-                transform: none;
-                padding: 15px;
-            }
-            .hero .logo {
-                max-width: 160px;
-                margin-bottom: 10px;
-            }
-            .hero h1 {
-                font-size: 1.8em;
-                margin: 10px 0;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-            .purpose-section, .story-section, .founder-section, .cta-section {
-                padding: 20px;
-            }
-            .founder-section {
-                min-height: 40vh;
-            }
-            .cta-section {
-                min-height: 35vh;
-            }
-            .founder-background {
-                background-position: center center;
-            }
-            .purpose-section h2, .story-section h2, .founder-section h2 {
-                font-size: 1.5em;
-            }
-            .purpose-section h3, .story-section h3, .founder-section h3 {
-                font-size: 1.3em;
-            }
-            .purpose-section p, .story-section p, .founder-section p {
-                font-size: 1em;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            .values-grid {
-                grid-template-columns: 1fr;
-                padding: 15px;
-                gap: 15px;
-            }
-            .value-item {
-                padding: 15px;
-            }
-            .value-item i {
-                font-size: 30px;
-            }
-            .value-item h4 {
-                font-size: 1.1em;
-            }
-            .value-item p {
-                font-size: 0.9em;
-            }
-            .founder-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .founder-photo {
-                max-width: 200px;
-                margin: 15px auto;
-            }
-            .founder-photo-container h3 {
-                font-size: 1.3em;
-            }
-            .founder-photo-container p {
-                font-size: 1em;
-            }
-            .skill-button {
-                font-size: 0.8em;
-                padding: 5px 10px;
-            }
-            .cta-hero-content {
-                padding: 15px;
-            }
-            .cta-hero-content .cta-button {
-                padding: 12px 24px;
-                font-size: 1.1em;
-            }
-            footer {
-                padding: 15px 0;
-                font-size: 0.8em;
-            }
-            footer .venture-text {
-                font-size: 0.55em;
-            }
-            footer p:not(.venture-text) {
-                font-size: 0.9em;
-            }
-            footer img {
-                width: 18px;
-            }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { 
+            font-family: 'Inter', system_ui, sans-serif; 
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button" id="header-cta" target="_blank">Book a Consult Today!</a>
-            <button class="menu-toggle" aria-label="Menu">☰</button>
-            <nav>
-                <a href="https://beacondigitalsolutionsllc.com/index.html">Home</a>
-                <a href="https://beacondigitalsolutionsllc.com/about.html">About</a>
-                <div class="dropdown">
-                    <div class="dropdown-toggle">
-                        <a href="https://beacondigitalsolutionsllc.com/services.html">Services</a>
-                        <i class="fas fa-caret-down dropdown-caret"></i>
-                    </div>
-                    <div class="dropdown-menu">
-                        <a href="https://beacondigitalsolutionsllc.com/process-optimization.html">Process Optimization</a>
-                        <a href="https://beacondigitalsolutionsllc.com/agile-project-delivery.html">Agile Project Delivery</a>
-                        <a href="https://beacondigitalsolutionsllc.com/transformation-strategy-consulting.html">Transformation Strategy Consulting</a>
-                    </div>
-                </div>
-                <a href="https://beacondigitalsolutionsllc.com/contact.html">Contact</a>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- HEADER -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-6 py-5 flex items-center justify-between">
+<div class="flex items-center gap-x-3">
+    <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions" class="h-9">
+    <div>
+        <span class="font-semibold text-2xl tracking-tight">Beacon</span>
+        <span class="text-slate-400 text-lg tracking-tight">Digital Solutions</span>
+    </div>
+</div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+                <a href="blog.html" class="hover:text-cyan-400 transition-colors">Blog</a>
+                <a href="tools.html" class="hover:text-cyan-400 transition-colors">Tools</a>
+                <a href="videos.html" class="hover:text-cyan-400 transition-colors">Videos</a>
+                <a href="about.html" class="text-cyan-400 transition-colors">About</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
             </nav>
+            
+            <!-- Desktop CTA -->
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" 
+               target="_blank"
+               class="hidden md:flex items-center gap-x-2 bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold px-6 py-2.5 rounded-2xl text-sm transition-all">
+                <i class="fas fa-calendar"></i> Book Consult
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" 
+                    class="md:hidden text-2xl text-slate-200">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-6 py-6 flex flex-col gap-4 text-sm font-medium">
+            <a href="index.html" class="hover:text-cyan-400">Home</a>
+            <a href="blog.html" class="hover:text-cyan-400">Blog</a>
+            <a href="tools.html" class="hover:text-cyan-400">Tools</a>
+            <a href="videos.html" class="hover:text-cyan-400">Videos</a>
+            <a href="about.html" class="hover:text-cyan-400">About</a>
+            <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+            
+            <!-- Mobile CTA -->
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" 
+               target="_blank"
+               class="mt-4 bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold px-6 py-3 rounded-2xl text-sm inline-flex items-center justify-center gap-x-2">
+                <i class="fas fa-calendar"></i> Book Consult
+            </a>
         </div>
     </header>
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo" class="logo">
-            <h1>About Us</h1>
-            <p>Empowering Small Businesses to Outpace the Giants</p>
-            <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a>
+
+    <!-- MAIN CONTENT -->
+    <div class="max-w-screen-2xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h1 class="text-6xl font-bold tracking-tighter mb-6">Taylor Miller</h1>
+                <p class="text-2xl text-cyan-400 mb-8">Power user turning AI into daily business wins.</p>
+                
+                <div class="space-y-6 text-slate-300 text-lg">
+                    <p>I run Beacon Digital Solutions and use AI tools every single day — for my own business and for clients.</p>
+                    <p>This site is where I share exactly what works right now: the prompts, workflows, tools, and real ROI numbers that actually move the needle.</p>
+                    <p>No hype. No theory. Just real stuff I test and ship weekly.</p>
+                </div>
+
+                <div class="mt-12 flex gap-6">
+                    <a href="https://x.com/MillerPTaylor" target="_blank" 
+                       class="flex items-center gap-x-3 text-cyan-400 hover:text-white transition-colors">
+                        <i class="fab fa-x-twitter text-3xl"></i>
+                        <span class="text-lg">@MillerPTaylor</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-3xl p-10">
+                <div class="aspect-square bg-slate-800 rounded-2xl flex items-center justify-center mb-8">
+                    <i class="fas fa-user text-9xl text-slate-600"></i>
+                </div>
+                <div class="text-center">
+                    <p class="font-medium text-lg">13+ years in operations &amp; digital transformation</p>
+                    <p class="text-sm text-slate-400 mt-2">Now 100% focused on AI-powered tooling for small businesses</p>
+                </div>
+            </div>
         </div>
     </div>
-    <main>
-        <!-- Purpose Section (Mission, Vision, Core Values) -->
-        <section class="purpose-section">
-            <h2>Our Purpose</h2>
-            <h3>Mission</h3>
-            <p>To empower local small businesses, the backbone of our nation, by optimizing their operations with tailored digital solutions. We enable small businesses to better compete against large corporations through tailored digital solutions, empowering them to thrive in a rapidly digitized world and strengthen their local communities.</p>
-            <h3>Vision</h3>
-            <p>To create a vibrant local economy where small businesses reclaim market share by revolutionizing their operations to be lean, scalable, and competitive through innovative digital solutions.</p>
-            <h3>Core Values</h3>
-            <div class="values-grid">
-                <div class="value-item">
-                    <i class="fas fa-users"></i>
-                    <h4>Community First</h4>
-                    <p>Prioritize local businesses and their role in strengthening our communities.</p>
-                </div>
-                <div class="value-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h4>Empowerment Through Innovation</h4>
-                    <p>Use digital tools to level the playing field for small businesses.</p>
-                </div>
-                <div class="value-item">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Integrity and Collaboration</h4>
-                    <p>Partner with small businesses transparently to achieve shared success.</p>
-                </div>
-            </div>
-            <p><a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a></p>
-        </section>
-        <!-- Our Story Section -->
-        <section class="story-section">
-            <h2>Our Story</h2>
-            <p>Growing up in a family that built and runs a commercial refrigeration small business, our founder, Taylor Miller, saw the passion and community connection small businesses bring. As the backbone of our economy, small businesses employ nearly half the U.S. workforce, yet their market share has declined—from 50.1% of private sector sales in 2000 to 46.2% in 2023 (U.S. Census Bureau).</p>
-            <p>At Beacon Digital Solutions, we see a transformative opportunity for small businesses to reclaim market share. Now more affordable than ever, digital tools and standardized processes empower you to transform your operations into lean, scalable, and competitive systems, unlocking significant growth opportunities. With tailored deliverables like opportunity audits, streamlined process maps, and optimized SOPs, we empower you to boost efficiency, deliver exceptional service, and strengthen your community. Join us to transform your small business and reclaim your market share.</p>
-            <p><a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a></p>
-        </section>
-        <!-- Founder Section (Meet Our Founder) -->
-        <section class="founder-section">
-            <div class="founder-background"></div>
-            <div class="founder-content">
-                <h2>Meet Our Founder</h2>
-                <div class="founder-container">
-                    <div class="founder-photo-container">
-                        <img src="Taylor_photo.png" alt="Taylor Miller, President and Lead Consultant" class="founder-photo">
-                        <h3>Taylor Miller</h3>
-                        <p>President and Lead Consultant</p>
-                    </div>
-                    <div class="founder-bio">
-                        <p>Through these endeavors, Taylor has earned numerous awards for innovation, leadership, and collaboration, reflecting his commitment to delivering measurable, high-impact solutions.</p>
-                        <div class="skills">
-                            <button class="skill-button">Program Management</button>
-                            <button class="skill-button">IT Product Management</button>
-                            <button class="skill-button">Executing Digital Strategies</button>
-                            <button class="skill-button">Process Optimization</button>
-                            <button class="skill-button">Data Products</button>
-                            <button class="skill-button">API Development</button>
-                            <button class="skill-button">Business Intelligence Tools</button>
-                            <button class="skill-button">Agile Methodologies</button>
-                            <button class="skill-button">Change Management</button>
-                        </div>
-                        <div class="experience">
-                            <h4>Leading Aerospace Company</h4>
-                            <p>At a leading aerospace company, Taylor guided a team of digital experts to tackle inefficient financial processes, delivering data-driven products and APIs that slashed process times by 62%. These streamlined workflows and Business Intelligence solutions unlocked millions in recurring savings, empowering the organization to operate smarter and stay competitive.</p>
-                        </div>
-                        <div class="experience">
-                            <h4>Booz Allen Hamilton</h4>
-                            <p>At Booz Allen Hamilton, a leading DC consulting firm, Taylor guided USCIS’s Office of Information Technology through complex IT challenges, leading the adoption of Agile methodologies, test automation, and CI/CD pipelines. This streamlined delivery and empowered rapid, efficient responses to evolving needs, transforming IT operations for greater impact and scalability.</p>
-                        </div>
-                        <div class="experience">
-                            <h4>Local Small Business</h4>
-                            <p>At Coastline Cooling, a family-owned commercial refrigeration business, Taylor tackled inefficient operations by implementing lean process improvements, comprehensive training, and effective change management. These efforts streamlined workflows, empowered the team, and built a foundation for scalable growth, enabling the business to thrive in a competitive market.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-background"></div>
-            <div class="cta-hero-content">
-                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Get Started Today</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>2025 Beacon Digital Solutions | Jupiter, FL</p>
-        <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
-        <p><a href="https://beacondigitalsolutionsllc.com/policies.html">Privacy Policy & Terms of Service</a></p>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 py-16 border-t border-slate-800">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center text-slate-400 text-sm">
+            © 2026 Beacon Digital Solutions LLC • Jupiter, FL
+        </div>
     </footer>
+
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-        document.querySelector('.dropdown-caret').addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const dropdown = this.parentElement.parentElement;
-            dropdown.classList.toggle('active');
+        // Optional: Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
         });
     </script>
 </body>
