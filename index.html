@@ -3,575 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beacon Digital Solutions empowers small businesses with digital tools and streamlined operations to compete with large corporations.">
-    <meta name="keywords" content="Beacon Digital Solutions, small business support, digital optimization, operational efficiency, Jupiter FL, digital transformation">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-88GV74L2RT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-88GV74L2RT');
-    </script>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Beacon Digital Solutions - Home</title>
+    <meta name="description" content="AI-powered digital tools, video blogs & real business insights from a power user. Beacon Digital Solutions – weekly state of AI tooling & integrations that drive ROI today.">
+    <title>Beacon Digital Solutions | AI Tools & Power-User Insights</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+    <link rel="manifest" href="site.webmanifest?v=1">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #003366;
-            padding: 15px 20px;
-            border-bottom: 1px solid #ccc;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-sizing: border-box;
-            padding: 0 10px;
-        }
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            align-items: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #00A8E8;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-toggle {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .dropdown-caret {
-            cursor: pointer;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #003366;
-            min-width: 150px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            border-radius: 5px;
-        }
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        .dropdown-menu a {
-            display: block;
-            padding: 10px 15px;
-            font-size: 1em;
-            color: #fff;
-            text-align: left;
-        }
-        .dropdown-menu a:hover {
-            background: #00A8E8;
-        }
-        .hero, .services, .cta-section {
-            position: relative;
-            width: 100%;
-            margin: 0;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-        .hero {
-            min-height: 60vh;
-        }
-        .services {
-            min-height: 50vh;
-        }
-        .cta-section {
-            min-height: 50vh;
-        }
-        .hero-background, .services-background, .cta-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 0;
-        }
-        .hero-background {
-            background-image: url('digital_transformation.jpg');
-            filter: brightness(0.7);
-        }
-        .services-background {
-            background-image: url('services-hero.jpg');
-            background-position: center 40%;
-            filter: brightness(1);
-        }
-        .cta-background {
-            background-image: url('cta-hero.jpg');
-            background-size: contain;
-            background-position: center center;
-            background-repeat: no-repeat;
-            z-index: 0;
-            filter: brightness(1);
-        }
-        .cta-section {
-            background-color: #f5f5f5;
-        }
-        .hero-content, .services-hero-content, .cta-hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #fff;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            padding: 20px;
-        }
-        .cta-hero-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .services-hero-content {
-            padding: 40px 20px;
-        }
-        .hero-content h1, .hero-content p, .hero-content .cta-button {
-            color: #fff !important;
-        }
-        .hero-content img {
-            filter: none !important;
-        }
-        .hero .logo {
-            max-width: 200px;
-            margin-bottom: 5px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-        .cta-button {
-            background-color: #1A2A44;
-            color: #fff !important;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .cta-button:hover {
-            background-color: #0F1A2F;
-            transform: scale(1.05);
-        }
-        #header-cta.cta-button {
-            background-color: #00A8E8;
-            padding: 10px 20px;
-            font-size: 1.1em;
-        }
-        #header-cta.cta-button:hover {
-            background-color: #003366;
-            transform: scale(1.05);
-        }
-        .cta-hero-content .cta-button {
-            padding: 16px 32px;
-            font-size: 1.3em;
-            background-color: #ff4500;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .cta-hero-content .cta-button:hover {
-            background-color: #e03e00;
-            transform: scale(1.1);
-        }
-        main {
-            margin: 0;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .intro-section, .why-choose-section {
-            background-color: #fff;
-            padding: 30px;
-            margin: 0;
-            color: #333;
-            width: 100%;
-            box-sizing: border-box;
-            overflow-x: hidden;
-        }
-        .intro-section h2, .why-choose-section h2 {
-            color: #003366;
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .intro-section p, .why-choose-section p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #333;
-        }
-        .intro-section ul, .why-choose-section ul {
-            color: #333;
-            list-style-type: disc;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-            padding-left: 40px;
-            text-align: left;
-        }
-        .intro-section li, .why-choose-section li {
-            margin-bottom: 10px;
-        }
-        .services h2 {
-            color: #fff;
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-        .service {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            color: #333;
-        }
-        .service i {
-            font-size: 80px;
-            margin-bottom: 15px;
-            color: #003366;
-        }
-        .service h3 {
-            color: #003366;
-            margin-bottom: 10px;
-        }
-        .service p {
-            color: #333;
-        }
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        footer .venture-text {
-            font-size: 0.6em;
-        }
-        footer p:not(.venture-text) {
-            font-size: 1em;
-        }
-        footer a {
-            color: #00A8E8;
-            text-decoration: none;
-            margin-left: 5px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        footer img {
-            width: 20px;
-            height: auto;
-            vertical-align: middle;
-        }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            nav {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #003366;
-                padding: 20px;
-                gap: 15px;
-                box-sizing: border-box;
-            }
-            nav.active {
-                display: flex;
-            }
-            .dropdown {
-                position: relative;
-            }
-            .dropdown-menu {
-                position: static;
-                background: #004080;
-                box-shadow: none;
-                margin-left: 20px;
-            }
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-            .dropdown-toggle i {
-                transform: rotate(0);
-            }
-            .dropdown.active .dropdown-toggle i {
-                transform: rotate(180deg);
-            }
-            .nav-container {
-                justify-content: space-between;
-                padding: 0 10px;
-                align-items: center;
-            }
-            #header-cta.cta-button {
-                font-size: 1em;
-                padding: 8px 16px;
-            }
-            .hero, .services, .cta-section {
-                min-height: 25vh;
-                padding: 20px 0;
-            }
-            .cta-section {
-                min-height: 35vh;
-            }
-            .hero-background, .services-background, .cta-background {
-                background-position: center center;
-                width: 100%;
-            }
-            .hero-content {
-                position: relative;
-                top: 0;
-                transform: none;
-                padding: 15px;
-            }
-            .hero .logo {
-                max-width: 160px;
-                margin-bottom: 10px;
-            }
-            .hero h1 {
-                font-size: 1.8em;
-                margin: 10px 0;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-            .intro-section, .why-choose-section {
-                padding: 20px;
-            }
-            .intro-section h2, .services h2, .why-choose-section h2 {
-                font-size: 1.5em;
-            }
-            .intro-section p, .why-choose-section p {
-                font-size: 1em;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            .intro-section ul, .why-choose-section ul {
-                max-width: 100%;
-                padding-left: 30px;
-            }
-            .service-grid {
-                grid-template-columns: 1fr;
-                padding: 15px;
-                gap: 15px;
-            }
-            .service {
-                padding: 15px;
-            }
-            .service i {
-                font-size: 60px;
-            }
-            .service h3 {
-                font-size: 1.2em;
-            }
-            .service p {
-                display: block;
-                font-size: 0.9em;
-            }
-            .cta-hero-content {
-                padding: 15px;
-            }
-            .cta-hero-content .cta-button {
-                padding: 12px 24px;
-                font-size: 1.1em;
-            }
-            footer {
-                padding: 15px 0;
-                font-size: 0.9em;
-            }
-            footer .venture-text {
-                font-size: 0.55em;
-            }
-            footer p:not(.venture-text) {
-                font-size: 0.9em;
-            }
-            footer img {
-                width: 18px;
-            }
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .hero-bg { background: linear-gradient(90deg, #0a1729 0%, #1e2937 100%); }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
     </style>
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" class="cta-button" id="header-cta" target="_blank">Book a Consult Today!</a>
-            <button class="menu-toggle" aria-label="Menu">☰</button>
-            <nav>
-                <a href="https://beacondigitalsolutionsllc.com/index.html">Home</a>
-                <a href="https://beacondigitalsolutionsllc.com/about.html">About</a>
-                <div class="dropdown">
-                    <div class="dropdown-toggle">
-                        <a href="https://beacondigitalsolutionsllc.com/services.html">Services</a>
-                        <i class="fas fa-caret-down dropdown-caret"></i>
-                    </div>
-                    <div class="dropdown-menu">
-                        <a href="https://beacondigitalsolutionsllc.com/process-optimization.html">Process Optimization</a>
-                        <a href="https://beacondigitalsolutionsllc.com/agile-project-delivery.html">Agile Project Delivery</a>
-                        <a href="https://beacondigitalsolutionsllc.com/transformation-strategy-consulting.html">Transformation Strategy Consulting</a>
-                    </div>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- HEADER -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions" class="h-9">
+                <div>
+                    <span class="font-semibold text-2xl tracking-tight">Beacon</span>
+                    <span class="text-slate-400 text-lg tracking-tight">Digital Solutions</span>
                 </div>
-                <a href="https://beacondigitalsolutionsllc.com/contact.html">Contact</a>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="index.html" class="text-cyan-400">Home</a>
+                <a href="blog.html" class="hover:text-cyan-400">Blog</a>
+                <a href="tools.html" class="hover:text-cyan-400">Tools</a>
+                <a href="videos.html" class="hover:text-cyan-400">Videos</a>
+                <a href="about.html" class="hover:text-cyan-400">About</a>
+                <a href="contact.html" class="hover:text-cyan-400">Contact</a>
             </nav>
+            
+            <a href="https://calendly.com/taylor-beacondigitalsolutionsllc/initial-consult" target="_blank" 
+               class="bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold px-6 py-2.5 rounded-2xl text-sm flex items-center gap-x-2">
+                <i class="fas fa-calendar"></i> Book Consult
+            </a>
         </div>
     </header>
-    <!-- Section 1: Hero -->
-    <div class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions logo for small business digital empowerment" class="logo">
-            <h1>Beacon Digital Solutions</h1>
-            <p>Empowering Small Businesses to Outpace the Giants</p>
-            <a href="#services" class="cta-button">Discover Our Solutions</a>
-        </div>
-    </div>
-    <main>
-        <!-- Section 2: Welcome -->
-        <section class="intro-section">
-            <h2>Empowering Small Businesses to Thrive in a Digital World</h2>
-            <p><strong>The Challenge:</strong> Large corporations dominate with advanced digital tools and streamlined processes, leaving small businesses struggling to keep up.</p>
-            <p><strong>Our Solution:</strong> We equip small businesses with tailored digital strategies and optimized operations to compete and thrive.</p>
-            <p><strong>Your Victory:</strong> Boost efficiency, attract more customers, and grow your business while strengthening your community.</p>
-            <a href="https://beacondigitalsolutionsllc.com/about.html" class="cta-button">Learn More</a>
-        </section>
-        <!-- Section 3: Services -->
-        <section class="services" id="services">
-            <div class="services-background"></div>
-            <div class="services-hero-content">
-                <h2>Our Deliverables for Small Businesses</h2>
-                <div class="service-grid">
-                    <div class="service">
-                        <i class="fas fa-search"></i>
-                        <h3>Tooling & Process Audit</h3>
-                        <p>Our fact-finding mission delivers a prioritized list of high-value opportunities, using stakeholder interviews and data analysis to identify inefficiencies, reducing costs by 20-25%.</p>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(at_center,#22d3ee_0%,transparent_70%)] opacity-10"></div>
+        
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-x-2 bg-slate-800 text-cyan-400 text-xs font-medium tracking-widest px-4 h-8 rounded-3xl">
+                    <i class="fas fa-bolt"></i> POWER USER IN THE TRENCHES
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold leading-none tracking-tighter">
+                    AI Tools.<br>Real Workflows.<br>Zero Hype.
+                </h1>
+                
+                <p class="text-xl text-slate-400 max-w-lg">
+                    I use AI daily in my Fortune 500 role, MBA, and small business consulting. 
+                    Here’s exactly what works — with prompts, ROI numbers, and live builds.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="blog/ai-sales-agent-47-minutes.html" 
+                       class="bg-white text-slate-950 font-semibold px-8 py-4 rounded-3xl flex items-center gap-x-3 hover:scale-105 transition-all">
+                        <i class="fas fa-bolt"></i> New: 47-Min AI Sales Agent
+                    </a>
+                    <a href="blog.html" 
+                       class="border border-slate-400 hover:border-white font-semibold px-8 py-4 rounded-3xl flex items-center gap-x-3 hover:scale-105 transition-all">
+                        Browse All Posts
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-x-8 text-sm">
+                    <div class="flex -space-x-4">
+                        <div class="w-8 h-8 bg-cyan-400 rounded-2xl flex items-center justify-center text-slate-950 font-bold text-xs ring-2 ring-slate-950">AI</div>
+                        <div class="w-8 h-8 bg-emerald-400 rounded-2xl flex items-center justify-center text-slate-950 font-bold text-xs ring-2 ring-slate-950">ROI</div>
                     </div>
-                    <div class="service">
-                        <i class="fas fa-sitemap"></i>
-                        <h3>Streamlined Process Maps & Standard Operating Procedures</h3>
-                        <p>A deep dive into your processes with value stream mapping to uncover waste, delivering enhanced process flow diagrams and Standard Operating Proceduress, reducing errors by 20%.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-desktop"></i>
-                        <h3>Custom Digital Tool Setups</h3>
-                        <p>Obtain tailored CRM, e-commerce, or automation platforms, boosting efficiency by 15-25%.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <h3>KPI Dashboards & Scaling Strategies</h3>
-                        <p>Gain Business Intelligence dashboards and PROSCI-guided scaling plans, enhancing visibility and ROI by 15-20%.</p>
-                    </div>
+                    <p class="text-slate-400">Weekly insights from real business use</p>
                 </div>
             </div>
-        </section>
-        <!-- Section 4: Why Choose -->
-        <section class="why-choose-section">
-            <h2>Why Partner With Us?</h2>
-            <ul>
-                <li><strong>Community Focus:</strong> We’re dedicated to strengthening small businesses and their local communities.</li>
-                <li><strong>Proven Expertise:</strong> 13+ years delivering operational and digital solutions at top firms and local businesses.</li>
-                <li><strong>Real Impact:</strong> Achieved 62% time savings for a leading company through streamlined processes.</li>
-                <li><strong>Tailored Solutions:</strong> We customize digital tools and strategies to fit your small business needs.</li>
-            </ul>
-        </section>
-        <!-- Section 5: CTA -->
-        <section class="cta-section">
-            <div class="cta-background"></div>
-            <div class="cta-hero-content">
-                <a href="https://beacondigitalsolutionsllc.com/contact.html" class="cta-button">Start Growing Today</a>
+            
+            <div class="relative hidden md:block">
+                <div class="bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-3xl p-8 shadow-2xl">
+                    <div class="aspect-video bg-slate-900 rounded-2xl flex items-center justify-center mb-6 relative">
+                        <i class="fas fa-play-circle text-7xl text-cyan-400"></i>
+                        <div class="absolute bottom-4 right-4 bg-black/70 text-xs px-3 py-1 rounded">47 min build</div>
+                    </div>
+                    <p class="text-center text-slate-400 text-sm font-medium">
+                        Latest: “Zero-Cost AI Sales Agent” – Live demo + full prompt
+                    </p>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>2025 Beacon Digital Solutions | Jupiter, FL</p>
-        <p>Follow our founder on: <a href="https://x.com/MillerPTaylor" target="_blank" rel="noopener noreferrer"><img src="X-logo.jpg" alt="Twitter X Logo"></a></p>
-        <p><a href="https://beacondigitalsolutionsllc.com/policies.html">Privacy Policy & Terms of Service</a></p>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 flex gap-x-2">
+            <a href="#latest" class="text-xs uppercase tracking-widest flex items-center gap-x-1 text-slate-400 hover:text-white">
+                SCROLL FOR LATEST <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- LATEST INSIGHTS -->
+    <section id="latest" class="max-w-screen-2xl mx-auto px-6 py-20">
+        <div class="flex justify-between items-baseline mb-12">
+            <h2 class="text-4xl font-semibold tracking-tight">Latest AI Tools & Insights</h2>
+            <a href="blog.html" class="text-cyan-400 flex items-center gap-x-2 text-sm font-medium hover:underline">
+                View all posts <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Hero Post -->
+            <div class="lg:col-span-2 bg-slate-900 rounded-3xl overflow-hidden card-hover border border-amber-500/20">
+                <div class="hero-bg h-80 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[radial-gradient(at_center,#fbbf24_0%,transparent_70%)] opacity-10"></div>
+                    <i class="fas fa-bolt text-[180px] text-amber-400/10 absolute"></i>
+                    
+                    <div class="relative text-center px-8 z-10 max-w-2xl">
+                        <div class="inline-flex items-center gap-2 bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-6">
+                            <i class="fas fa-bolt"></i> NEW LIVE BUILD
+                        </div>
+                        <h3 class="text-4xl font-bold tracking-tighter leading-none text-white mb-6">
+                            I Built a Zero-Cost AI Sales Agent in 47 Minutes
+                        </h3>
+                        <p class="text-lg text-slate-300">
+                            Qualifies leads, books calls 24/7, and follows up automatically. Full prompt + workflow included.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-8 bg-slate-900 flex flex-col md:flex-row gap-6 items-center justify-between">
+                    <div class="text-slate-400 text-sm">
+                        March 25, 2026 • 9 min read • Video + Prompt
+                    </div>
+                    <a href="blog/ai-sales-agent-47-minutes.html" 
+                       class="inline-flex items-center gap-x-3 bg-white text-slate-950 font-semibold px-8 py-4 rounded-3xl hover:bg-amber-400 transition-all">
+                        Read the Full Post + Get the Prompt
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fortune 500 -->
+            <div class="bg-slate-900 rounded-3xl overflow-hidden card-hover">
+                <div class="h-52 bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center">
+                    <i class="fas fa-building text-8xl text-white/30"></i>
+                </div>
+                <div class="p-8">
+                    <div class="text-xs text-slate-400 mb-3">Mar 24, 2026 • 11 min</div>
+                    <h3 class="font-semibold text-2xl leading-tight mb-4">How I Use AI Every Day Inside a Fortune 500 Company</h3>
+                    <p class="text-slate-400 line-clamp-3">Safe, approved workflows that deliver real results without breaking any rules.</p>
+                    <a href="blog/ai-in-fortune-500.html" class="text-cyan-400 font-medium flex items-center gap-x-2 mt-6 hover:underline">
+                        Read Full Post →
+                    </a>
+                </div>
+            </div>
+
+            <!-- MBA -->
+            <div class="bg-slate-900 rounded-3xl overflow-hidden card-hover">
+                <div class="h-52 bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-8xl text-white/30"></i>
+                </div>
+                <div class="p-8">
+                    <div class="text-xs text-slate-400 mb-3">Mar 23, 2026 • 10 min</div>
+                    <h3 class="font-semibold text-2xl leading-tight mb-4">How AI Is Helping Me Crush My MBA While Running a Business</h3>
+                    <p class="text-slate-400 line-clamp-3">Exact prompts and workflows that save hours every week.</p>
+                    <a href="blog/ai-mba-workflow.html" class="text-cyan-400 font-medium flex items-center gap-x-2 mt-6 hover:underline">
+                        Read Full Post →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Top 7 Tools -->
+            <div class="bg-slate-900 rounded-3xl overflow-hidden card-hover">
+                <div class="h-52 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                    <i class="fas fa-chart-line text-8xl text-white/30"></i>
+                </div>
+                <div class="p-8">
+                    <div class="text-xs text-slate-400 mb-3">Mar 22, 2026 • 12 min</div>
+                    <h3 class="font-semibold text-2xl leading-tight mb-4">Top 7 AI Tools I Actually Use in Client Projects Right Now</h3>
+                    <p class="text-slate-400 line-clamp-3">Ranked by real ROI across enterprise and small business work.</p>
+                    <a href="blog/top-7-ai-tools-2026.html" class="text-cyan-400 font-medium flex items-center gap-x-2 mt-6 hover:underline">
+                        Read Full Post →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FREE PROMPT PACK CTA -->
+    <section class="max-w-screen-2xl mx-auto px-6 py-20 border-t border-slate-800">
+        <div class="bg-slate-900 rounded-3xl p-12 md:p-16 text-center max-w-2xl mx-auto">
+            <div class="inline-flex items-center gap-2 bg-amber-500 text-slate-950 text-sm font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-6">
+                <i class="fas fa-gift"></i> FREE FOR NEW SUBSCRIBERS
+            </div>
+            
+            <h2 class="text-4xl font-semibold mb-4">Sign Up for the Newsletter & Get My Top 10 AI Prompts</h2>
+            <p class="text-xl text-slate-300 mb-8 max-w-xl mx-auto">
+                The exact prompts I personally use every week for sales agents, client onboarding, contract review, 
+                SOP creation, Fortune 500 reporting, MBA case studies, and strategic decisions.
+            </p>
+            
+ <form id="prompt-form" class="flex flex-col md:flex-row gap-4 max-w-md mx-auto" 
+      action="https://formspree.io/f/xwvwkkdj" 
+      method="POST">
+    
+    <input type="email" 
+           name="email" 
+           placeholder="your@email.com" 
+           required
+           class="bg-slate-800 border border-slate-700 focus:border-amber-400 rounded-3xl px-6 py-4 flex-1 outline-none text-slate-200">
+    
+    <button type="submit" 
+            class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-semibold px-10 py-4 rounded-3xl whitespace-nowrap transition-all">
+        Subscribe & Get the Prompts
+    </button>
+</form>
+
+<!-- Reliable Redirect Script -->
+<script>
+    document.getElementById('prompt-form').addEventListener('submit', function() {
+        setTimeout(() => {
+            window.location.href = 'https://beacondigitalsolutionsllc.com/thank-you.html';
+        }, 1200);   // 1.2 second delay gives Formspree time to process
+    });
+</script>
+            
+            <p class="text-xs text-slate-400 mt-8">
+                Weekly insights + instant access to the prompt pack • Unsubscribe anytime
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 py-16 border-t border-slate-800">
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-3 gap-y-12">
+            <div>
+                <div class="flex items-center gap-x-3 mb-6">
+                    <img src="Beacon_Digital_Solutions.png" alt="Logo" class="h-8">
+                    <div>
+                        <span class="font-semibold text-2xl">Beacon</span>
+                        <span class="text-slate-400 text-lg">Digital Solutions</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm">Jupiter, FL • Power-user AI for small business</p>
+            </div>
+            
+            <div class="flex flex-col gap-y-2 text-sm">
+                <a href="blog.html" class="hover:text-cyan-400">Blog</a>
+                <a href="tools.html" class="hover:text-cyan-400">AI Tools</a>
+                <a href="videos.html" class="hover:text-cyan-400">Video Library</a>
+                <a href="about.html" class="hover:text-cyan-400">About Taylor</a>
+            </div>
+            
+            <div>
+                <p class="text-slate-400 text-sm mb-4">Follow the founder</p>
+                <a href="https://x.com/MillerPTaylor" target="_blank" class="flex items-center gap-x-3 text-cyan-400 hover:text-white">
+                    <i class="fab fa-x-twitter text-2xl"></i>
+                    <span>@MillerPTaylor</span>
+                </a>
+                <p class="text-xs text-slate-500 mt-12">© 2026 Beacon Digital Solutions LLC</p>
+                <a href="policies.html" class="text-xs text-slate-400 hover:text-slate-300">Privacy &amp; Terms</a>
+            </div>
+        </div>
     </footer>
+
+    <!-- Tailwind Init -->
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-        document.querySelector('.dropdown-caret').addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const dropdown = this.parentElement.parentElement;
-            dropdown.classList.toggle('active');
-        });
+        tailwind.config = {
+            content: [],
+            theme: { extend: {} }
+        };
     </script>
 </body>
 </html>
