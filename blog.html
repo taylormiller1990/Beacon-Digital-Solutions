@@ -139,44 +139,48 @@
 
         </div>
     </div>
-
-    <!-- FREE PROMPT PACK CTA - Polished -->
-    <section class="max-w-screen-2xl mx-auto px-6 py-20 border-t border-slate-800">
-        <div class="bg-slate-900 rounded-3xl p-12 md:p-16 text-center max-w-2xl mx-auto">
-            <div class="inline-flex items-center gap-2 bg-amber-500 text-slate-950 text-sm font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-6">
-                <i class="fas fa-gift"></i> FREE FOR NEW SUBSCRIBERS
-            </div>
-            
-            <h2 class="text-4xl font-semibold mb-4">Sign Up for the Newsletter & Get My Top 10 AI Prompts</h2>
-            <p class="text-xl text-slate-300 mb-8 max-w-xl mx-auto">
-                The exact prompts I personally use every week for sales agents, client onboarding, contract review, 
-                SOP creation, Fortune 500 reporting, MBA case studies, and strategic decisions.
-            </p>
-            
-<form id="prompt-form" class="flex flex-col md:flex-row gap-4 max-w-md mx-auto" 
-      action="https://formspree.io/f/xwvwkkdj" 
-      method="POST">
-    
-    <input type="email" 
-           name="email" 
-           placeholder="your@email.com" 
-           required
-           class="bg-slate-800 border border-slate-700 focus:border-amber-400 rounded-3xl px-6 py-4 flex-1 outline-none text-slate-200">
-    
-    <button type="submit" 
-            class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-semibold px-10 py-4 rounded-3xl whitespace-nowrap transition-all">
-        Subscribe & Get the Prompts
-    </button>
-</form>
-
-<!-- Reliable Redirect Script -->
-<script>
-    document.getElementById('prompt-form').addEventListener('submit', function() {
-        setTimeout(() => {
-            window.location.href = 'https://beacondigitalsolutionsllc.com/thank-you.html';
-        }, 1200);   // 1.2 second delay gives Formspree time to process
-    });
-</script>
+        
+<!-- Polished Buttondown Form -->
+<section class="max-w-screen-2xl mx-auto px-6 py-20 border-t border-slate-800">
+    <div class="bg-slate-900 rounded-3xl p-12 md:p-16 text-center max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-amber-500 text-slate-950 text-sm font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-6">
+            <i class="fas fa-gift"></i> FREE FOR NEW SUBSCRIBERS
+        </div>
+        
+        <h2 class="text-4xl font-semibold mb-4">Sign Up & Get My Top 10 AI Prompts</h2>
+        <p class="text-xl text-slate-300 mb-10 max-w-xl mx-auto">
+            The exact prompts I personally use every week for sales, onboarding, contract review, SOPs, 
+            Fortune 500 reporting, MBA case studies, and strategic decisions.
+        </p>
+        
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/BeaconDigitalSolutionsLLC"
+          method="post"
+          class="embeddable-buttondown-form flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+          
+          <input 
+            type="email" 
+            name="email" 
+            id="bd-email" 
+            placeholder="your@email.com" 
+            required
+            class="bg-slate-800 border border-slate-700 focus:border-amber-400 rounded-3xl px-6 py-4 flex-1 outline-none text-slate-200">
+          
+          <input 
+            type="submit" 
+            value="Subscribe & Get Prompts"
+            class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-semibold px-10 py-4 rounded-3xl whitespace-nowrap transition-all cursor-pointer">
+        </form>
+        
+        <p class="text-xs text-slate-400 mt-8">
+            + Weekly AI insights • Unsubscribe anytime
+        </p>
+        
+        <p class="text-[10px] text-slate-500 mt-6">
+            Powered by <a href="https://buttondown.com/refer/BeaconDigitalSolutionsLLC" target="_blank" class="hover:text-slate-300">Buttondown</a>
+        </p>
+    </div>
+</section>
             
             <p class="text-xs text-slate-400 mt-8">
                 Weekly insights + instant access to the prompt pack • Unsubscribe anytime
