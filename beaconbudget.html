@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beacon Budget — A privacy-first, local-first zero-based budgeting app for families. Your financial data never leaves your Mac. Free core toolkit. Premium planning tools. Built on Christian stewardship values.">
+    <title>Beacon Budget | Beacon Digital Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+    <link rel="manifest" href="site.webmanifest?v=1">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+        .hero-bg { background: linear-gradient(90deg, #0a1729 0%, #1e2937 100%); }
+        .section-header { font-size: 2.25rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.025em; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+    <!-- HEADER -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <img src="Beacon_Digital_Solutions.png" alt="Beacon Digital Solutions" class="h-9">
+                <div>
+                    <span class="font-semibold text-2xl tracking-tight">Beacon</span>
+                    <span class="text-slate-400 text-lg tracking-tight">Digital Solutions</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-cyan-400">Home</a>
+                <a href="beaconbudget.html" class="text-cyan-400">Beacon Budget</a>
+                <a href="videos.html" class="hover:text-cyan-400">Videos</a>
+                <a href="blog.html" class="hover:text-cyan-400">Blog</a>
+                <a href="about.html" class="hover:text-cyan-400">About</a>
+                <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+            </nav>
+            <div class="flex items-center gap-x-3">
+                <a href="beaconbudget.html#download" 
+                   class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-5 py-2 rounded-2xl text-sm flex items-center gap-x-2">
+                    <i class="fas fa-download"></i> <span class="hidden sm:inline">Download Free</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-bg pt-16 pb-20">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 bg-emerald-500/10 text-emerald-400 text-xs font-medium tracking-[2px] px-4 h-8 rounded-3xl mb-6">
+                    100% LOCAL • NEVER LEAVES YOUR MAC
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
+                    Beacon Budget.<br>
+                    Faithful with<br>
+                    what you've been given.
+                </h1>
+                
+                <p class="text-2xl text-slate-300 max-w-2xl mb-10">
+                    A zero-based personal finance tool built for families who want to steward their resources intentionally — 
+                    without ever sending their financial life to the cloud.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#download" 
+                       class="bg-white hover:bg-slate-100 text-slate-950 font-semibold px-10 py-4 rounded-3xl text-lg flex items-center gap-x-3 transition-all">
+                        <i class="fas fa-download"></i> Download Free on the Mac App Store
+                    </a>
+                    <a href="#premium" 
+                       class="border border-white/60 hover:bg-white/5 font-semibold px-10 py-4 rounded-3xl text-lg flex items-center gap-x-3 transition-all">
+                        See Premium features
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-slate-400">Free forever for the core toolkit. Premium unlocks deeper planning tools. 1-day local trial available in-app.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST / PRIVACY BAR -->
+    <div class="border-b border-slate-800 bg-slate-900/60">
+        <div class="max-w-screen-2xl mx-auto px-6 py-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-slate-400">
+            <div class="flex items-center gap-x-2"><i class="fas fa-shield-alt text-emerald-400"></i> <span>All data stays on your Mac</span></div>
+            <div class="flex items-center gap-x-2"><i class="fas fa-lock text-emerald-400"></i> <span>Encrypted local storage</span></div>
+            <div class="flex items-center gap-x-2"><i class="fas fa-user-secret text-emerald-400"></i> <span>No accounts. No tracking. No selling your data.</span></div>
+            <div class="flex items-center gap-x-2"><i class="fas fa-heart text-emerald-400"></i> <span>Built on Christian stewardship values</span></div>
+        </div>
+    </div>
+
+    <!-- FREE VS PREMIUM -->
+    <section id="premium" class="max-w-screen-2xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="section-header">Simple, honest pricing.<br>Two tiers. No surprises.</h2>
+            <p class="text-xl text-slate-400 mt-3 max-w-xl mx-auto">Start with everything you need to run a real zero-based budget. Upgrade only when you want the deeper planning tools.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- FREE -->
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-10 flex flex-col">
+                <div>
+                    <div class="uppercase tracking-[1.5px] text-xs font-semibold text-emerald-400 mb-2">Always Free</div>
+                    <h3 class="text-4xl font-semibold tracking-tight">Free</h3>
+                    <p class="text-2xl mt-1 text-slate-300">$0 <span class="text-base text-slate-500">— forever</span></p>
+                </div>
+                
+                <div class="my-8 border-t border-slate-800"></div>
+                
+                <ul class="space-y-4 text-slate-300 flex-1">
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Zero-based budgeting with parent categories and quick entry</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Transactions, imports (CSV, OFX, QFX, PDF), watch folders</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Dashboard, Emergency Fund, and core stewardship tools</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Local encrypted storage — your data never leaves your Mac</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>1-day local trial of Premium features inside the app</span></li>
+                </ul>
+                
+                <a href="#download" class="mt-10 block text-center bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold py-4 rounded-3xl text-lg">
+                    Download Free on the Mac App Store
+                </a>
+                <p class="text-center text-xs text-slate-500 mt-3">App Store discovery • Subscribe to Premium on the web or in-app</p>
+            </div>
+
+            <!-- PREMIUM -->
+            <div class="bg-slate-900 border border-emerald-400/40 rounded-3xl p-10 flex flex-col relative">
+                <div class="absolute top-8 right-8 bg-emerald-400 text-slate-950 text-xs font-bold px-4 py-1 rounded-full">RECOMMENDED FOR MOST FAMILIES</div>
+                
+                <div>
+                    <div class="uppercase tracking-[1.5px] text-xs font-semibold text-amber-400 mb-2">For deeper planning</div>
+                    <h3 class="text-4xl font-semibold tracking-tight">Premium</h3>
+                    <p class="text-2xl mt-1 text-slate-300">$9/mo <span class="text-base text-slate-500">— billed monthly, cancel anytime</span></p>
+                </div>
+                
+                <div class="my-8 border-t border-slate-800"></div>
+                
+                <ul class="space-y-4 text-slate-300 flex-1">
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Everything in Free, plus:</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Retirement projections with scenario planning</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Education (529) savings tracking &amp; projections</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Real Estate / mortgage payoff tools</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Tax planning</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>More planning tools coming soon</span></li>
+                </ul>
+                
+                <div class="mt-10">
+                    <a href="#subscribe" class="block text-center bg-white hover:bg-slate-100 text-slate-950 font-semibold py-4 rounded-3xl text-lg">
+                        Subscribe for $9/mo on the Web
+                    </a>
+                    <p class="text-center text-xs text-slate-500 mt-3">Direct relationship with us. Your data stays local either way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS / PHILOSOPHY -->
+    <section class="max-w-screen-2xl mx-auto px-6 py-16 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="section-header text-center mb-3">Built differently on purpose.</h2>
+            <p class="text-center text-xl text-slate-400 mb-12">We made the hard choices so your family doesn't have to.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 flex items-center gap-2"><i class="fas fa-laptop-house text-emerald-400"></i> Everything local first</h4>
+                        <p class="text-slate-400">Budgets, transactions, projections, and reports are calculated on your Mac using SwiftData and on-device encryption. No cloud sync. No company database of your net worth.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 flex items-center gap-2"><i class="fas fa-key text-emerald-400"></i> Credentials stay in Keychain</h4>
+                        <p class="text-slate-400">Optional email scanning uses your mail provider's app password stored only in the macOS Keychain (device-only access). We never see or store it.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 flex items-center gap-2"><i class="fas fa-microchip text-emerald-400"></i> Local intelligence only</h4>
+                        <p class="text-slate-400">We are not using AI in Beacon Budget today. If we add intelligent features later, they will use local models that run entirely on your Mac and never leave your device. This gives you strong protection, even if it limits some real-time external capabilities.</p>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 flex items-center gap-2"><i class="fas fa-wallet text-emerald-400"></i> Zero-based budgeting</h4>
+                        <p class="text-slate-400">Every dollar gets a job. Income minus allocations equals zero. Giving and stewardship categories are first-class citizens in the budget by design.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 flex items-center gap-2"><i class="fas fa-file-import text-emerald-400"></i> Import your way</h4>
+                        <p class="text-slate-400">Drag in statements, point a watch folder at downloads, or let the optional local email scanner pull transactions from bank alerts. You control it.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 flex items-center gap-2"><i class="fas fa-users text-emerald-400"></i> Built for real families</h4>
+                        <p class="text-slate-400">Cash transactions for tithes and gifts. Annual reviews with a stewardship lens. Privacy Mode for screenshots or support without exposing your real numbers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD + SUBSCRIBE SECTION -->
+    <section id="download" class="max-w-screen-2xl mx-auto px-6 py-20 border-t border-slate-800 bg-slate-900">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="section-header mb-3">Ready to get started?</h2>
+            <p class="text-xl text-slate-300 mb-10">Download the free version on the Mac App Store for visibility and convenience. Subscribe to Premium directly on our website for the best experience and direct support from us.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://apps.apple.com" target="_blank" 
+                   class="inline-flex items-center justify-center gap-x-3 bg-white text-slate-950 font-semibold px-10 py-5 rounded-3xl text-lg hover:bg-slate-100">
+                    <i class="fab fa-apple text-2xl"></i>
+                    <span>Download Beacon Budget Free</span>
+                </a>
+                <a href="#subscribe-web" 
+                   class="inline-flex items-center justify-center gap-x-3 border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-950 font-semibold px-10 py-5 rounded-3xl text-lg transition-all">
+                    Subscribe to Premium on the Web
+                </a>
+            </div>
+            <p class="text-xs text-slate-500 mt-4">App Store link will be updated once live. Search “Beacon Budget” on the Mac App Store.</p>
+        </div>
+    </section>
+
+    <!-- WEB SUBSCRIBE - Direct from Website -->
+    <section id="subscribe" class="max-w-screen-2xl mx-auto px-6 py-20 border-t border-slate-800">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-semibold mb-3">Get Premium straight from this website</h3>
+                <p class="text-xl text-slate-300">Subscribe for $9/month directly with us. No App Store cut. Cancel anytime. Your financial data stays 100% on your Mac either way.</p>
+            </div>
+
+            <!-- Primary direct option -->
+            <div class="bg-slate-900 border border-emerald-400/30 rounded-3xl p-10 mb-8 text-center">
+                <div class="text-5xl font-semibold mb-1">$9</div>
+                <div class="text-emerald-400 mb-6">per month, billed monthly</div>
+                
+                <!-- 
+                  TODO: Replace the href below with your real Stripe Payment Link 
+                  (create a $9/mo recurring product in Stripe → Payment Links → copy the link)
+                -->
+                <a href="mailto:support@beacondigitalsolutionsllc.com?subject=Beacon%20Budget%20Premium%20Subscription" 
+                   class="inline-block w-full md:w-auto bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-12 py-4 rounded-3xl text-lg">
+                    Subscribe for $9/mo
+                </a>
+                <p class="text-xs text-slate-500 mt-4">We'll send you a secure payment link + simple activation instructions within 24 hours (or use the form below for faster processing).</p>
+            </div>
+
+            <!-- Backup form -->
+            <div class="bg-slate-900 rounded-3xl p-10">
+                <p class="text-center text-slate-300 mb-6">Or tell us you want Premium access and we'll email you a direct payment link + instructions right away.</p>
+                <form action="https://formspree.io/f/xwvwkkdj" method="POST" class="max-w-md mx-auto">
+                    <div class="grid gap-4">
+                        <input type="text" name="name" placeholder="Your name" class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
+                        <input type="email" name="email" placeholder="your@email.com" required class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
+                        <input type="hidden" name="interest" value="Beacon Budget Premium - $9/mo web subscription">
+                        <button type="submit" class="bg-white hover:bg-slate-100 text-slate-950 font-semibold py-3.5 rounded-3xl">Send me a Premium payment link</button>
+                    </div>
+                </form>
+                <p class="text-center text-xs text-slate-500 mt-4">After payment we’ll reply with activation steps you can do inside the app in under a minute.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOS TEASER -->
+    <section class="max-w-screen-2xl mx-auto px-6 pb-20">
+        <div class="bg-slate-900 rounded-3xl p-12 text-center">
+            <p class="uppercase tracking-widest text-xs text-emerald-400 font-medium mb-2">LEARN AS YOU GO</p>
+            <h3 class="text-3xl font-semibold mb-4">Watch training videos made for real users</h3>
+            <p class="text-slate-400 max-w-md mx-auto mb-6">Short, practical videos showing exactly how to set up your budget, import transactions, run a monthly review, and use the Premium planning tools — all while keeping everything private.</p>
+            <a href="videos.html" class="inline-flex items-center gap-x-2 text-emerald-400 hover:text-emerald-300 font-medium">Browse the video library <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 py-16 border-t border-slate-800">
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-3 gap-y-12 text-sm">
+            <div>
+                <div class="flex items-center gap-x-3 mb-4">
+                    <img src="Beacon_Digital_Solutions.png" alt="Logo" class="h-7">
+                    <span class="font-semibold">Beacon Digital Solutions</span>
+                </div>
+                <p class="text-slate-400">Jupiter, FL • Privacy-first tools for families</p>
+            </div>
+            <div class="flex flex-col gap-y-1 text-slate-300">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="beaconbudget.html" class="hover:text-white">Beacon Budget</a>
+                <a href="videos.html" class="hover:text-white">Videos &amp; Training</a>
+                <a href="blog.html" class="hover:text-white">Blog</a>
+                <a href="about.html" class="hover:text-white">About</a>
+            </div>
+            <div class="text-slate-400">
+                © 2026 Beacon Digital Solutions LLC<br>
+                <a href="privacy.html" class="hover:text-slate-300">Privacy Policy</a> · 
+                <a href="terms.html" class="hover:text-slate-300">Terms of Service</a><br>
+                <a href="mailto:support@beacondigitalsolutionsllc.com" class="hover:text-slate-300">support@beacondigitalsolutionsllc.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
