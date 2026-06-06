@@ -6,11 +6,13 @@ This site promotes Beacon Budget (our first local-first zero-based budgeting app
 
 ## Key pages
 - index.html — Home with privacy promise and community focus
-- beaconbudget.html — Main product page (Free + Premium)
+- products.html — New top-level Products hub (Beacon Budget lives underneath as the detail page)
+- beaconbudget.html — Beacon Budget detail page (Free + $9/mo Premium, corrected features, direct web subscribe)
 - about.html — Personal story + values (God-image bearers, protect our neighbor)
-- videos.html — Training VLOG hub
-- blog.html — Insights, tutorials, stewardship content
+- videos.html — Training VLOG hub (primary content destination)
 - privacy.html — Expanded manifesto-style policy
+
+Blog has been removed from navigation (Videos are now the main content vehicle).
 
 Legacy consulting pages (services.html and subpages) are de-emphasized following the pivot from AI consulting/prompts to building tools and community.
 
