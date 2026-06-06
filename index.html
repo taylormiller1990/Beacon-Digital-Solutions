@@ -41,9 +41,11 @@
                     <a href="products.html" class="hover:text-cyan-400 flex items-center gap-x-1">
                         Products <i class="fas fa-chevron-down text-[10px] ml-0.5"></i>
                     </a>
-                    <div class="absolute left-0 mt-2 w-52 bg-slate-900 border border-slate-700 rounded-2xl shadow-xl py-2 hidden group-hover:block z-50">
-                        <a href="beaconbudget.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Beacon Budget</a>
-                        <a href="smart-caller-id.html" class="block px-4 py-2 text-sm hover:bg-slate-800 text-slate-400">Beacon Caller ID <span class="text-[10px]">(coming soon)</span></a>
+                    <div class="absolute left-0 top-full hidden group-hover:block z-50 w-52 pt-2">
+                        <div class="bg-slate-900 border border-slate-700 rounded-2xl shadow-xl py-2">
+                            <a href="beaconbudget.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Beacon Budget</a>
+                            <a href="smart-caller-id.html" class="block px-4 py-2 text-sm hover:bg-slate-800 text-slate-400">Beacon Caller ID <span class="text-[10px]">(coming soon)</span></a>
+                        </div>
                     </div>
                 </div>
                 <a href="videos.html" class="hover:text-cyan-400">Videos</a>
@@ -99,15 +101,10 @@
             </div>
             
             <div class="relative hidden md:block">
-                <div class="bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-3xl p-8 shadow-2xl">
-                    <div class="aspect-video bg-slate-900 rounded-2xl flex items-center justify-center mb-6 relative overflow-hidden">
-                        <div class="text-center">
-                            <i class="fas fa-wallet text-7xl text-emerald-400 mb-4"></i>
-                            <p class="text-emerald-400 font-semibold">Beacon Budget</p>
-                            <p class="text-slate-400 text-sm mt-1">Zero-based budgeting that stays on your Mac</p>
-                        </div>
-                    </div>
-                    <p class="text-center text-slate-400 text-sm font-medium">
+                <div class="bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-3xl p-4 shadow-2xl">
+                    <img src="Dashboard_Private.png" alt="Beacon Budget dashboard - private, on-device personal finance management" 
+                         class="rounded-2xl w-full border border-slate-600">
+                    <p class="text-center text-slate-400 text-sm font-medium mt-4">
                         First tool: Manage your finances quickly, effectively, and safely — so you can spend more time with your family.
                     </p>
                 </div>
@@ -173,11 +170,14 @@
                 </div>
             </div>
             
-            <div class="flex-1 bg-slate-900 rounded-3xl p-10 text-center border border-slate-800">
-                <div class="text-6xl mb-4">🛡️</div>
-                <h3 class="text-2xl font-semibold mb-2">Your data. Your device. Your family.</h3>
-                <p class="text-slate-400 mb-6">We're building a community of families who refuse to trade their privacy for convenience — and who want tools that help them steward their time, money, and attention well.</p>
-                <a href="#community" class="text-emerald-400 hover:text-emerald-300 font-medium">Join the community below →</a>
+            <div class="flex-1">
+                <img src="Budgets_Private.png" alt="Beacon Budget screenshot - private on-device zero-based budgeting" 
+                     class="rounded-3xl border border-slate-700 shadow-2xl w-full">
+                <div class="mt-4 bg-slate-900 rounded-3xl p-6 text-center border border-slate-800">
+                    <h3 class="text-xl font-semibold mb-2">Your data. Your device. Your family.</h3>
+                    <p class="text-slate-400 text-sm mb-4">We're building a community of families who refuse to trade their privacy for convenience — and who want tools that help them steward their time, money, and attention well.</p>
+                    <a href="#community" class="text-emerald-400 hover:text-emerald-300 font-medium text-sm">Join the community below →</a>
+                </div>
             </div>
         </div>
     </section>

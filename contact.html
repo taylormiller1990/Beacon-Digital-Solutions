@@ -39,9 +39,11 @@
                     <a href="products.html" class="hover:text-cyan-400 flex items-center gap-x-1">
                         Products <i class="fas fa-chevron-down text-[10px] ml-0.5"></i>
                     </a>
-                    <div class="absolute left-0 mt-2 w-52 bg-slate-900 border border-slate-700 rounded-2xl shadow-xl py-2 hidden group-hover:block z-50">
-                        <a href="beaconbudget.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Beacon Budget</a>
-                        <a href="smart-caller-id.html" class="block px-4 py-2 text-sm hover:bg-slate-800 text-slate-400">Beacon Caller ID <span class="text-[10px]">(coming soon)</span></a>
+                    <div class="absolute left-0 top-full hidden group-hover:block z-50 w-52 pt-2">
+                        <div class="bg-slate-900 border border-slate-700 rounded-2xl shadow-xl py-2">
+                            <a href="beaconbudget.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Beacon Budget</a>
+                            <a href="smart-caller-id.html" class="block px-4 py-2 text-sm hover:bg-slate-800 text-slate-400">Beacon Caller ID <span class="text-[10px]">(coming soon)</span></a>
+                        </div>
                     </div>
                 </div>
                 <a href="videos.html" class="hover:text-cyan-400">Videos</a>
@@ -72,17 +74,37 @@
     </div>
 
     <footer class="bg-slate-950 py-16 border-t border-slate-800">
-        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-3 gap-y-8 text-sm">
-            <div class="flex items-center gap-x-3">
-                <img src="Beacon_Digital_Solutions.png" alt="Logo" class="h-7">
-                <span class="font-semibold">Beacon Digital Solutions</span>
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-3 gap-y-12 text-sm">
+            <div>
+                <div class="flex items-center gap-x-3 mb-6">
+                    <img src="Beacon_Digital_Solutions.png" alt="Logo" class="h-8">
+                    <div>
+                        <span class="font-semibold text-2xl">Beacon</span>
+                        <span class="text-slate-400 text-lg">Digital Solutions</span>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm">Jupiter, FL • Privacy-first tools for families</p>
             </div>
-            <div class="flex gap-x-6 text-slate-300">
-                <a href="products.html" class="hover:text-white">Products</a>
-                <a href="videos.html" class="hover:text-white">Videos</a>
-                <a href="about.html" class="hover:text-white">About</a>
+            
+            <div class="flex flex-col gap-y-2 text-sm">
+                <a href="index.html" class="hover:text-cyan-400">Home</a>
+                <a href="products.html" class="hover:text-cyan-400">Products</a>
+                <a href="videos.html" class="hover:text-cyan-400">Videos</a>
+                <a href="about.html" class="hover:text-cyan-400">About</a>
+                <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+                <a href="support.html" class="hover:text-cyan-400">Support</a>
             </div>
-            <div class="text-slate-400 text-right">© 2026 Beacon Digital Solutions LLC • <a href="privacy.html" class="hover:text-slate-300">Privacy</a></div>
+            
+            <div>
+                <p class="text-slate-400 text-sm mb-4">Legal</p>
+                <div class="flex flex-col gap-y-1 text-sm">
+                    <a href="privacy.html" class="hover:text-cyan-400">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-cyan-400">Terms of Service</a>
+                    <a href="eula.html" class="hover:text-cyan-400">EULA</a>
+                </div>
+                <p class="text-xs text-slate-500 mt-8">© 2026 Beacon Digital Solutions LLC</p>
+                <a href="https://x.com/MillerPTaylor" target="_blank" class="text-xs text-cyan-400 hover:text-white mt-1 inline-block">Follow @MillerPTaylor on X</a>
+            </div>
         </div>
     </footer>
 </body>
