@@ -35,7 +35,15 @@
             </div>
             <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                 <a href="index.html" class="hover:text-cyan-400">Home</a>
-                <a href="products.html" class="text-cyan-400">Products</a>
+                <div class="relative group">
+                    <a href="products.html" class="text-cyan-400 flex items-center gap-x-1">
+                        Products <i class="fas fa-chevron-down text-[10px] ml-0.5"></i>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-52 bg-slate-900 border border-slate-700 rounded-2xl shadow-xl py-2 hidden group-hover:block z-50">
+                        <a href="beaconbudget.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Beacon Budget</a>
+                        <a href="smart-caller-id.html" class="block px-4 py-2 text-sm hover:bg-slate-800 text-slate-400">Beacon Caller ID <span class="text-[10px]">(coming soon)</span></a>
+                    </div>
+                </div>
                 <a href="videos.html" class="hover:text-cyan-400">Videos</a>
                 <a href="about.html" class="hover:text-cyan-400">About</a>
                 <a href="contact.html" class="hover:text-cyan-400">Contact</a>

@@ -34,7 +34,15 @@
             </div>
             <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                 <a href="index.html" class="hover:text-cyan-400">Home</a>
-                <a href="products.html" class="text-cyan-400">Products</a>
+                <div class="relative group">
+                    <a href="products.html" class="hover:text-cyan-400 flex items-center gap-x-1">
+                        Products <i class="fas fa-chevron-down text-[10px] ml-0.5"></i>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-52 bg-slate-900 border border-slate-700 rounded-2xl shadow-xl py-2 hidden group-hover:block z-50">
+                        <a href="beaconbudget.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Beacon Budget</a>
+                        <a href="smart-caller-id.html" class="block px-4 py-2 text-sm hover:bg-slate-800 text-slate-400">Beacon Caller ID <span class="text-[10px]">(coming soon)</span></a>
+                    </div>
+                </div>
                 <a href="videos.html" class="hover:text-cyan-400">Videos</a>
                 <a href="about.html" class="hover:text-cyan-400">About</a>
                 <a href="contact.html" class="hover:text-cyan-400">Contact</a>
@@ -75,6 +83,11 @@
             <h2 class="text-5xl font-bold tracking-tight mb-4">Beacon Budget</h2>
             <p class="text-2xl text-slate-300 mb-8">A local-first, zero-based personal finance tool for families who want to be intentional with what they've been given — without ever sending their financial life to the cloud.</p>
 
+            <div class="mb-10">
+                <img src="Budgets_Private.png" alt="Beacon Budget private budgets view - zero-based budgeting on device" 
+                     class="rounded-3xl border border-slate-700 shadow-2xl w-full max-w-3xl mx-auto">
+            </div>
+
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Free -->
                 <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8">
@@ -87,6 +100,9 @@
                         <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Everything stays encrypted on your Mac</li>
                     </ul>
                     <a href="beaconbudget.html" class="block text-center bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold py-3 rounded-3xl">Download Free on the Mac App Store</a>
+                    <div class="flex justify-center mt-3">
+                        <img src="BeaconBudgetAppStore.png" alt="Download Beacon Budget on the Mac App Store" class="h-9">
+                    </div>
                 </div>
 
                 <!-- Premium -->

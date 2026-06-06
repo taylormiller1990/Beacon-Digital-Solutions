@@ -38,7 +38,15 @@
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                 <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
-                <a href="products.html" class="hover:text-cyan-400 transition-colors">Products</a>
+                <div class="relative group">
+                    <a href="products.html" class="hover:text-cyan-400 flex items-center gap-x-1 transition-colors">
+                        Products <i class="fas fa-chevron-down text-[10px] ml-0.5"></i>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-52 bg-slate-900 border border-slate-700 rounded-2xl shadow-xl py-2 hidden group-hover:block z-50">
+                        <a href="beaconbudget.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Beacon Budget</a>
+                        <a href="smart-caller-id.html" class="block px-4 py-2 text-sm hover:bg-slate-800 text-slate-400">Beacon Caller ID <span class="text-[10px]">(coming soon)</span></a>
+                    </div>
+                </div>
                 <a href="videos.html" class="hover:text-cyan-400 transition-colors">Videos</a>
                 <a href="about.html" class="text-cyan-400 transition-colors">About</a>
                 <a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
@@ -61,6 +69,8 @@
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-6 py-6 flex flex-col gap-4 text-sm font-medium">
             <a href="index.html" class="hover:text-cyan-400">Home</a>
             <a href="products.html" class="hover:text-cyan-400">Products</a>
+            <a href="beaconbudget.html" class="pl-4 text-xs hover:text-cyan-400">— Beacon Budget</a>
+            <a href="smart-caller-id.html" class="pl-4 text-xs hover:text-cyan-400 text-slate-400">— Beacon Caller ID (coming soon)</a>
             <a href="videos.html" class="hover:text-cyan-400">Videos</a>
             <a href="about.html" class="hover:text-cyan-400">About</a>
             <a href="contact.html" class="hover:text-cyan-400">Contact</a>
@@ -79,7 +89,7 @@
             <!-- Photo + Bio -->
             <div class="md:col-span-5">
                 <div class="sticky top-24">
-                    <img src="Taylor_photo.jpg" alt="Taylor Miller, founder of Beacon Digital Solutions" 
+                    <img src="X_Profile.png" alt="Taylor Miller, founder of Beacon Digital Solutions" 
                          class="w-full rounded-3xl shadow-2xl border border-slate-800 object-cover aspect-[4/3]">
                     <div class="mt-6 text-center md:text-left">
                         <a href="https://x.com/MillerPTaylor" target="_blank" 
