@@ -193,27 +193,64 @@
                 Receive occasional updates on our tools and resources for using technology in a responsible way.
             </p>
             
-            <form id="community-form" class="flex flex-col md:flex-row gap-4 max-w-md mx-auto" 
-                  action="https://formspree.io/f/xwvwkkdj" 
-                  method="POST">
+            <form id="community-form" class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
                 <input type="email" 
                        name="email" 
+                       id="community-email"
                        placeholder="your@email.com" 
                        required
                        class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-4 flex-1 outline-none text-slate-200">
                 <button type="submit" 
+                        id="community-btn"
                         class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-8 py-4 rounded-3xl whitespace-nowrap transition-all">
                     Join the Community
                 </button>
             </form>
+            <p id="community-msg" class="text-sm mt-3 hidden"></p>
 
             <script>
+                // COMMUNITY SIGNUP — posts to our backend so we own the records.
+                // For local testing: run PORT=5001 python3 app.py, then visit the site at http://localhost:8000
+                // When deployed: change the URL below to your live backend (e.g. https://your-backend.onrender.com/community/signup)
+                const COMMUNITY_ENDPOINT = 'http://localhost:5001/community/signup';
+
                 const form = document.getElementById('community-form');
+                const msg = document.getElementById('community-msg');
+                const btn = document.getElementById('community-btn');
+
                 if (form) {
-                    form.addEventListener('submit', function() {
-                        setTimeout(() => {
-                            window.location.href = 'thank-you.html';
-                        }, 1200);
+                    form.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        const email = document.getElementById('community-email').value.trim();
+                        if (!email) return;
+
+                        btn.disabled = true;
+                        btn.textContent = 'Joining...';
+                        msg.classList.remove('hidden', 'text-emerald-400', 'text-red-400');
+                        msg.textContent = '';
+
+                        try {
+                            const res = await fetch(COMMUNITY_ENDPOINT, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ email, source: 'website_index' })
+                            });
+
+                            if (res.ok) {
+                                msg.classList.add('text-emerald-400');
+                                msg.textContent = 'Thank you — you are now on the list.';
+                                setTimeout(() => {
+                                    window.location.href = 'thank-you.html';
+                                }, 900);
+                            } else {
+                                throw new Error('Server error');
+                            }
+                        } catch (err) {
+                            msg.classList.add('text-red-400');
+                            msg.textContent = 'Could not submit right now. Email support@beacondigitalsolutionsllc.com instead.';
+                            btn.disabled = false;
+                            btn.textContent = 'Join the Community';
+                        }
                     });
                 }
             </script>

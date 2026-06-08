@@ -152,10 +152,42 @@
             Occasional updates on our tools and practical information for using technology responsibly.
         </p>
         
-        <form action="https://formspree.io/f/xwvwkkdj" method="POST" class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-            <input type="email" name="email" placeholder="your@email.com" required class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-4 flex-1 outline-none text-slate-200">
-            <button type="submit" class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-8 py-4 rounded-3xl">Join the Community</button>
+        <form id="blog-community-form" class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+            <input type="email" id="blog-community-email" placeholder="your@email.com" required class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-4 flex-1 outline-none text-slate-200">
+            <button type="submit" id="blog-community-btn" class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-8 py-4 rounded-3xl">Join the Community</button>
         </form>
+        <p id="blog-community-msg" class="text-sm mt-3"></p>
+
+        <script>
+            // Blog community signup — owned records via backend
+            const COMMUNITY_ENDPOINT = 'http://localhost:5001/community/signup';
+            const bform = document.getElementById('blog-community-form');
+            if (bform) {
+                bform.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('blog-community-email').value.trim();
+                    const btn = document.getElementById('blog-community-btn');
+                    const msg = document.getElementById('blog-community-msg');
+                    if (!email) return;
+                    btn.disabled = true; btn.textContent = 'Joining...';
+                    try {
+                        const res = await fetch(COMMUNITY_ENDPOINT, {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({email, source: 'website_blog'})
+                        });
+                        if (res.ok) {
+                            msg.textContent = 'Thank you — added to the list.';
+                            msg.className = 'text-sm mt-3 text-emerald-400';
+                        } else { throw new Error(); }
+                    } catch (err) {
+                        msg.textContent = 'Submission failed. Please email support@beacondigitalsolutionsllc.com';
+                        msg.className = 'text-sm mt-3 text-red-400';
+                        btn.disabled = false; btn.textContent = 'Join the Community';
+                    }
+                });
+            }
+        </script>
         
         <p class="text-xs text-slate-400 mt-6">We respect your time and your data the same way we respect it in our tools.</p>
     </div>

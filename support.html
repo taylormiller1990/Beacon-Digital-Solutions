@@ -64,6 +64,73 @@
                         <li>• Feedback on existing tools or ideas for new ones</li>
                     </ul>
                 </div>
+
+                <!-- Public feedback intake → feeds /admin/feedback backlog -->
+                <div class="mt-10 p-8 bg-slate-900 rounded-3xl border border-slate-800">
+                    <h3 class="font-semibold mb-2">Report a bug or suggest an improvement</h3>
+                    <p class="text-sm text-slate-400 mb-4">This goes straight into our internal backlog so we can prioritize fixes and new features based on what real users tell us.</p>
+                    <form id="feedback-form">
+                        <div class="grid gap-3">
+                            <input type="email" id="fb-email" placeholder="Your email (optional but helpful for follow-up)" class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-2xl px-4 py-2.5 text-sm outline-none">
+                            <select id="fb-type" class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-2xl px-4 py-2.5 text-sm outline-none">
+                                <option value="bug">Bug / something is broken</option>
+                                <option value="feature">Feature request / idea</option>
+                                <option value="general">General feedback</option>
+                                <option value="praise">This is great — just wanted to say thanks</option>
+                            </select>
+                            <input type="text" id="fb-title" placeholder="Short title (e.g. 'Import from CSV fails on commas')" class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-2xl px-4 py-2.5 text-sm outline-none">
+                            <textarea id="fb-desc" rows="4" placeholder="Describe what happened or what you'd like to see..." required class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-2xl px-4 py-2.5 text-sm outline-none resize-y"></textarea>
+                            <button type="submit" id="fb-btn" class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold py-2.5 rounded-2xl text-sm">Send feedback</button>
+                        </div>
+                        <p id="fb-msg" class="text-xs mt-2 text-center"></p>
+                    </form>
+                </div>
+
+                <script>
+                    // Feedback form posts to our backend /feedback endpoint (owned records + backlog triage)
+                    // Local: run the backend on 5001. Live: update the URL below.
+                    const FEEDBACK_ENDPOINT = 'http://localhost:5001/feedback';
+
+                    const fbform = document.getElementById('feedback-form');
+                    if (fbform) {
+                        fbform.addEventListener('submit', async function(e) {
+                            e.preventDefault();
+                            const btn = document.getElementById('fb-btn');
+                            const msg = document.getElementById('fb-msg');
+                            btn.disabled = true;
+                            btn.textContent = 'Sending...';
+                            msg.textContent = '';
+
+                            const payload = {
+                                email: document.getElementById('fb-email').value.trim(),
+                                tool: 'beacon_budget',
+                                type: document.getElementById('fb-type').value,
+                                title: document.getElementById('fb-title').value.trim(),
+                                description: document.getElementById('fb-desc').value.trim()
+                            };
+
+                            try {
+                                const res = await fetch(FEEDBACK_ENDPOINT, {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify(payload)
+                                });
+                                if (res.ok) {
+                                    msg.textContent = 'Thank you. Your feedback is in our backlog.';
+                                    msg.className = 'text-xs mt-2 text-center text-emerald-400';
+                                    fbform.reset();
+                                } else {
+                                    throw new Error();
+                                }
+                            } catch (err) {
+                                msg.textContent = 'Could not send right now. Email support@beacondigitalsolutionsllc.com';
+                                msg.className = 'text-xs mt-2 text-center text-red-400';
+                            }
+                            btn.disabled = false;
+                            btn.textContent = 'Send feedback';
+                        });
+                    }
+                </script>
             </div>
         </div>
     </div>

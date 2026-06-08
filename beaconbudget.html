@@ -238,37 +238,112 @@
             <div class="text-center mb-10">
                 <h3 class="text-3xl font-semibold mb-3">Subscribe directly through our website</h3>
                 <p class="text-xl text-slate-300">Premium access is available for $8 per month. Whether you use the free version or premium, your information never leaves your device and we never see it.</p>
+                <p class="text-xs text-emerald-400 mt-2">For quick local test: run the backend first (see comments in app.py), then use the button below. It will use localhost:5000.</p>
             </div>
 
-            <!-- Primary direct option -->
+            <!-- Primary Stripe Checkout -->
             <div class="bg-slate-900 border border-emerald-400/30 rounded-3xl p-10 mb-8 text-center">
                 <div class="text-5xl font-semibold mb-1">$8</div>
                 <div class="text-emerald-400 mb-6">per month, billed monthly</div>
                 
-                <!-- 
-                  TODO: Replace the href below with your real Stripe Payment Link 
-                  (create a $8/mo recurring product in Stripe → Payment Links → copy the link)
-                -->
-                <a href="mailto:support@beacondigitalsolutionsllc.com?subject=Beacon%20Budget%20Premium%20Subscription" 
-                   class="inline-block w-full md:w-auto bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-12 py-4 rounded-3xl text-lg">
-                    Subscribe for $8/mo
-                </a>
-                <p class="text-xs text-slate-500 mt-4">We'll send you a secure payment link + simple activation instructions within 24 hours (or use the form below for faster processing).</p>
+                <form id="checkout-form">
+                    <input type="email" id="checkout-email" placeholder="your@email.com" required
+                           class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 w-full max-w-xs mx-auto mb-4 outline-none text-slate-200">
+                    <button type="submit"
+                            class="w-full max-w-xs mx-auto bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-12 py-4 rounded-3xl text-lg block">
+                        Subscribe for $8/mo
+                    </button>
+                </form>
+                <p class="text-xs text-slate-500 mt-4">Secure checkout powered by Stripe. Complete the test payment below with test card (4242 4242 4242 4242). Watch the Flask terminal (and `stripe listen` if running) for the license key (BB-...) printed after the webhook.</p>
             </div>
 
-            <!-- Backup form -->
+            <script>
+            // This will call your backend to create a Stripe Checkout session
+            document.getElementById('checkout-form').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const email = document.getElementById('checkout-email').value;
+                const button = e.target.querySelector('button');
+                button.disabled = true;
+                button.textContent = 'Redirecting to secure checkout...';
+
+                try {
+                    // IMPORTANT: This must match the port you used for the backend (PORT=5001 below)
+                    // For local test: http://localhost:5001/create-checkout
+                    // For deployed: your public URL
+                    const response = await fetch('http://localhost:5001/create-checkout', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email: email, price: 'premium_monthly' })
+                    });
+                    const data = await response.json();
+                    if (data.url) {
+                        window.location.href = data.url;  // Go to Stripe Checkout
+                    } else {
+                        alert('Error starting checkout. Please try the form below or email us.');
+                        button.disabled = false;
+                        button.textContent = 'Subscribe for $8/mo';
+                    }
+                } catch (err) {
+                    console.error('Checkout fetch error:', err);
+                    alert('Could not connect to checkout. Check browser console (F12) for details. Or email support@beacondigitalsolutionsllc.com');
+                    button.disabled = false;
+                    button.textContent = 'Subscribe for $8/mo';
+                }
+            });
+            </script>
+
+            <!-- Manual / Backup (owned records) -->
             <div class="bg-slate-900 rounded-3xl p-10">
-                <p class="text-center text-slate-300 mb-6">Or tell us you want Premium access and we'll email you a direct payment link + instructions right away.</p>
-                <form action="https://formspree.io/f/xwvwkkdj" method="POST" class="max-w-md mx-auto">
+                <p class="text-center text-slate-300 mb-6">Prefer to talk to a human first? Tell us and we'll send a payment link + license instructions.</p>
+                <form id="manual-interest-form" class="max-w-md mx-auto">
                     <div class="grid gap-4">
-                        <input type="text" name="name" placeholder="Your name" class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
-                        <input type="email" name="email" placeholder="your@email.com" required class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
-                        <input type="hidden" name="interest" value="Beacon Budget Premium - $8/mo web subscription">
-                        <button type="submit" class="bg-white hover:bg-slate-100 text-slate-950 font-semibold py-3.5 rounded-3xl">Send me a Premium payment link</button>
+                        <input type="text" id="manual-name" placeholder="Your name" class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
+                        <input type="email" id="manual-email" placeholder="your@email.com" required class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
+                        <button type="submit" id="manual-btn" class="bg-white hover:bg-slate-100 text-slate-950 font-semibold py-3.5 rounded-3xl">Request payment link</button>
                     </div>
+                    <p id="manual-msg" class="text-xs text-center mt-3 text-slate-400"></p>
                 </form>
-                <p class="text-center text-xs text-slate-500 mt-4">After payment we’ll reply with activation steps you can do inside the app in under a minute.</p>
             </div>
+
+            <script>
+                // Manual interest → our backend contacts table (so we own the list)
+                // Change COMMUNITY_ENDPOINT when you deploy the backend.
+                const COMMUNITY_ENDPOINT = 'http://localhost:5001/community/signup';
+
+                const mform = document.getElementById('manual-interest-form');
+                if (mform) {
+                    mform.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        const name = document.getElementById('manual-name').value.trim();
+                        const email = document.getElementById('manual-email').value.trim();
+                        const btn = document.getElementById('manual-btn');
+                        const msg = document.getElementById('manual-msg');
+
+                        if (!email) return;
+                        btn.disabled = true;
+                        btn.textContent = 'Sending...';
+
+                        try {
+                            const res = await fetch(COMMUNITY_ENDPOINT, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ email, name, source: 'beaconbudget_manual_request' })
+                            });
+                            if (res.ok) {
+                                msg.textContent = 'Request received. We will follow up by email.';
+                                msg.className = 'text-xs text-center mt-3 text-emerald-400';
+                            } else {
+                                throw new Error();
+                            }
+                        } catch (err) {
+                            msg.textContent = 'Could not submit. Email support@beacondigitalsolutionsllc.com';
+                            msg.className = 'text-xs text-center mt-3 text-red-400';
+                            btn.disabled = false;
+                            btn.textContent = 'Request payment link';
+                        }
+                    });
+                }
+            </script>
         </div>
     </section>
 
