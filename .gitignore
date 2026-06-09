@@ -10,3 +10,24 @@ Thumbs.db
 node_modules/
 dist/
 build/
+
+# Secrets — NEVER commit these
+.env
+*.env
+
+# Backend database (customer emails + license keys live here).
+# This repo is public + served by GitHub Pages, so the DB must never be
+# committed. In production it lives on the backend host's persistent disk.
+licenses.db
+*.sqlite
+*.sqlite3
+
+# Beta app binaries (host these as GitHub Releases / CDN, not in the repo)
+downloads/*.zip
+downloads/*.dmg
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/

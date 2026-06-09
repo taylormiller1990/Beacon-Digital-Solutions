@@ -77,8 +77,10 @@ PREMIUM_PRICE_ID = os.environ.get("PREMIUM_PRICE_ID", "price_1Tg54DLG5yvcqnWHjA9
 # How long before the app should re-validate with the server (in days)
 VALIDATION_INTERVAL_DAYS = 30
 
-# Simple local SQLite DB (use Postgres in production)
-DB_PATH = "licenses.db"
+# SQLite DB. In production set DB_PATH to a path on the host's PERSISTENT disk
+# (e.g. Render disk mounted at /var/data → DB_PATH=/var/data/licenses.db) so
+# license keys survive restarts/redeploys and are never written into the repo.
+DB_PATH = os.environ.get("DB_PATH", "licenses.db")
 
 # Secret for signing licenses (generate a long random string and keep it secret)
 # For quick local test you can use this one (change for production):
@@ -191,12 +193,18 @@ def success():
     """Simple success page after Stripe Checkout."""
     session_id = request.args.get("session_id")
     return f"""
-    <html><body style="font-family: system-ui; padding: 40px; max-width: 600px; margin: auto;">
-        <h1>Thank you!</h1>
-        <p>Your payment was successful.</p>
-        <p><strong>For this local test:</strong> Look in the Flask terminal (the one running the backend) for the line with "License = BB-XXXX-XXXX-XXXX-XXXX". Copy that key (the BB- part).</p>
-        <p>In your Mac app (Beacon Budget), go to Settings → Premium and use the "Activate with License Key" UI (you'll add it) to enter the email and key. It will call the local backend to activate.</p>
-        <p><a href="https://beacondigitalsolutionsllc.com/beaconbudget">Back to Beacon Budget page</a></p>
+    <html><body style="font-family: system-ui; padding: 40px; max-width: 640px; margin: auto; line-height: 1.6; color: #0a1729;">
+        <h1>Thank you — you're all set!</h1>
+        <p>Your $8/mo Premium subscription is active. <strong>We've emailed your license key</strong> (it looks like <code>BB-XXXX-XXXX-XXXX-XXXX</code>) to the address you used at checkout. It can take a minute to arrive — check spam if you don't see it.</p>
+        <h3>To unlock Premium in the app:</h3>
+        <ol>
+            <li>Open <strong>Beacon Budget</strong> on your Mac.</li>
+            <li>Go to <strong>Settings &rarr; Premium</strong>.</li>
+            <li>Enter the <strong>same email</strong> you used at checkout and your <strong>license key</strong>, then click Activate.</li>
+        </ol>
+        <p>The planning tools (Retirement, Education, Real Estate, Tax) unlock immediately. You can activate on more than one Mac with the same email + key.</p>
+        <p>Questions? Email <a href="mailto:support@beacondigitalsolutionsllc.com">support@beacondigitalsolutionsllc.com</a>.</p>
+        <p><a href="https://beacondigitalsolutionsllc.com/beaconbudget">&larr; Back to Beacon Budget</a></p>
     </body></html>
     """
 
@@ -559,4 +567,10 @@ if __name__ == '__main__':
     if missing:
         print("WARNING: Missing or placeholder env vars:", ", ".join(missing))
         print("Set them with: export VAR=value")
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+    # Debug is OFF unless you explicitly opt in with FLASK_DEBUG=1 (local only).
+    # In production the app is served by gunicorn (see Procfile), not this block.
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 5000)),
+        debug=os.environ.get("FLASK_DEBUG") == "1",
+    )

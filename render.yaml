@@ -1,0 +1,35 @@
+# Render.com Blueprint for the Beacon licensing backend (app.py).
+# In Render: New → Blueprint → connect this repo → it reads this file.
+# After it deploys, fill in the secret values (marked sync:false) under the
+# service's Environment tab. See DEPLOY.md for the full walkthrough.
+services:
+  - type: web
+    name: beacon-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60
+    healthCheckPath: /health
+    # Persistent disk so license keys (licenses.db) survive restarts/redeploys.
+    disk:
+      name: beacon-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: DB_PATH
+        value: /var/data/licenses.db
+      - key: BACKEND_BASE_URL
+        value: https://api.beacondigitalsolutionsllc.com
+      # Secrets — set these in the Render dashboard (never in the repo):
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: PREMIUM_PRICE_ID
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: LICENSE_SIGNING_SECRET
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

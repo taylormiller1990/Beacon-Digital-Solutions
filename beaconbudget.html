@@ -14,6 +14,25 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- =====================================================================
+         BEACON BUDGET — SITE CONFIG  (edit these two values, nothing else)
+         =====================================================================
+         1) BB_BACKEND  — the public HTTPS URL where your Flask app.py is
+            deployed. The $8/mo Stripe checkout and the "request a link" form
+            POST here. It MUST be https (this site is https; a non-https
+            backend will be blocked by the browser as mixed content).
+            For a quick LOCAL test only, you can set this to
+            'http://localhost:5001' and open this page over http://localhost.
+         2) BB_DOWNLOAD — the direct download URL for the notarized beta build
+            (.zip or .dmg). The simplest beta option is to drop the file in a
+            /downloads/ folder in this repo and leave the relative path below;
+            a GitHub Releases URL works too.
+    -->
+    <script>
+      window.BB_BACKEND  = 'https://api.beacondigitalsolutionsllc.com';
+      window.BB_DOWNLOAD = 'downloads/BeaconBudget-beta.zip';
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
@@ -79,16 +98,16 @@
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#download" 
+                    <a href="#download"
                        class="bg-white hover:bg-slate-100 text-slate-950 font-semibold px-10 py-4 rounded-3xl text-lg flex items-center gap-x-3 transition-all">
-                        <i class="fas fa-download"></i> Download Free on the Mac App Store
+                        <i class="fas fa-download"></i> Download Free (Beta)
                     </a>
-                    <a href="#premium" 
+                    <a href="#premium"
                        class="border border-white/60 hover:bg-white/5 font-semibold px-10 py-4 rounded-3xl text-lg flex items-center gap-x-3 transition-all">
                         See Premium features
                     </a>
                 </div>
-                <p class="mt-4 text-sm text-slate-400">Free forever for the core toolkit. Premium unlocks deeper planning tools. 1-day local trial available in-app.</p>
+                <p class="mt-4 text-sm text-slate-400">Free forever for the core toolkit. Premium unlocks deeper planning tools for $8/mo. 1-day local trial available in-app.</p>
             </div>
         </div>
     </section>
@@ -136,9 +155,9 @@
                 </ul>
                 
                 <a href="#download" class="mt-10 block text-center bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold py-4 rounded-3xl text-lg">
-                    Download Free on the Mac App Store
+                    Download Free (Beta)
                 </a>
-                <p class="text-center text-xs text-slate-500 mt-3">App Store discovery • Subscribe to Premium on the web or in-app</p>
+                <p class="text-center text-xs text-slate-500 mt-3">Direct download during beta • Upgrade to Premium anytime</p>
             </div>
 
             <!-- PREMIUM -->
@@ -158,7 +177,6 @@
                     <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Retirement projections with scenario planning</span></li>
                     <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Education (529) savings tracking &amp; projections</span></li>
                     <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Real Estate / mortgage payoff tools</span></li>
-                    <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>Tax planning</span></li>
                     <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1 w-4"></i> <span>More planning tools coming soon</span></li>
                 </ul>
                 
@@ -215,20 +233,36 @@
     <section id="download" class="max-w-screen-2xl mx-auto px-6 py-20 border-t border-slate-800 bg-slate-900">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="section-header mb-3">Ready to get started?</h2>
-            <p class="text-xl text-slate-300 mb-10">The free version is available on the Mac App Store. Premium is offered directly through our website. In either case, your data remains entirely on your device.</p>
-            
+            <p class="text-xl text-slate-300 mb-10">Download the free app, then unlock Premium for $8/mo whenever you're ready. In either case, your data remains entirely on your device.</p>
+
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://apps.apple.com" target="_blank" 
+                <a id="free-download-btn" href="#"
                    class="inline-flex items-center justify-center gap-x-3 bg-white text-slate-950 font-semibold px-10 py-5 rounded-3xl text-lg hover:bg-slate-100">
                     <i class="fab fa-apple text-2xl"></i>
                     <span>Download Beacon Budget Free</span>
                 </a>
-                <a href="#subscribe-web" 
+                <a href="#subscribe"
                    class="inline-flex items-center justify-center gap-x-3 border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-950 font-semibold px-10 py-5 rounded-3xl text-lg transition-all">
-                    Subscribe to Premium on the Web
+                    Unlock Premium — $8/mo
                 </a>
             </div>
-            <p class="text-xs text-slate-500 mt-4">App Store link will be updated once live. Search “Beacon Budget” on the Mac App Store.</p>
+            <p class="text-xs text-slate-500 mt-4">macOS 14 (Sonoma) or later. Beta direct download — the Mac App Store version is coming soon.</p>
+
+            <!-- After downloading: 3-step "how Premium works" so beta users aren't lost -->
+            <div class="mt-12 grid sm:grid-cols-3 gap-4 text-left">
+                <div class="bg-slate-950/40 border border-slate-800 rounded-2xl p-5">
+                    <div class="text-emerald-400 font-bold mb-1">1. Download &amp; open</div>
+                    <p class="text-sm text-slate-400">Install the free app. Every core budgeting feature works immediately — no account needed.</p>
+                </div>
+                <div class="bg-slate-950/40 border border-slate-800 rounded-2xl p-5">
+                    <div class="text-emerald-400 font-bold mb-1">2. Subscribe ($8/mo)</div>
+                    <p class="text-sm text-slate-400">Use the checkout below. We email your license key the moment payment succeeds.</p>
+                </div>
+                <div class="bg-slate-950/40 border border-slate-800 rounded-2xl p-5">
+                    <div class="text-emerald-400 font-bold mb-1">3. Activate in the app</div>
+                    <p class="text-sm text-slate-400">In the app: <span class="text-slate-200">Settings → Premium</span>, enter your email + key, and the planning tools unlock.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -237,8 +271,7 @@
         <div class="max-w-2xl mx-auto">
             <div class="text-center mb-10">
                 <h3 class="text-3xl font-semibold mb-3">Subscribe directly through our website</h3>
-                <p class="text-xl text-slate-300">Premium access is available for $8 per month. Whether you use the free version or premium, your information never leaves your device and we never see it.</p>
-                <p class="text-xs text-emerald-400 mt-2">For quick local test: run the backend first (see comments in app.py), then use the button below. It will use localhost:5000.</p>
+                <p class="text-xl text-slate-300">Premium access is available for $8 per month, billed monthly — cancel anytime. Whether you use the free version or premium, your information never leaves your device and we never see it.</p>
             </div>
 
             <!-- Primary Stripe Checkout -->
@@ -254,11 +287,12 @@
                         Subscribe for $8/mo
                     </button>
                 </form>
-                <p class="text-xs text-slate-500 mt-4">Secure checkout powered by Stripe. Complete the test payment below with test card (4242 4242 4242 4242). Watch the Flask terminal (and `stripe listen` if running) for the license key (BB-...) printed after the webhook.</p>
+                <p class="text-xs text-slate-500 mt-4">Secure checkout powered by Stripe. We never see or store your card details. Your license key is emailed to you the moment payment succeeds.</p>
             </div>
 
             <script>
-            // This will call your backend to create a Stripe Checkout session
+            // Calls your deployed backend (window.BB_BACKEND, set in <head>) to
+            // create a Stripe Checkout session, then redirects to Stripe.
             document.getElementById('checkout-form').addEventListener('submit', async function(e) {
                 e.preventDefault();
                 const email = document.getElementById('checkout-email').value;
@@ -267,10 +301,7 @@
                 button.textContent = 'Redirecting to secure checkout...';
 
                 try {
-                    // IMPORTANT: This must match the port you used for the backend (PORT=5001 below)
-                    // For local test: http://localhost:5001/create-checkout
-                    // For deployed: your public URL
-                    const response = await fetch('http://localhost:5001/create-checkout', {
+                    const response = await fetch(window.BB_BACKEND + '/create-checkout', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ email: email, price: 'premium_monthly' })
@@ -279,13 +310,13 @@
                     if (data.url) {
                         window.location.href = data.url;  // Go to Stripe Checkout
                     } else {
-                        alert('Error starting checkout. Please try the form below or email us.');
+                        alert('Error starting checkout. Please try the "request a link" form below, or email support@beacondigitalsolutionsllc.com');
                         button.disabled = false;
                         button.textContent = 'Subscribe for $8/mo';
                     }
                 } catch (err) {
                     console.error('Checkout fetch error:', err);
-                    alert('Could not connect to checkout. Check browser console (F12) for details. Or email support@beacondigitalsolutionsllc.com');
+                    alert('Could not connect to checkout. Please email support@beacondigitalsolutionsllc.com and we will send you a payment link.');
                     button.disabled = false;
                     button.textContent = 'Subscribe for $8/mo';
                 }
@@ -307,8 +338,7 @@
 
             <script>
                 // Manual interest → our backend contacts table (so we own the list)
-                // Change COMMUNITY_ENDPOINT when you deploy the backend.
-                const COMMUNITY_ENDPOINT = 'http://localhost:5001/community/signup';
+                const COMMUNITY_ENDPOINT = window.BB_BACKEND + '/community/signup';
 
                 const mform = document.getElementById('manual-interest-form');
                 if (mform) {
@@ -382,5 +412,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Point the free-download button at the configured download URL (window.BB_DOWNLOAD) -->
+    <script>
+        (function () {
+            var btn = document.getElementById('free-download-btn');
+            if (btn && window.BB_DOWNLOAD) {
+                btn.setAttribute('href', window.BB_DOWNLOAD);
+                btn.setAttribute('download', '');
+            }
+        })();
+    </script>
 </body>
 </html>
