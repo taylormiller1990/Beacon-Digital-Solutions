@@ -182,9 +182,9 @@
                 
                 <div class="mt-10">
                     <a href="#subscribe" class="block text-center bg-white hover:bg-slate-100 text-slate-950 font-semibold py-4 rounded-3xl text-lg">
-                        Subscribe for $8/mo on the Web
+                        How to get Premium
                     </a>
-                    <p class="text-center text-xs text-slate-500 mt-3">Direct with us. We never see your information.</p>
+                    <p class="text-center text-xs text-slate-500 mt-3">Unlocked inside the app. We never see your information.</p>
                 </div>
             </div>
         </div>
@@ -266,114 +266,36 @@
         </div>
     </section>
 
-    <!-- WEB SUBSCRIBE - Direct from Website -->
+    <!-- HOW TO GET PREMIUM (in-app via the App Store) -->
     <section id="subscribe" class="max-w-screen-2xl mx-auto px-6 py-20 border-t border-slate-800">
         <div class="max-w-2xl mx-auto">
             <div class="text-center mb-10">
-                <h3 class="text-3xl font-semibold mb-3">Subscribe directly through our website</h3>
-                <p class="text-xl text-slate-300">Premium access is available for $8 per month, billed monthly — cancel anytime. Whether you use the free version or premium, your information never leaves your device and we never see it.</p>
+                <h3 class="text-3xl font-semibold mb-3">How to get Premium</h3>
+                <p class="text-xl text-slate-300">Premium is $8/month, billed monthly — cancel anytime. You unlock it right inside the app, and your information never leaves your device.</p>
             </div>
 
-            <!-- Primary Stripe Checkout -->
+            <!-- In-app subscription card -->
             <div class="bg-slate-900 border border-emerald-400/30 rounded-3xl p-10 mb-8 text-center">
-                <div class="text-5xl font-semibold mb-1">$8</div>
-                <div class="text-emerald-400 mb-6">per month, billed monthly</div>
-                
-                <form id="checkout-form">
-                    <input type="email" id="checkout-email" placeholder="your@email.com" required
-                           class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 w-full max-w-xs mx-auto mb-4 outline-none text-slate-200">
-                    <button type="submit"
-                            class="w-full max-w-xs mx-auto bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-12 py-4 rounded-3xl text-lg block">
-                        Subscribe for $8/mo
-                    </button>
-                </form>
-                <p class="text-xs text-slate-500 mt-4">Secure checkout powered by Stripe. We never see or store your card details. Your license key is emailed to you the moment payment succeeds.</p>
+                <div class="text-5xl font-semibold mb-1">$8<span class="text-2xl text-slate-400">/mo</span></div>
+                <div class="text-emerald-400 mb-6">billed monthly · cancel anytime</div>
+
+                <ol class="text-left max-w-md mx-auto space-y-3 text-slate-300 mb-8">
+                    <li class="flex gap-3"><span class="text-emerald-400 font-bold">1.</span> Download the free app (button below).</li>
+                    <li class="flex gap-3"><span class="text-emerald-400 font-bold">2.</span> Open it and go to <span class="text-slate-100 font-medium">Settings → Premium</span>.</li>
+                    <li class="flex gap-3"><span class="text-emerald-400 font-bold">3.</span> Tap <span class="text-slate-100 font-medium">Subscribe</span> — billing is handled securely by Apple. Premium unlocks instantly.</li>
+                </ol>
+
+                <a href="#download" class="inline-block bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-12 py-4 rounded-3xl text-lg">
+                    Get the free app to start
+                </a>
+                <p class="text-xs text-slate-500 mt-4">No separate account needed. Billing runs through your Apple ID; we never see or store your card details.</p>
             </div>
 
-            <script>
-            // Calls your deployed backend (window.BB_BACKEND, set in <head>) to
-            // create a Stripe Checkout session, then redirects to Stripe.
-            document.getElementById('checkout-form').addEventListener('submit', async function(e) {
-                e.preventDefault();
-                const email = document.getElementById('checkout-email').value;
-                const button = e.target.querySelector('button');
-                button.disabled = true;
-                button.textContent = 'Redirecting to secure checkout...';
-
-                try {
-                    const response = await fetch(window.BB_BACKEND + '/create-checkout', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email: email, price: 'premium_monthly' })
-                    });
-                    const data = await response.json();
-                    if (data.url) {
-                        window.location.href = data.url;  // Go to Stripe Checkout
-                    } else {
-                        alert('Error starting checkout. Please try the "request a link" form below, or email support@beacondigitalsolutionsllc.com');
-                        button.disabled = false;
-                        button.textContent = 'Subscribe for $8/mo';
-                    }
-                } catch (err) {
-                    console.error('Checkout fetch error:', err);
-                    alert('Could not connect to checkout. Please email support@beacondigitalsolutionsllc.com and we will send you a payment link.');
-                    button.disabled = false;
-                    button.textContent = 'Subscribe for $8/mo';
-                }
-            });
-            </script>
-
-            <!-- Manual / Backup (owned records) -->
-            <div class="bg-slate-900 rounded-3xl p-10">
-                <p class="text-center text-slate-300 mb-6">Prefer to talk to a human first? Tell us and we'll send a payment link + license instructions.</p>
-                <form id="manual-interest-form" class="max-w-md mx-auto">
-                    <div class="grid gap-4">
-                        <input type="text" id="manual-name" placeholder="Your name" class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
-                        <input type="email" id="manual-email" placeholder="your@email.com" required class="bg-slate-800 border border-slate-700 focus:border-emerald-400 rounded-3xl px-6 py-3 outline-none">
-                        <button type="submit" id="manual-btn" class="bg-white hover:bg-slate-100 text-slate-950 font-semibold py-3.5 rounded-3xl">Request payment link</button>
-                    </div>
-                    <p id="manual-msg" class="text-xs text-center mt-3 text-slate-400"></p>
-                </form>
+            <!-- Web subscription: coming soon -->
+            <div class="bg-slate-900/60 rounded-3xl p-8 text-center">
+                <p class="text-slate-300"><span class="text-emerald-400 font-semibold">Coming soon:</span> subscribe to Premium directly on the web. For now, Premium is available right inside the app.</p>
+                <p class="text-sm text-slate-500 mt-3">Questions? Email <a href="mailto:support@beacondigitalsolutionsllc.com" class="text-emerald-400 hover:text-emerald-300">support@beacondigitalsolutionsllc.com</a>.</p>
             </div>
-
-            <script>
-                // Manual interest → our backend contacts table (so we own the list)
-                const COMMUNITY_ENDPOINT = window.BB_BACKEND + '/community/signup';
-
-                const mform = document.getElementById('manual-interest-form');
-                if (mform) {
-                    mform.addEventListener('submit', async function(e) {
-                        e.preventDefault();
-                        const name = document.getElementById('manual-name').value.trim();
-                        const email = document.getElementById('manual-email').value.trim();
-                        const btn = document.getElementById('manual-btn');
-                        const msg = document.getElementById('manual-msg');
-
-                        if (!email) return;
-                        btn.disabled = true;
-                        btn.textContent = 'Sending...';
-
-                        try {
-                            const res = await fetch(COMMUNITY_ENDPOINT, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ email, name, source: 'beaconbudget_manual_request' })
-                            });
-                            if (res.ok) {
-                                msg.textContent = 'Request received. We will follow up by email.';
-                                msg.className = 'text-xs text-center mt-3 text-emerald-400';
-                            } else {
-                                throw new Error();
-                            }
-                        } catch (err) {
-                            msg.textContent = 'Could not submit. Email support@beacondigitalsolutionsllc.com';
-                            msg.className = 'text-xs text-center mt-3 text-red-400';
-                            btn.disabled = false;
-                            btn.textContent = 'Request payment link';
-                        }
-                    });
-                }
-            </script>
         </div>
     </section>
 
