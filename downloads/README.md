@@ -1,14 +1,14 @@
-# Prudent Budget — beta downloads
+# Wealth Anchor — beta downloads
 
 The website's free-download button points here. Drop the **notarized** beta build
 in this folder so the link works:
 
 ```
-downloads/PrudentBudget-beta.zip
+downloads/WealthAnchor-beta.zip
 ```
 
 The filename must match `window.BB_DOWNLOAD` in `beaconbudget.html` (currently
-`downloads/PrudentBudget-beta.zip`). If you publish via GitHub Releases or a CDN
+`downloads/WealthAnchor-beta.zip`). If you publish via GitHub Releases or a CDN
 instead, just set `window.BB_DOWNLOAD` to that URL and you can ignore this folder.
 
 ## How to produce the beta build (Mac, direct distribution — NOT App Store)
@@ -18,9 +18,9 @@ instead, just set `window.BB_DOWNLOAD` to that URL and you can ignore this folde
    Apple notarization to finish and for the ticket to staple.
 3. Export the `.app`, then zip it preserving symlinks:
    ```
-   ditto -c -k --keepParent "Prudent Budget.app" PrudentBudget-beta.zip
+   ditto -c -k --keepParent "Wealth Anchor.app" WealthAnchor-beta.zip
    ```
-4. Copy `PrudentBudget-beta.zip` into this folder and commit, **or** upload it to a
+4. Copy `WealthAnchor-beta.zip` into this folder and commit, **or** upload it to a
    GitHub Release and point `BB_DOWNLOAD` at that URL.
 
 > Notarization matters: an un-notarized direct build triggers Gatekeeper warnings
