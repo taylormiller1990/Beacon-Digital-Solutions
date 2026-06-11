@@ -7,7 +7,7 @@ This site promotes Beacon Budget (our first local-first zero-based budgeting app
 ## Key pages
 - index.html — Home with privacy promise and community focus
 - products.html — New top-level Products hub (Beacon Budget lives underneath as the detail page)
-- beaconbudget.html — Beacon Budget detail page (Free + $8/mo Premium, direct web subscribe with automated license)
+- thrive.html — Beacon Budget detail page (Free + $8/mo Premium, direct web subscribe with automated license)
 - about.html — Personal story + values (God-image bearers, protect our neighbor)
 - videos.html — Training VLOG hub (primary content destination)
 - privacy.html — Expanded manifesto-style policy
@@ -18,7 +18,7 @@ Legacy consulting pages (services.html and subpages) are de-emphasized following
 
 ## Notes
 - Uses static HTML + Tailwind CDN for simplicity
-- Update App Store links in beaconbudget.html once live
+- Update App Store links in thrive.html once live
 - Web subscription flow will be added; forms currently capture interest
 - All CTAs and navigation now point to tools + community direction (no more "Book Consult" primary)
 
@@ -66,7 +66,7 @@ This gives you:
    PORT=5001 python3 app.py
    ```
 
-When you later deploy the Flask app (Railway, Render, Fly.io, etc.), update the three `COMMUNITY_ENDPOINT` / `FEEDBACK_ENDPOINT` constants in index.html, beaconbudget.html, blog.html, and support.html to point at your live backend URL (e.g. `https://beacon-backend.onrender.com/community/signup`).
+When you later deploy the Flask app (Railway, Render, Fly.io, etc.), update the three `COMMUNITY_ENDPOINT` / `FEEDBACK_ENDPOINT` constants in index.html, thrive.html, blog.html, and support.html to point at your live backend URL (e.g. `https://beacon-backend.onrender.com/community/signup`).
 
 The same backend binary also handles the (currently paused) Stripe + license issuance flow.
 
@@ -74,7 +74,7 @@ The same backend binary also handles the (currently paused) Stripe + license iss
 
 (The payments/licensing automation work is paused per your request. The code is still here and was one environment variable away from working end-to-end in local testing. We can resume it in a single focused session whenever you want to ship direct web subscriptions.)
 
-**CRITICAL:** You must run these commands from inside the folder that contains `app.py` (and `beaconbudget.html`). The folder has a space in the name, so use quotes.
+**CRITICAL:** You must run these commands from inside the folder that contains `app.py` (and `thrive.html`). The folder has a space in the name, so use quotes.
 
 Exact sequence:
 
@@ -113,7 +113,7 @@ Exact sequence:
    cd "/Users/taylor/Documents/Business Website/Beacon-Digital-Solutions"
    python3 -m http.server 8000
    ```
-   Then in your browser go to: http://localhost:8000/beaconbudget.html
+   Then in your browser go to: http://localhost:8000/thrive.html
 
 6. On the page, enter a test email in the "Subscribe for $8/mo" box and click the button.
 
@@ -137,6 +137,6 @@ Exact sequence:
 - Environment variables (the `export` lines) only apply to the terminal where you typed them. If you open a brand new terminal, re-do the `cd` + `export`.
 - The JS on the page is already configured to call localhost:5001 for this local test (with PORT=5001).
 
-Once this local test works, the next real step is deploying the backend to a public URL (e.g. Railway), setting the same env vars there, updating the one fetch URL in beaconbudget.html, and adding the webhook in your Stripe Dashboard.
+Once this local test works, the next real step is deploying the backend to a public URL (e.g. Railway), setting the same env vars there, updating the one fetch URL in thrive.html, and adding the webhook in your Stripe Dashboard.
 
 Full troubleshooting and production notes are in the big comment at the top of `app.py`. Paste any error messages you see and I'll help fix them immediately.

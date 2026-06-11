@@ -7,7 +7,7 @@ in this folder so the link works:
 downloads/Thrive-beta.zip
 ```
 
-The filename must match `window.BB_DOWNLOAD` in `beaconbudget.html` (currently
+The filename must match `window.BB_DOWNLOAD` in `thrive.html` (currently
 `downloads/Thrive-beta.zip`). If you publish via GitHub Releases or a CDN
 instead, just set `window.BB_DOWNLOAD` to that URL and you can ignore this folder.
 
